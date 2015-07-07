@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD8266861B45B5080085302A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8266851B45B5080085302A /* AppDelegate.swift */; };
+		CD8266881B45B5080085302A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8266871B45B5080085302A /* ViewController.swift */; };
+		CD82668B1B45B5080085302A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8266891B45B5080085302A /* Main.storyboard */; };
+		CD8266901B45B5080085302A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD82668E1B45B5080085302A /* LaunchScreen.xib */; };
+		CD82669C1B45B5080085302A /* CoffeeFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD82669B1B45B5080085302A /* CoffeeFinderTests.swift */; };
+		CD8266A81B45B9FB0085302A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD8266A71B45B9FB0085302A /* Images.xcassets */; };
+		CD8266AE1B45C69D0085302A /* Black-coffee-shadow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD8266AD1B45C29C0085302A /* Black-coffee-shadow.ttf */; };
+		CD8266AF1B45C69D0085302A /* Black-coffee-shadow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD8266AD1B45C29C0085302A /* Black-coffee-shadow.ttf */; };
+		CD8266B11B45C9940085302A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8266B01B45C9940085302A /* RegisterViewController.swift */; };
+		CD8266B51B45C9DB0085302A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8266B41B45C9DB0085302A /* HomeViewController.swift */; };
+		CD8266B71B45CACE0085302A /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8266B61B45CACE0085302A /* ResultsViewController.swift */; };
+		CD8266B91B45CB380085302A /* RailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8266B81B45CB380085302A /* RailsRequest.swift */; };
+		CD8266BD1B45CB710085302A /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8266BC1B45CB710085302A /* CameraViewController.swift */; };
+		CD8266BF1B45CC940085302A /* S3ImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8266BE1B45CC940085302A /* S3ImageRequest.swift */; };
+		CD8266C31B45D0450085302A /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8266C21B45D0450085302A /* ReviewViewController.swift */; };
+		CD8266CD1B45DE0A0085302A /* AFAmazonS3Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8266C81B45DE0A0085302A /* AFAmazonS3Manager.m */; };
+		CD8266CE1B45DE0A0085302A /* AFAmazonS3RequestSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8266CA1B45DE0A0085302A /* AFAmazonS3RequestSerializer.m */; };
+		CD8266CF1B45DE0A0085302A /* AFAmazonS3ResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8266CC1B45DE0A0085302A /* AFAmazonS3ResponseSerializer.m */; };
+		CD8266E41B45DE530085302A /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8266D21B45DE530085302A /* AFHTTPRequestOperation.m */; };
+		CD8266E51B45DE530085302A /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8266D41B45DE530085302A /* AFHTTPRequestOperationManager.m */; };
+		CD8266E61B45DE530085302A /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8266D61B45DE530085302A /* AFHTTPSessionManager.m */; };
+		CD8266E71B45DE530085302A /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8266D91B45DE530085302A /* AFNetworkReachabilityManager.m */; };
+		CD8266E81B45DE530085302A /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8266DB1B45DE530085302A /* AFSecurityPolicy.m */; };
+		CD8266E91B45DE530085302A /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8266DD1B45DE530085302A /* AFURLConnectionOperation.m */; };
+		CD8266EA1B45DE530085302A /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8266DF1B45DE530085302A /* AFURLRequestSerialization.m */; };
+		CD8266EB1B45DE530085302A /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8266E11B45DE530085302A /* AFURLResponseSerialization.m */; };
+		CD8266EC1B45DE530085302A /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8266E31B45DE530085302A /* AFURLSessionManager.m */; };
+		CD8266EE1B46BC780085302A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8266ED1B46BC780085302A /* Keys.swift */; };
+		CD8266F01B46C5570085302A /* SocialData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8266EF1B46C5570085302A /* SocialData.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD8266961B45B5080085302A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD8266781B45B5080085302A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD82667F1B45B5080085302A;
+			remoteInfo = CoffeeFinder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CD8266801B45B5080085302A /* CoffeeFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD8266841B45B5080085302A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD8266851B45B5080085302A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CD8266871B45B5080085302A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CD82668A1B45B5080085302A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CD82668F1B45B5080085302A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CD8266951B45B5080085302A /* CoffeeFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD82669A1B45B5080085302A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD82669B1B45B5080085302A /* CoffeeFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeFinderTests.swift; sourceTree = "<group>"; };
+		CD8266A71B45B9FB0085302A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CD8266AD1B45C29C0085302A /* Black-coffee-shadow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Black-coffee-shadow.ttf"; sourceTree = "<group>"; };
+		CD8266B01B45C9940085302A /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		CD8266B41B45C9DB0085302A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CD8266B61B45CACE0085302A /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		CD8266B81B45CB380085302A /* RailsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailsRequest.swift; sourceTree = "<group>"; };
+		CD8266BC1B45CB710085302A /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		CD8266BE1B45CC940085302A /* S3ImageRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = S3ImageRequest.swift; sourceTree = "<group>"; };
+		CD8266C21B45D0450085302A /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		CD8266C61B45DE0A0085302A /* CoffeeFinder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoffeeFinder-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		CD8266C71B45DE0A0085302A /* AFAmazonS3Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFAmazonS3Manager.h; sourceTree = "<group>"; };
+		CD8266C81B45DE0A0085302A /* AFAmazonS3Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFAmazonS3Manager.m; sourceTree = "<group>"; };
+		CD8266C91B45DE0A0085302A /* AFAmazonS3RequestSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFAmazonS3RequestSerializer.h; sourceTree = "<group>"; };
+		CD8266CA1B45DE0A0085302A /* AFAmazonS3RequestSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFAmazonS3RequestSerializer.m; sourceTree = "<group>"; };
+		CD8266CB1B45DE0A0085302A /* AFAmazonS3ResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFAmazonS3ResponseSerializer.h; sourceTree = "<group>"; };
+		CD8266CC1B45DE0A0085302A /* AFAmazonS3ResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFAmazonS3ResponseSerializer.m; sourceTree = "<group>"; };
+		CD8266D11B45DE530085302A /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		CD8266D21B45DE530085302A /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		CD8266D31B45DE530085302A /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		CD8266D41B45DE530085302A /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		CD8266D51B45DE530085302A /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		CD8266D61B45DE530085302A /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		CD8266D71B45DE530085302A /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		CD8266D81B45DE530085302A /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		CD8266D91B45DE530085302A /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		CD8266DA1B45DE530085302A /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		CD8266DB1B45DE530085302A /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		CD8266DC1B45DE530085302A /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		CD8266DD1B45DE530085302A /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		CD8266DE1B45DE530085302A /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		CD8266DF1B45DE530085302A /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		CD8266E01B45DE530085302A /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		CD8266E11B45DE530085302A /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		CD8266E21B45DE530085302A /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		CD8266E31B45DE530085302A /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		CD8266ED1B46BC780085302A /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		CD8266EF1B46C5570085302A /* SocialData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialData.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD82667D1B45B5080085302A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD8266921B45B5080085302A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD8266771B45B5080085302A = {
+			isa = PBXGroup;
+			children = (
+				CD8266821B45B5080085302A /* CoffeeFinder */,
+				CD8266981B45B5080085302A /* CoffeeFinderTests */,
+				CD8266811B45B5080085302A /* Products */,
+				CD8266C41B45DDDB0085302A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CD8266811B45B5080085302A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD8266801B45B5080085302A /* CoffeeFinder.app */,
+				CD8266951B45B5080085302A /* CoffeeFinderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD8266821B45B5080085302A /* CoffeeFinder */ = {
+			isa = PBXGroup;
+			children = (
+				CD8266891B45B5080085302A /* Main.storyboard */,
+				CD8266C01B45CC9D0085302A /* ViewControllers */,
+				CD8266C11B45CCA70085302A /* Requests */,
+				CD8266831B45B5080085302A /* Supporting Files */,
+			);
+			path = CoffeeFinder;
+			sourceTree = "<group>";
+		};
+		CD8266831B45B5080085302A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CD8266851B45B5080085302A /* AppDelegate.swift */,
+				CD82668E1B45B5080085302A /* LaunchScreen.xib */,
+				CD8266841B45B5080085302A /* Info.plist */,
+				CD8266AD1B45C29C0085302A /* Black-coffee-shadow.ttf */,
+				CD8266A71B45B9FB0085302A /* Images.xcassets */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CD8266981B45B5080085302A /* CoffeeFinderTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD82669B1B45B5080085302A /* CoffeeFinderTests.swift */,
+				CD8266991B45B5080085302A /* Supporting Files */,
+			);
+			path = CoffeeFinderTests;
+			sourceTree = "<group>";
+		};
+		CD8266991B45B5080085302A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CD82669A1B45B5080085302A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CD8266C01B45CC9D0085302A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD8266871B45B5080085302A /* ViewController.swift */,
+				CD8266B01B45C9940085302A /* RegisterViewController.swift */,
+				CD8266B41B45C9DB0085302A /* HomeViewController.swift */,
+				CD8266B61B45CACE0085302A /* ResultsViewController.swift */,
+				CD8266C21B45D0450085302A /* ReviewViewController.swift */,
+				CD8266BC1B45CB710085302A /* CameraViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CD8266C11B45CCA70085302A /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				CD8266C61B45DE0A0085302A /* CoffeeFinder-Bridging-Header.h */,
+				CD8266BE1B45CC940085302A /* S3ImageRequest.swift */,
+				CD8266B81B45CB380085302A /* RailsRequest.swift */,
+				CD8266ED1B46BC780085302A /* Keys.swift */,
+				CD8266EF1B46C5570085302A /* SocialData.swift */,
+			);
+			name = Requests;
+			sourceTree = "<group>";
+		};
+		CD8266C41B45DDDB0085302A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD8266D01B45DE230085302A /* AFNetworking */,
+				CD8266C51B45DDEC0085302A /* AFAmazonS3Manager */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD8266C51B45DDEC0085302A /* AFAmazonS3Manager */ = {
+			isa = PBXGroup;
+			children = (
+				CD8266C71B45DE0A0085302A /* AFAmazonS3Manager.h */,
+				CD8266C81B45DE0A0085302A /* AFAmazonS3Manager.m */,
+				CD8266C91B45DE0A0085302A /* AFAmazonS3RequestSerializer.h */,
+				CD8266CA1B45DE0A0085302A /* AFAmazonS3RequestSerializer.m */,
+				CD8266CB1B45DE0A0085302A /* AFAmazonS3ResponseSerializer.h */,
+				CD8266CC1B45DE0A0085302A /* AFAmazonS3ResponseSerializer.m */,
+			);
+			name = AFAmazonS3Manager;
+			sourceTree = "<group>";
+		};
+		CD8266D01B45DE230085302A /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				CD8266D11B45DE530085302A /* AFHTTPRequestOperation.h */,
+				CD8266D21B45DE530085302A /* AFHTTPRequestOperation.m */,
+				CD8266D31B45DE530085302A /* AFHTTPRequestOperationManager.h */,
+				CD8266D41B45DE530085302A /* AFHTTPRequestOperationManager.m */,
+				CD8266D51B45DE530085302A /* AFHTTPSessionManager.h */,
+				CD8266D61B45DE530085302A /* AFHTTPSessionManager.m */,
+				CD8266D71B45DE530085302A /* AFNetworking.h */,
+				CD8266D81B45DE530085302A /* AFNetworkReachabilityManager.h */,
+				CD8266D91B45DE530085302A /* AFNetworkReachabilityManager.m */,
+				CD8266DA1B45DE530085302A /* AFSecurityPolicy.h */,
+				CD8266DB1B45DE530085302A /* AFSecurityPolicy.m */,
+				CD8266DC1B45DE530085302A /* AFURLConnectionOperation.h */,
+				CD8266DD1B45DE530085302A /* AFURLConnectionOperation.m */,
+				CD8266DE1B45DE530085302A /* AFURLRequestSerialization.h */,
+				CD8266DF1B45DE530085302A /* AFURLRequestSerialization.m */,
+				CD8266E01B45DE530085302A /* AFURLResponseSerialization.h */,
+				CD8266E11B45DE530085302A /* AFURLResponseSerialization.m */,
+				CD8266E21B45DE530085302A /* AFURLSessionManager.h */,
+				CD8266E31B45DE530085302A /* AFURLSessionManager.m */,
+			);
+			name = AFNetworking;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD82667F1B45B5080085302A /* CoffeeFinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD82669F1B45B5080085302A /* Build configuration list for PBXNativeTarget "CoffeeFinder" */;
+			buildPhases = (
+				CD82667C1B45B5080085302A /* Sources */,
+				CD82667D1B45B5080085302A /* Frameworks */,
+				CD82667E1B45B5080085302A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoffeeFinder;
+			productName = CoffeeFinder;
+			productReference = CD8266801B45B5080085302A /* CoffeeFinder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD8266941B45B5080085302A /* CoffeeFinderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD8266A21B45B5080085302A /* Build configuration list for PBXNativeTarget "CoffeeFinderTests" */;
+			buildPhases = (
+				CD8266911B45B5080085302A /* Sources */,
+				CD8266921B45B5080085302A /* Frameworks */,
+				CD8266931B45B5080085302A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD8266971B45B5080085302A /* PBXTargetDependency */,
+			);
+			name = CoffeeFinderTests;
+			productName = CoffeeFinderTests;
+			productReference = CD8266951B45B5080085302A /* CoffeeFinderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD8266781B45B5080085302A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Whitney Lauren";
+				TargetAttributes = {
+					CD82667F1B45B5080085302A = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					CD8266941B45B5080085302A = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = CD82667F1B45B5080085302A;
+					};
+				};
+			};
+			buildConfigurationList = CD82667B1B45B5080085302A /* Build configuration list for PBXProject "CoffeeFinder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD8266771B45B5080085302A;
+			productRefGroup = CD8266811B45B5080085302A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD82667F1B45B5080085302A /* CoffeeFinder */,
+				CD8266941B45B5080085302A /* CoffeeFinderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD82667E1B45B5080085302A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD8266AE1B45C69D0085302A /* Black-coffee-shadow.ttf in Resources */,
+				CD8266A81B45B9FB0085302A /* Images.xcassets in Resources */,
+				CD82668B1B45B5080085302A /* Main.storyboard in Resources */,
+				CD8266901B45B5080085302A /* LaunchScreen.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD8266931B45B5080085302A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD8266AF1B45C69D0085302A /* Black-coffee-shadow.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD82667C1B45B5080085302A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD8266F01B46C5570085302A /* SocialData.swift in Sources */,
+				CD8266BF1B45CC940085302A /* S3ImageRequest.swift in Sources */,
+				CD8266B51B45C9DB0085302A /* HomeViewController.swift in Sources */,
+				CD8266EE1B46BC780085302A /* Keys.swift in Sources */,
+				CD8266E51B45DE530085302A /* AFHTTPRequestOperationManager.m in Sources */,
+				CD8266C31B45D0450085302A /* ReviewViewController.swift in Sources */,
+				CD8266E91B45DE530085302A /* AFURLConnectionOperation.m in Sources */,
+				CD8266CD1B45DE0A0085302A /* AFAmazonS3Manager.m in Sources */,
+				CD8266B11B45C9940085302A /* RegisterViewController.swift in Sources */,
+				CD8266EA1B45DE530085302A /* AFURLRequestSerialization.m in Sources */,
+				CD8266881B45B5080085302A /* ViewController.swift in Sources */,
+				CD8266E61B45DE530085302A /* AFHTTPSessionManager.m in Sources */,
+				CD8266E41B45DE530085302A /* AFHTTPRequestOperation.m in Sources */,
+				CD8266B71B45CACE0085302A /* ResultsViewController.swift in Sources */,
+				CD8266E81B45DE530085302A /* AFSecurityPolicy.m in Sources */,
+				CD8266CF1B45DE0A0085302A /* AFAmazonS3ResponseSerializer.m in Sources */,
+				CD8266E71B45DE530085302A /* AFNetworkReachabilityManager.m in Sources */,
+				CD8266EC1B45DE530085302A /* AFURLSessionManager.m in Sources */,
+				CD8266861B45B5080085302A /* AppDelegate.swift in Sources */,
+				CD8266BD1B45CB710085302A /* CameraViewController.swift in Sources */,
+				CD8266CE1B45DE0A0085302A /* AFAmazonS3RequestSerializer.m in Sources */,
+				CD8266EB1B45DE530085302A /* AFURLResponseSerialization.m in Sources */,
+				CD8266B91B45CB380085302A /* RailsRequest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD8266911B45B5080085302A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD82669C1B45B5080085302A /* CoffeeFinderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD8266971B45B5080085302A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD82667F1B45B5080085302A /* CoffeeFinder */;
+			targetProxy = CD8266961B45B5080085302A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CD8266891B45B5080085302A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD82668A1B45B5080085302A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CD82668E1B45B5080085302A /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD82668F1B45B5080085302A /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD82669D1B45B5080085302A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CD82669E1B45B5080085302A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD8266A01B45B5080085302A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = CoffeeFinder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CoffeeFinder-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CD8266A11B45B5080085302A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = CoffeeFinder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CoffeeFinder-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		CD8266A31B45B5080085302A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CoffeeFinderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoffeeFinder.app/CoffeeFinder";
+			};
+			name = Debug;
+		};
+		CD8266A41B45B5080085302A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CoffeeFinderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoffeeFinder.app/CoffeeFinder";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD82667B1B45B5080085302A /* Build configuration list for PBXProject "CoffeeFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD82669D1B45B5080085302A /* Debug */,
+				CD82669E1B45B5080085302A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD82669F1B45B5080085302A /* Build configuration list for PBXNativeTarget "CoffeeFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD8266A01B45B5080085302A /* Debug */,
+				CD8266A11B45B5080085302A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD8266A21B45B5080085302A /* Build configuration list for PBXNativeTarget "CoffeeFinderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD8266A31B45B5080085302A /* Debug */,
+				CD8266A41B45B5080085302A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD8266781B45B5080085302A /* Project object */;
+}
