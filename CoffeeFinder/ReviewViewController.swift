@@ -12,11 +12,12 @@ class ReviewViewController: UIViewController {
     
     
     
-    
-    
+    @IBOutlet weak var writeReview: UITextView!
     
     
     @IBAction func submitReview(sender: UIButton) {
+        
+        
     }
     
     

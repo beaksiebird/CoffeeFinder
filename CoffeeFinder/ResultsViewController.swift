@@ -115,7 +115,7 @@ class ResultsViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         let foursquareId = "NEEAYQOQJE3WHXMGFYAPORCOB34JIWSIEVKBXIE3NUDDPBYU"
         let client_secret = "M2QIQDADDASWMBXX2GCR3WQZQA3IVBBNREEWEACRYKM3SJIP"
         
-        let endpoint = apiUrl + "venues/search?client_id=\(foursquareId)&client_secret=\(client_secret)&ll=\(location.coordinate.latitude),\(location.coordinate.longitude)&v=20150101"
+        let endpoint = apiUrl + "venues/search?client_id=\(foursquareId)&client_secret=\(client_secret)&ll=\(location.coordinate.latitude),\(location.coordinate.longitude)&v=20150101&query=coffee"
         
         if let url = NSURL(string: endpoint) {
             
@@ -131,7 +131,11 @@ class ResultsViewController: UIViewController, CLLocationManagerDelegate, MKMapV
                     if let responseInfo = returnedInfo["response"] as? [String:AnyObject] {
                         
                         
-                        if let venuesInfo = responseInfo["venues"] as? [AnyObject] {
+                        if let venuesInfo = responseInfo["venues"]/*!["name"]*/ as? [AnyObject] {
+                        
+                                
+                                //println("This is venue type NAME :\(venuesInfo)")
+                                
                             
                             completion(venues: venuesInfo)
                             
