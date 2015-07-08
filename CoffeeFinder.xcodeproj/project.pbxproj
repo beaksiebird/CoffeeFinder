@@ -36,6 +36,9 @@
 		CD8266EC1B45DE530085302A /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8266E31B45DE530085302A /* AFURLSessionManager.m */; };
 		CD8266EE1B46BC780085302A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8266ED1B46BC780085302A /* Keys.swift */; };
 		CD8266F01B46C5570085302A /* SocialData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8266EF1B46C5570085302A /* SocialData.swift */; };
+		CDD4019D1B4D969B00282B36 /* VenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD4019C1B4D969B00282B36 /* VenueViewController.swift */; };
+		CDD401A41B4DAB9500282B36 /* ImagesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD401A31B4DAB9500282B36 /* ImagesCollectionView.swift */; };
+		CDD401A61B4DB05A00282B36 /* ReviewsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD401A51B4DB05A00282B36 /* ReviewsTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +98,9 @@
 		CD8266E31B45DE530085302A /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		CD8266ED1B46BC780085302A /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		CD8266EF1B46C5570085302A /* SocialData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialData.swift; sourceTree = "<group>"; };
+		CDD4019C1B4D969B00282B36 /* VenueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueViewController.swift; sourceTree = "<group>"; };
+		CDD401A31B4DAB9500282B36 /* ImagesCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesCollectionView.swift; sourceTree = "<group>"; };
+		CDD401A51B4DB05A00282B36 /* ReviewsTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewsTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				CD8266891B45B5080085302A /* Main.storyboard */,
+				CDD401A21B4DA6E500282B36 /* CollectionViews */,
 				CD8266C01B45CC9D0085302A /* ViewControllers */,
 				CD8266C11B45CCA70085302A /* Requests */,
 				CD8266831B45B5080085302A /* Supporting Files */,
@@ -183,6 +190,7 @@
 				CD8266B61B45CACE0085302A /* ResultsViewController.swift */,
 				CD8266C21B45D0450085302A /* ReviewViewController.swift */,
 				CD8266BC1B45CB710085302A /* CameraViewController.swift */,
+				CDD4019C1B4D969B00282B36 /* VenueViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -247,6 +255,15 @@
 			name = AFNetworking;
 			sourceTree = "<group>";
 		};
+		CDD401A21B4DA6E500282B36 /* CollectionViews */ = {
+			isa = PBXGroup;
+			children = (
+				CDD401A31B4DAB9500282B36 /* ImagesCollectionView.swift */,
+				CDD401A51B4DB05A00282B36 /* ReviewsTableView.swift */,
+			);
+			name = CollectionViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -291,6 +308,7 @@
 		CD8266781B45B5080085302A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Whitney Lauren";
 				TargetAttributes = {
@@ -355,6 +373,7 @@
 				CD8266EE1B46BC780085302A /* Keys.swift in Sources */,
 				CD8266E51B45DE530085302A /* AFHTTPRequestOperationManager.m in Sources */,
 				CD8266C31B45D0450085302A /* ReviewViewController.swift in Sources */,
+				CDD4019D1B4D969B00282B36 /* VenueViewController.swift in Sources */,
 				CD8266E91B45DE530085302A /* AFURLConnectionOperation.m in Sources */,
 				CD8266CD1B45DE0A0085302A /* AFAmazonS3Manager.m in Sources */,
 				CD8266B11B45C9940085302A /* RegisterViewController.swift in Sources */,
@@ -367,9 +386,11 @@
 				CD8266CF1B45DE0A0085302A /* AFAmazonS3ResponseSerializer.m in Sources */,
 				CD8266E71B45DE530085302A /* AFNetworkReachabilityManager.m in Sources */,
 				CD8266EC1B45DE530085302A /* AFURLSessionManager.m in Sources */,
+				CDD401A41B4DAB9500282B36 /* ImagesCollectionView.swift in Sources */,
 				CD8266861B45B5080085302A /* AppDelegate.swift in Sources */,
 				CD8266BD1B45CB710085302A /* CameraViewController.swift in Sources */,
 				CD8266CE1B45DE0A0085302A /* AFAmazonS3RequestSerializer.m in Sources */,
+				CDD401A61B4DB05A00282B36 /* ReviewsTableView.swift in Sources */,
 				CD8266EB1B45DE530085302A /* AFURLResponseSerialization.m in Sources */,
 				CD8266B91B45CB380085302A /* RailsRequest.swift in Sources */,
 			);

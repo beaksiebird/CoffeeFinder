@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>C96671D0-5437-4BBD-BF6C-35AEF9113B57</string>
 	<key>IDESourceControlProjectName</key>
-	<string>CoffeeFinder</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>F5BC8BDF437EE2E8C2BEEC7A135DB8222369BF55</key>
 		<string>https://github.com/whitneyhogg/CoffeeFinder.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>CoffeeFinder.xcodeproj</string>
+	<string>CoffeeFinder.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>F5BC8BDF437EE2E8C2BEEC7A135DB8222369BF55</key>

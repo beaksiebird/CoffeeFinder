@@ -39,7 +39,9 @@ class RailsRequest: NSObject {
     var password: String?
     var imageURL: String?
     var text: String?
-    var reviewid: Int!
+    var reviewid: Int?
+    var userid: String?
+    var venueid: Int?
     
     //begin repeated stuff
     func registerWithCompletion(completion: () -> Void) {
@@ -117,9 +119,11 @@ class RailsRequest: NSObject {
         var info = [
             
             "method" : "POST",
-            "endpoint" : "/users/login",
+            "endpoint" : "reviews/new",
             "parameters" : [
                 
+                "user" : userid!,
+                "venueid" : venueid!,
                 "image" : "https://coffeecollection.s3.amazonaws.com/myImage_1435934260.png",
                 "text" : text!
                 
@@ -150,8 +154,8 @@ class RailsRequest: NSObject {
         
         var info = [
             
-            "method" : "POST",
-            "endpoint" : "/users/login",
+            "method" : "DELETE",
+            "endpoint" : "review/:id",
             "parameters" : [
                 
                 "reviewid" : reviewid!,
@@ -219,8 +223,8 @@ class RailsRequest: NSObject {
         
         var info = [
             
-            "method" : "POST",
-            "endpoint" : "/users/login",
+            "method" : "DELETE",
+            "endpoint" : "user/username/delete",
             "parameters" : [
                 
                 "username" : username!,

@@ -179,9 +179,9 @@ class ResultsViewController: UIViewController, CLLocationManagerDelegate, MKMapV
     
     func showMoreInfo(sender: UIButton) {
         
-        var homeVC = storyboard?.instantiateViewControllerWithIdentifier("homeVC") as! HomeViewController
+        var venueVC = storyboard?.instantiateViewControllerWithIdentifier("venueVC") as! VenueViewController
         
-        presentViewController(homeVC, animated: false, completion: nil)
+        presentViewController(venueVC, animated: false, completion: nil)
         
         
     }
