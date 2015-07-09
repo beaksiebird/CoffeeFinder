@@ -257,8 +257,8 @@ class RailsRequest: NSObject {
         
         var info = [
             
-            "method" : "POST",
-            "endpoint" : "/users/login",
+            "method" : "PATCH",
+            "endpoint" : "users/:id",
             "parameters" : [
                 
                 "username" : username!,

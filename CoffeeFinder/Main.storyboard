@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fZI-V2-hi9">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Black-coffee-shadow.ttf">
+            <string>BlackCoffeeShadow-Bold</string>
+            <string>BlackCoffeeShadow-Bold</string>
+            <string>BlackCoffeeShadow-Bold</string>
+            <string>BlackCoffeeShadow-Bold</string>
+            <string>BlackCoffeeShadow-Bold</string>
+            <string>BlackCoffeeShadow-Bold</string>
+            <string>BlackCoffeeShadow-Bold</string>
+            <string>BlackCoffeeShadow-Bold</string>
+            <string>BlackCoffeeShadow-Bold</string>
+            <string>BlackCoffeeShadow-Bold</string>
+            <string>BlackCoffeeShadow-Bold</string>
+            <string>BlackCoffeeShadow-Bold</string>
+            <string>BlackCoffeeShadow-Bold</string>
+            <string>BlackCoffeeShadow-Bold</string>
+            <string>BlackCoffeeShadow-Bold</string>
+            <string>BlackCoffeeShadow-Bold</string>
+            <string>BlackCoffeeShadow-Bold</string>
+            <string>BlackCoffeeShadow-Bold</string>
+            <string>BlackCoffeeShadow-Bold</string>
+            <string>BlackCoffeeShadow-Bold</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="itg-gc-Qr1">
+            <objects>
+                <viewController storyboardIdentifier="searchVC" id="uv7-cB-Tz4" customClass="SearchViewController" customModule="CoffeeFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="elG-Iz-I7c"/>
+                        <viewControllerLayoutGuide type="bottom" id="zrI-5a-Oaw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sbo-jO-53Y">
+                        <rect key="frame" x="0.0" y="0.0" width="340" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="coffea_v2" translatesAutoresizingMaskIntoConstraints="NO" id="hN4-fL-8uv">
+                                <rect key="frame" x="-147" y="-57" width="640" height="1136"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NvY-OL-oVq">
+                                <rect key="frame" x="-135" y="-47" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJN-ot-MGw">
+                                <rect key="frame" x="10" y="85" width="314" height="55"/>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="40"/>
+                                <state key="normal" title="FIND COFFEE NEAR ME">
+                                    <color key="titleColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchCoffee:" destination="uv7-cB-Tz4" eventType="touchUpInside" id="3vq-lz-TFp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="REVIEWED BY OUR OWN COFFEE ADDICTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrP-Tc-hog">
+                                <rect key="frame" x="29" y="310" width="288" height="33"/>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="22"/>
+                                <color key="textColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NEED COFFEE ASAP?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZy-fl-dlD">
+                                <rect key="frame" x="26" y="44" width="288" height="33"/>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="26"/>
+                                <color key="textColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CoffeeBeans" translatesAutoresizingMaskIntoConstraints="NO" id="xcL-fs-9ha">
+                                <rect key="frame" x="46" y="148" width="249" height="149"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6v-9E-yNV">
+                                <rect key="frame" x="16" y="344" width="314" height="55"/>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="40"/>
+                                <state key="normal" title="SEARCH REVIEWED ">
+                                    <color key="titleColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchReviewed:" destination="uv7-cB-Tz4" eventType="touchUpInside" id="1M1-eY-M3C"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SXc-Nd-M54"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="340" height="600"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Zi-wg-K3H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="510" y="-275"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bnb-o0-BXp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="tGH-hq-OHG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="340" height="600"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LJc-7h-mOZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uv7-cB-Tz4" kind="relationship" relationship="rootViewController" id="CsA-nI-XGW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xk6-OW-Xgg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="84" y="-269"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="iFS-l2-Mmg">
+            <objects>
+                <viewController storyboardIdentifier="homeVC" id="4OP-Bq-Wxa" customClass="HomeViewController" customModule="CoffeeFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yv7-ZK-IdR"/>
+                        <viewControllerLayoutGuide type="bottom" id="MxF-3i-SEW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vvl-Qt-ZCK">
+                        <rect key="frame" x="0.0" y="0.0" width="340" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="coffea_v2" translatesAutoresizingMaskIntoConstraints="NO" id="5CO-gr-kTu">
+                                <rect key="frame" x="-140" y="-34" width="640" height="1136"/>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yVs-8g-gZh">
+                                <rect key="frame" x="162" y="21" width="178" height="176"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7f-3Z-HFw">
+                                <rect key="frame" x="16" y="13" width="53" height="30"/>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="23"/>
+                                <state key="normal" title="BACK">
+                                    <color key="titleColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButton:" destination="4OP-Bq-Wxa" eventType="touchUpInside" id="wb1-tx-oWr"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="djo-6h-T5c">
+                                <rect key="frame" x="-93" y="28" width="340" height="162"/>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AwX-px-bbg">
+                                <rect key="frame" x="52" y="158" width="340" height="162"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="COFFEE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRT-GQ-yAg">
+                                <rect key="frame" x="26" y="63" width="93" height="32"/>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="31"/>
+                                <color key="textColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3kS-r7-0wa">
+                                <rect key="frame" x="-93" y="158" width="340" height="162"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PRICE " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyT-2d-A0Z">
+                                <rect key="frame" x="26" y="191" width="93" height="32"/>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="30"/>
+                                <color key="textColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AMBIANCE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Xf-b7-dI0">
+                                <rect key="frame" x="167" y="191" width="111" height="32"/>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="30"/>
+                                <color key="textColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KE7-c8-ZSd">
+                                <rect key="frame" x="137" y="20" width="60" height="30"/>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="29"/>
+                                <state key="normal" title="RESET">
+                                    <color key="titleColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetChoices:" destination="4OP-Bq-Wxa" eventType="touchUpInside" id="xAc-Vi-OcR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WIFI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egQ-9h-fy4">
+                                <rect key="frame" x="189" y="63" width="93" height="32"/>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="30"/>
+                                <color key="textColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBA-Fk-wCb">
+                                <rect key="frame" x="128" y="357" width="69" height="38"/>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="30"/>
+                                <state key="normal" title="SEARCH">
+                                    <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchButton:" destination="4OP-Bq-Wxa" eventType="touchUpInside" id="poU-0r-nlT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="340" height="600"/>
+                    <connections>
+                        <outlet property="ambianceChoices" destination="AwX-px-bbg" id="MKw-Q4-hVI"/>
+                        <outlet property="coffeeChoices" destination="djo-6h-T5c" id="gkp-ec-Lli"/>
+                        <outlet property="priceChoices" destination="3kS-r7-0wa" id="ibJ-Op-Xoe"/>
+                        <outlet property="wifiChoices" destination="yVs-8g-gZh" id="15J-1R-nBx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ddC-td-OAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="938" y="51"/>
+        </scene>
+        <!--Results View Controller-->
+        <scene sceneID="mgT-q7-Q4k">
+            <objects>
+                <viewController storyboardIdentifier="resultsVC" id="IcA-0Q-eDH" customClass="ResultsViewController" customModule="CoffeeFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cGF-FU-4wc"/>
+                        <viewControllerLayoutGuide type="bottom" id="qE6-sy-bh5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hdt-Zr-yK6">
+                        <rect key="frame" x="0.0" y="0.0" width="340" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Hv-fx-BGQ">
+                                <rect key="frame" x="16" y="12" width="56" height="30"/>
+                                <color key="backgroundColor" red="0.73804577309999997" green="0.86362239689999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="JK7-TH-PYn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="25"/>
+                                <state key="normal" title="BACK">
+                                    <color key="titleColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButton:" destination="IcA-0Q-eDH" eventType="touchUpInside" id="Ffc-VM-BKc"/>
+                                </connections>
+                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3qG-3f-jYg">
+                                <rect key="frame" x="0.0" y="12" width="340" height="600"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1Hv-fx-BGQ" firstAttribute="top" secondItem="hdt-Zr-yK6" secondAttribute="top" constant="12" id="q0p-UM-iQK"/>
+                            <constraint firstItem="1Hv-fx-BGQ" firstAttribute="leading" secondItem="hdt-Zr-yK6" secondAttribute="leading" constant="16" id="vci-WT-whn"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="340" height="600"/>
+                    <connections>
+                        <outlet property="myMapView" destination="3qG-3f-jYg" id="EoE-BW-pMA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Imu-R8-TPr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="998" y="-606"/>
+        </scene>
+        <!--Venue View Controller-->
+        <scene sceneID="kSU-2U-83b">
+            <objects>
+                <viewController storyboardIdentifier="venueVC" id="fZI-V2-hi9" customClass="VenueViewController" customModule="CoffeeFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B90-0u-Nvf"/>
+                        <viewControllerLayoutGuide type="bottom" id="uk4-Ur-b2I"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dj2-JA-26p">
+                        <rect key="frame" x="0.0" y="0.0" width="340" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="coffea_v2" translatesAutoresizingMaskIntoConstraints="NO" id="D87-RA-IEw">
+                                <rect key="frame" x="-144" y="-41" width="640" height="1136"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHb-WW-Zel">
+                                <rect key="frame" x="-25" y="153" width="156" height="35"/>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="25"/>
+                                <color key="textColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ADDRESS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZx-DF-7ES">
+                                <rect key="frame" x="184" y="153" width="156" height="35"/>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="25"/>
+                                <color key="textColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HOURS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktd-3q-v2k">
+                                <rect key="frame" x="98" y="211" width="156" height="35"/>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="25"/>
+                                <color key="textColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXg-iI-IPl">
+                                <rect key="frame" x="10" y="540" width="77" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="G3u-nh-J7D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="31"/>
+                                <state key="normal" title="RESULTS">
+                                    <color key="titleColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resultsButton:" destination="fZI-V2-hi9" eventType="touchUpInside" id="PNL-Ct-Rit"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojf-Eg-EYg">
+                                <rect key="frame" x="251" y="303" width="126" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDw-mK-KLh">
+                                <rect key="frame" x="16" y="184" width="126" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PD5-a6-V5D">
+                                <rect key="frame" x="113" y="254" width="126" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nf9-b6-SXE">
+                                <rect key="frame" x="265" y="540" width="59" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="duz-Xw-ltf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="25"/>
+                                <state key="normal" title="CREATE">
+                                    <color key="titleColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="createReview:" destination="fZI-V2-hi9" eventType="touchUpInside" id="Bn2-Y1-rly"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7YX-L0-0MW">
+                                <rect key="frame" x="43" y="368" width="248" height="38"/>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="34"/>
+                                <state key="normal" title="READ REVIEWS">
+                                    <color key="titleColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="reviewButton:" destination="fZI-V2-hi9" eventType="touchUpInside" id="Lay-yL-uPF"/>
+                                    <segue destination="pjR-Mn-Pot" kind="presentation" id="gsz-Zo-OyL"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YyY-Bv-8dd" customClass="ImagesCollectionView" customModule="CoffeeFinder" customModuleProvider="target">
+                                <rect key="frame" x="165" y="0.0" width="175" height="143"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="143" id="Bof-mN-LsB"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="di4-iU-MVC">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="3mW-Oh-7Jb">
+                                    <rect key="frame" x="0.0" y="0.0" width="175" height="143"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <cells/>
+                            </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lLm-jg-g2A" customClass="ImagesCollectionView" customModule="CoffeeFinder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="165" height="143"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="143" id="0tG-zl-hb4"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="p2x-uO-r6n">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="mxA-FH-dZ9">
+                                    <rect key="frame" x="0.0" y="0.0" width="165" height="143"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <cells/>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltz-6u-1lw">
+                                <rect key="frame" x="123" y="156" width="72" height="30"/>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="25"/>
+                                <state key="normal" title="REPORT">
+                                    <color key="titleColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="YyY-Bv-8dd" secondAttribute="trailing" id="1mX-gI-9zg"/>
+                            <constraint firstItem="YyY-Bv-8dd" firstAttribute="top" secondItem="Dj2-JA-26p" secondAttribute="top" id="1xG-rQ-4Zv"/>
+                            <constraint firstItem="YyY-Bv-8dd" firstAttribute="leading" secondItem="Dj2-JA-26p" secondAttribute="leading" id="5KI-ci-ilt"/>
+                            <constraint firstItem="bXg-iI-IPl" firstAttribute="leading" secondItem="Dj2-JA-26p" secondAttribute="leading" constant="10" id="AyU-rH-044"/>
+                            <constraint firstItem="uk4-Ur-b2I" firstAttribute="top" secondItem="bXg-iI-IPl" secondAttribute="bottom" id="dbE-hc-aWA"/>
+                            <constraint firstAttribute="trailing" secondItem="nf9-b6-SXE" secondAttribute="trailing" constant="16" id="eR5-w7-FGh"/>
+                            <constraint firstItem="uk4-Ur-b2I" firstAttribute="top" secondItem="nf9-b6-SXE" secondAttribute="bottom" constant="8" id="nhc-TR-u5U"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="340" height="600"/>
+                    <connections>
+                        <outlet property="addressInfo" destination="hDw-mK-KLh" id="AQc-yi-fCW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9EI-UL-dEY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1366" y="-253"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="GbJ-P4-5e8">
+            <objects>
+                <tableViewController id="oZd-vY-YvR" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="vk4-m0-3ed" customClass="ImagesTableView" customModule="CoffeeFinder" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="340" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="402-TQ-d8f">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="402-TQ-d8f" id="bfK-Du-6jc">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oZd-vY-YvR" id="P0W-ju-LKL"/>
+                            <outlet property="delegate" destination="oZd-vY-YvR" id="bXZ-PM-7YL"/>
+                        </connections>
+                    </tableView>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="340" height="600"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Nb-OT-Uxv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1790" y="12"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="xiI-L6-Zro">
+            <objects>
+                <tableViewController id="pjR-Mn-Pot" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="com-04-bfQ" customClass="ReviewsTableView" customModule="CoffeeFinder" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="340" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WoZ-wh-bMZ">
+                            <rect key="frame" x="-23" y="-15" width="340" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="25"/>
+                            <state key="normal" title="REPORT">
+                                <color key="titleColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="CC8-mm-brb">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CC8-mm-brb" id="fLE-FH-v4O">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pjR-Mn-Pot" id="xHA-iL-ena"/>
+                            <outlet property="delegate" destination="pjR-Mn-Pot" id="8YU-rW-Ksm"/>
+                        </connections>
+                    </tableView>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="340" height="600"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tuk-ot-9VQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1790" y="-688"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CoffeeBeans" width="505" height="300"/>
+        <image name="coffea_v2" width="640" height="1136"/>
+    </resources>
+</document>

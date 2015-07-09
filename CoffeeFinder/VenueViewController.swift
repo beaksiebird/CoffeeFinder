@@ -11,6 +11,16 @@ import UIKit
 class VenueViewController: UIViewController {
     
     
+    
+    @IBAction func createReview(sender: UIButton) {
+        
+        var storyboard = UIStoryboard(name: "Review", bundle: nil)
+        
+        var createNVC = storyboard.instantiateInitialViewController() as! UINavigationController
+        
+        self.presentViewController(createNVC, animated: false, completion: nil)
+    }
+    
     @IBAction func reviewButton(sender: UIButton) {
         
         var reviewVC = self.storyboard?.instantiateViewControllerWithIdentifier("reviewVC")
@@ -35,9 +45,9 @@ class VenueViewController: UIViewController {
     
     
     @IBOutlet weak var venueImage: UIImageView!
+    @IBOutlet weak var nameInfo: UILabel!
     @IBOutlet weak var addressInfo: UILabel!
-    @IBOutlet weak var checkinsInfo: UILabel!
-    @IBOutlet weak var herenowInfo: UILabel!
+    @IBOutlet weak var hoursInfo: UILabel!
     
     
     

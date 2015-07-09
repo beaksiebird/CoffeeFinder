@@ -11,6 +11,9 @@ import UIKit
 class ReviewViewController: UIViewController {
     
     
+    @IBOutlet weak var userImages: UIImageView!
+    
+    
     
     @IBOutlet weak var writeReview: UITextView!
     
