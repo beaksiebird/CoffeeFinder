@@ -117,6 +117,8 @@ class ResultsViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         
         let endpoint = apiUrl + "venues/search?client_id=\(foursquareId)&client_secret=\(client_secret)&ll=\(location.coordinate.latitude),\(location.coordinate.longitude)&v=20150101&query=coffee"
         
+        println(endpoint)
+        
         if let url = NSURL(string: endpoint) {
             
             let request = NSURLRequest(URL: url)
@@ -180,6 +182,9 @@ class ResultsViewController: UIViewController, CLLocationManagerDelegate, MKMapV
     func showMoreInfo(sender: UIButton) {
         
         var venueVC = storyboard?.instantiateViewControllerWithIdentifier("venueVC") as! VenueViewController
+        
+        // send venueInfo to venueVC
+        venueVC.venueInfo = allVenues[sender.tag]
         
         presentViewController(venueVC, animated: false, completion: nil)
         

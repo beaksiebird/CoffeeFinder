@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import CoreLocation
 
 class VenueViewController: UIViewController {
     
-    
+    var venueInfo: [String:AnyObject]?
     
     @IBAction func createReview(sender: UIButton) {
         
@@ -41,20 +42,27 @@ class VenueViewController: UIViewController {
     }
     
     
+    @IBOutlet weak var flagImage: UIButton!
+    
+    
     
     
     
     @IBOutlet weak var venueImage: UIImageView!
     @IBOutlet weak var nameInfo: UILabel!
     @IBOutlet weak var addressInfo: UILabel!
-    @IBOutlet weak var hoursInfo: UILabel!
-    
+        
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-            }
+        nameInfo.text = venueInfo?["name"] as? String
+        addressInfo.text = venueInfo?["address"] as? String
+        
+        
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

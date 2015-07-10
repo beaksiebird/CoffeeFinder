@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fZI-V2-hi9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uv7-cB-Tz4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Black-coffee-shadow.ttf">
-            <string>BlackCoffeeShadow-Bold</string>
             <string>BlackCoffeeShadow-Bold</string>
             <string>BlackCoffeeShadow-Bold</string>
             <string>BlackCoffeeShadow-Bold</string>
@@ -58,6 +57,7 @@
                                 </state>
                                 <connections>
                                     <action selector="searchCoffee:" destination="uv7-cB-Tz4" eventType="touchUpInside" id="3vq-lz-TFp"/>
+                                    <segue destination="IcA-0Q-eDH" kind="presentation" id="2ee-vg-KIA"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="REVIEWED BY OUR OWN COFFEE ADDICTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrP-Tc-hog">
@@ -289,12 +289,6 @@
                                 <color key="textColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HOURS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktd-3q-v2k">
-                                <rect key="frame" x="98" y="211" width="156" height="35"/>
-                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="25"/>
-                                <color key="textColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXg-iI-IPl">
                                 <rect key="frame" x="10" y="540" width="77" height="60"/>
                                 <constraints>
@@ -310,19 +304,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojf-Eg-EYg">
-                                <rect key="frame" x="251" y="303" width="126" height="44"/>
+                                <rect key="frame" x="223" y="190" width="150" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDw-mK-KLh">
-                                <rect key="frame" x="16" y="184" width="126" height="44"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PD5-a6-V5D">
-                                <rect key="frame" x="113" y="254" width="126" height="44"/>
+                                <rect key="frame" x="10" y="190" width="126" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -350,11 +338,19 @@
                                 </state>
                                 <connections>
                                     <action selector="reviewButton:" destination="fZI-V2-hi9" eventType="touchUpInside" id="Lay-yL-uPF"/>
-                                    <segue destination="pjR-Mn-Pot" kind="presentation" id="gsz-Zo-OyL"/>
+                                    <segue destination="pjR-Mn-Pot" kind="presentation" id="ORg-rw-SE9"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltz-6u-1lw">
+                                <rect key="frame" x="122" y="156" width="72" height="30"/>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="25"/>
+                                <state key="normal" title="REPORT">
+                                    <color key="titleColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YyY-Bv-8dd" customClass="ImagesCollectionView" customModule="CoffeeFinder" customModuleProvider="target">
-                                <rect key="frame" x="165" y="0.0" width="175" height="143"/>
+                                <rect key="frame" x="0.0" y="0.0" width="340" height="148"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="143" id="Bof-mN-LsB"/>
                                 </constraints>
@@ -370,31 +366,6 @@
                                 </imageView>
                                 <cells/>
                             </collectionView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lLm-jg-g2A" customClass="ImagesCollectionView" customModule="CoffeeFinder" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="165" height="143"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="143" id="0tG-zl-hb4"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="p2x-uO-r6n">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="mxA-FH-dZ9">
-                                    <rect key="frame" x="0.0" y="0.0" width="165" height="143"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                </imageView>
-                                <cells/>
-                            </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltz-6u-1lw">
-                                <rect key="frame" x="123" y="156" width="72" height="30"/>
-                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="25"/>
-                                <state key="normal" title="REPORT">
-                                    <color key="titleColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -410,7 +381,9 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="340" height="600"/>
                     <connections>
-                        <outlet property="addressInfo" destination="hDw-mK-KLh" id="AQc-yi-fCW"/>
+                        <outlet property="addressInfo" destination="ojf-Eg-EYg" id="5Wg-OY-twx"/>
+                        <outlet property="flagImage" destination="ltz-6u-1lw" id="cMM-kT-HW8"/>
+                        <outlet property="nameInfo" destination="hDw-mK-KLh" id="hux-I1-JAm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9EI-UL-dEY" userLabel="First Responder" sceneMemberID="firstResponder"/>

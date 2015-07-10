@@ -16,6 +16,7 @@
             <string>BlackCoffeeShadow-Bold</string>
             <string>BlackCoffeeShadow-Bold</string>
             <string>BlackCoffeeShadow-Bold</string>
+            <string>BlackCoffeeShadow-Bold</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -337,7 +338,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIk-sd-BZd">
-                                <rect key="frame" x="10" y="369" width="128" height="30"/>
+                                <rect key="frame" x="-8" y="369" width="128" height="30"/>
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="36"/>
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -348,7 +349,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ve-i5-eHp">
-                                <rect key="frame" x="196" y="369" width="128" height="30"/>
+                                <rect key="frame" x="212" y="369" width="128" height="30"/>
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="36"/>
                                 <state key="normal" title="TAKE A PIC">
                                     <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -357,6 +358,14 @@
                                 <connections>
                                     <action selector="takePic:" destination="asp-vh-gdK" eventType="touchUpInside" id="0oK-S4-usn"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKQ-tf-25R">
+                                <rect key="frame" x="113" y="364" width="84" height="39"/>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="36"/>
+                                <state key="normal" title="SAVE">
+                                    <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

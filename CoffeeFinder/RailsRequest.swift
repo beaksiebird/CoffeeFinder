@@ -149,6 +149,41 @@ class RailsRequest: NSObject {
     }
     
     
+    func flagReviewWithCompletion(completion: () -> Void) {
+        
+        
+        var info = [
+            
+            "method" : "POST",
+            "endpoint" : "/users/login",
+            "parameters" : [
+                
+                "reviewid" : reviewid!,
+                
+                
+            ]
+            ] as [String:AnyObject]
+        
+        requestWithInfo(info, andCompletion: { (responseInfo) -> Void in
+            
+            println(responseInfo)
+            
+            if let accessToken = responseInfo?["access_token"] as? String {
+                
+                self.token = accessToken
+                
+                completion()
+                
+            }
+            
+        })
+        
+        completion()
+        
+    }
+    
+    
+    
     func deleteReviewWithCompletion(completion: () -> Void) {
         
         
@@ -182,42 +217,7 @@ class RailsRequest: NSObject {
         
     }
     
-    //figure out parameters
-    func flagReviewWithCompletion(completion: () -> Void) {
-        
-        
-        var info = [
-            
-            "method" : "POST",
-            "endpoint" : "/users/login",
-            "parameters" : [
-                
-                "reviewid" : reviewid!,
-               
-                
-            ]
-            ] as [String:AnyObject]
-        
-        requestWithInfo(info, andCompletion: { (responseInfo) -> Void in
-            
-            println(responseInfo)
-            
-            if let accessToken = responseInfo?["access_token"] as? String {
-                
-                self.token = accessToken
-                
-                completion()
-                
-            }
-            
-        })
-        
-        completion()
-        
-    }
-    
-    
-    //figure out parameters
+
     func deleteUserWithCompletion(completion: () -> Void) {
         
         
