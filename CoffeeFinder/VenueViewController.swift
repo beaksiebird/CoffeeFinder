@@ -9,25 +9,26 @@
 import UIKit
 import CoreLocation
 
-class VenueViewController: UIViewController {
+class VenueViewController: UIViewController, UIImagePickerControllerDelegate {
     
     var venueInfo: [String:AnyObject]?
+    
+    
+    
     
     @IBAction func createReview(sender: UIButton) {
         
         var storyboard = UIStoryboard(name: "Review", bundle: nil)
         
-        var createNVC = storyboard.instantiateInitialViewController() as! UINavigationController
         
-        self.presentViewController(createNVC, animated: false, completion: nil)
+        var reviewVC = storyboard.instantiateInitialViewController() as! UINavigationController
+        
+        self.presentViewController(reviewVC, animated: true, completion: nil)
+        
     }
     
     @IBAction func reviewButton(sender: UIButton) {
         
-        var reviewVC = self.storyboard?.instantiateViewControllerWithIdentifier("reviewVC")
-            as! ReviewViewController
-        
-        self.presentViewController(reviewVC, animated: false, completion: nil)
         
     }
     
@@ -45,10 +46,18 @@ class VenueViewController: UIViewController {
     @IBOutlet weak var flagImage: UIButton!
     
     
+        
     
     
+    @IBOutlet weak var venueImage:
+        UIImageView!
     
-    @IBOutlet weak var venueImage: UIImageView!
+    
+    let imagePicker = UIImagePickerController()
+    
+  
+    
+    
     @IBOutlet weak var nameInfo: UILabel!
     @IBOutlet weak var addressInfo: UILabel!
         
@@ -56,9 +65,12 @@ class VenueViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+ 
+    
         nameInfo.text = venueInfo?["name"] as? String
+        
         addressInfo.text = venueInfo?["address"] as? String
+        
         
         
         

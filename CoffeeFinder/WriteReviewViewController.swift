@@ -15,13 +15,28 @@ class WriteReviewViewController: UIViewController {
     
     
     
-    @IBAction func submitButton(sender: UIButton) {
+    @IBAction func nextButton(sender: UIButton) {
+        
+        RailsRequest.session().content = writeReview.text
+        
+        RailsRequest.session().createReviewWithCompletion { () -> Void in
+            
+            var submitVC = self.storyboard?.instantiateViewControllerWithIdentifier("submitVC")
+            as! SubmitViewController
+            
+            submitVC.review = self.writeReview.text
+            
+            self.navigationController?.pushViewController(submitVC, animated: true)
+            
+            
+            
+        }
         
     }
     
     @IBAction func takePic(sender: UIButton) {
         var cameraVC = self.storyboard?.instantiateViewControllerWithIdentifier("cameraVC")
-            as! ResultsViewController
+            as! CameraViewController
         
         self.presentViewController(cameraVC, animated: false, completion: nil)
         

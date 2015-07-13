@@ -10,17 +10,34 @@ import UIKit
 
 class RatingsViewController: UIViewController {
     
+    @IBAction func prettyStar(sender: PrettyStar) {
+        
+        sender.isStarSelected = !sender.isStarSelected
+    
+        
+        
+    }
+    
+
+    
+    @IBOutlet weak var prettystarOutlet: PrettyStar!
+    
+    
+    
     @IBAction func nextButton(sender: UIButton) {
         
         var writereviewVC = self.storyboard?.instantiateViewControllerWithIdentifier("writereviewVC")
             as! WriteReviewViewController
         
-        self.presentViewController(writereviewVC, animated: false, completion: nil)
+        self.navigationController?.pushViewController(writereviewVC, animated: false)
+        
     }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         // Do any additional setup after loading the view.
     }

@@ -8,14 +8,55 @@
 
 import UIKit
 
-class SubmitViewController: UIViewController {
+class SubmitViewController: UIViewController, UIImagePickerControllerDelegate  {
+    
+    
+    
+    @IBOutlet weak var userReview: UITextView!
+    @IBOutlet weak var userImage: UIImageView!
+    
+    var image: UIImage!
+    var review: String!
+    
+    
+    @IBAction func editReview(sender: UIButton) {
+        
+        
+        var writereviewVC = self.storyboard?.instantiateViewControllerWithIdentifier("writereviewVC")
+            as! WriteReviewViewController
+        
+        self.navigationController?.pushViewController(writereviewVC, animated: true)
+        
+        
+    }
+    
+    
+    
+    @IBAction func editPic(sender: UIButton) {
+        
+        
+        var cameraVC = self.storyboard?.instantiateViewControllerWithIdentifier("cameraVC")
+            as! CameraViewController
+        
+        self.navigationController?.pushViewController(cameraVC, animated: true)
+        
+        
+    }
+    
     
     
     @IBAction func submitReview(sender: UIButton) {
+        
+        
+        
+        
+        
         var venueVC = self.storyboard?.instantiateViewControllerWithIdentifier("venueVC")
             as! ResultsViewController
         
         self.presentViewController(venueVC, animated: false, completion: nil)
+        
+        
         
     }
     
@@ -24,6 +65,9 @@ class SubmitViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        userImage.image = image
+        userReview.text = review
+        
         // Do any additional setup after loading the view.
     }
 

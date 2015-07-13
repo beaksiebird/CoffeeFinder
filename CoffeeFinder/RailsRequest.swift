@@ -38,10 +38,10 @@ class RailsRequest: NSObject {
     var email: String?
     var password: String?
     var imageURL: String?
-    var text: String?
+    var content: String?
     var reviewid: Int?
     var userid: String?
-    var venueid: Int?
+    var establishmentid: Int?
     
     //begin repeated stuff
     func registerWithCompletion(completion: () -> Void) {
@@ -99,17 +99,19 @@ class RailsRequest: NSObject {
             
             println(responseInfo)
             
-            if let accessToken = responseInfo?["access_token"] as? String {
+            if let user = responseInfo?["user"] as? [String:AnyObject] {
                 
-                self.token = accessToken
-                
-                completion()
+                if let accessToken = user["access_token"] as? String {
+                    
+                    self.token = accessToken
+                    
+                    completion()
+                    
+                }
                 
             }
             
         })
-        
-        completion()
         
     }
 
@@ -122,10 +124,16 @@ class RailsRequest: NSObject {
             "endpoint" : "reviews/new",
             "parameters" : [
                 
-                "user" : userid!,
-                "venueid" : venueid!,
+//                "user" : userid!,
+//                "venueid" : venueid!,
+//                "image" : "https://coffeecollection.s3.amazonaws.com/myImage_1435934260.png",
+//                "text" : text!
+
+                
+                "user" : "1",
+                "establishment" : "23454324",
                 "image" : "https://coffeecollection.s3.amazonaws.com/myImage_1435934260.png",
-                "text" : text!
+                "content" : "boom"
                 
             ]
             ] as [String:AnyObject]
@@ -134,17 +142,9 @@ class RailsRequest: NSObject {
             
             println(responseInfo)
             
-            if let accessToken = responseInfo?["access_token"] as? String {
-                
-                self.token = accessToken
-                
-                completion()
-                
-            }
+            completion()
             
         })
-        
-        completion()
         
     }
     

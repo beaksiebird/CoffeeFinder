@@ -10,8 +10,9 @@ import UIKit
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIScrollViewDelegate {
     
-    //for zoom function?
-    @IBOutlet var scrollView : UIScrollView!
+    var image : UIImage!
+    
+    var hasTaken = false
     
     let screenWidth = UIScreen.mainScreen().bounds.size.width
     let screenHeight = UIScreen.mainScreen().bounds.size.height
@@ -23,13 +24,20 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         imagePicker.sourceType = .Camera
         imagePicker.delegate = self
         
+        if hasTaken { return }
+        
         self.presentViewController(imagePicker, animated: false, completion: nil)
     }
     
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+     
+        hasTaken = true
         
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+        
+        picker.dismissViewControllerAnimated(true, completion: nil)
+
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage { 
             
             let size = CGSize(width: image.size.width / 2, height: image.size.height / 2)
             
@@ -38,11 +46,20 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
             S3ImageRequest().saveImageToS3(resizedImage)
             
             UIImageWriteToSavedPhotosAlbum (image, nil, nil , nil)
+            
+            
+            let submitVC = self.storyboard?.instantiateViewControllerWithIdentifier("submitVC") as! SubmitViewController
+            
+            
+          
+             submitVC.image = self.image
+            
+            self.navigationController?.pushViewController(submitVC, animated: true)
+            
+           
 
         }
         
-        
-        picker.dismissViewControllerAnimated(true, completion: nil)
         
     }
     

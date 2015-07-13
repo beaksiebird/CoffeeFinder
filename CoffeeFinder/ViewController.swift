@@ -36,10 +36,7 @@ class ViewController: UIViewController {
         RailsRequest.session().loginWithCompletion { () -> Void in
             
             
-            var homeVC = self.storyboard?.instantiateViewControllerWithIdentifier("homeVC")
-                as! HomeViewController
-            
-            self.navigationController?.pushViewController(homeVC, animated: true)
+         self.dismissViewControllerAnimated(true, completion: nil)
             
         
         }

@@ -14,10 +14,19 @@ import UIKit
     @IBInspectable var strokeColor : UIColor = UIColor.blueColor()
     @IBInspectable var strokeWidth : CGFloat = 1
     
+    var isStarSelected: Bool = false {
+        
+        didSet {
+            
+            setNeedsDisplay()
+            
+        }
+        
+    }
   
         
-        let star = UIBezierPath()
-        
+    let star = UIBezierPath()
+    
     override func drawRect(rect: CGRect) {
         
         var context = UIGraphicsGetCurrentContext()
@@ -79,6 +88,12 @@ import UIKit
         CGContextAddPath(context, star.CGPath)
         CGContextStrokePath(context)
         
+        if isStarSelected {
+            
+            CGContextAddPath(context, star.CGPath)
+            CGContextFillPath(context)
+            
+        }
         
         
     }

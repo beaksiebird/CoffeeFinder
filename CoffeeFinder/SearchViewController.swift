@@ -12,7 +12,14 @@ class SearchViewController: UIViewController {
     
     
     @IBAction func searchReviewed(sender: UIButton) {
+        
+        var homeVC = self.storyboard?.instantiateViewControllerWithIdentifier("homeVC")
+            as! HomeViewController
+        
+        self.presentViewController(homeVC, animated: false, completion: nil)
+        
     }
+    
     
     
     @IBAction func searchCoffee(sender: UIButton) {
@@ -25,6 +32,24 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        if RailsRequest.session().token == nil {
+            
+            let loginSB = UIStoryboard(name: "Login", bundle: nil)
+            
+            let loginVC = loginSB.instantiateInitialViewController() as! ViewController
+            
+            presentViewController(loginVC, animated: false, completion: nil)
+
+            
+        }
+        
+        
+        // present loginVC
+        
     }
 
     override func didReceiveMemoryWarning() {

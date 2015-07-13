@@ -183,7 +183,6 @@ class ResultsViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         
         var venueVC = storyboard?.instantiateViewControllerWithIdentifier("venueVC") as! VenueViewController
         
-        // send venueInfo to venueVC
         venueVC.venueInfo = allVenues[sender.tag]
         
         presentViewController(venueVC, animated: false, completion: nil)

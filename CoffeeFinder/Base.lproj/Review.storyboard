@@ -17,6 +17,8 @@
             <string>BlackCoffeeShadow-Bold</string>
             <string>BlackCoffeeShadow-Bold</string>
             <string>BlackCoffeeShadow-Bold</string>
+            <string>BlackCoffeeShadow-Bold</string>
+            <string>BlackCoffeeShadow-Bold</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -88,6 +90,9 @@
                                         <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="prettyStar:" destination="XKA-ks-VRO" eventType="touchUpInside" id="OZ5-51-xlz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoW-EJ-LIW">
                                 <rect key="frame" x="212" y="409" width="128" height="30"/>
@@ -117,9 +122,12 @@
                                         <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="prettyStar:" destination="XKA-ks-VRO" eventType="touchUpInside" id="lPs-xn-YUF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uks-Qg-9y3" customClass="PrettyStar" customModule="CoffeeFinder" customModuleProvider="target">
-                                <rect key="frame" x="250" y="27" width="128" height="129"/>
+                                <rect key="frame" x="263" y="27" width="128" height="130"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -135,9 +143,12 @@
                                         <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="prettyStar:" destination="XKA-ks-VRO" eventType="touchUpInside" id="oBF-zi-E8v"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7A1-n3-Ftp" customClass="PrettyStar" customModule="CoffeeFinder" customModuleProvider="target">
-                                <rect key="frame" x="87" y="177" width="128" height="129"/>
+                                <rect key="frame" x="94" y="182" width="128" height="129"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -153,9 +164,12 @@
                                         <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="prettyStar:" destination="XKA-ks-VRO" eventType="touchUpInside" id="CLz-2Z-9Hw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mei-2U-MIZ" customClass="PrettyStar" customModule="CoffeeFinder" customModuleProvider="target">
-                                <rect key="frame" x="250" y="102" width="128" height="129"/>
+                                <rect key="frame" x="258" y="109" width="128" height="129"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -171,6 +185,9 @@
                                         <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="prettyStar:" destination="XKA-ks-VRO" eventType="touchUpInside" id="5E4-4c-u3C"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqS-oM-wZ7" customClass="PrettyStar" customModule="CoffeeFinder" customModuleProvider="target">
                                 <rect key="frame" x="169" y="182" width="128" height="129"/>
@@ -189,9 +206,12 @@
                                         <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="prettyStar:" destination="XKA-ks-VRO" eventType="touchUpInside" id="ceD-WE-PiN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ss2-89-3qI" customClass="PrettyStar" customModule="CoffeeFinder" customModuleProvider="target">
-                                <rect key="frame" x="169" y="253" width="128" height="129"/>
+                                <rect key="frame" x="169" y="254" width="128" height="129"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -207,6 +227,9 @@
                                         <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="prettyStar:" destination="XKA-ks-VRO" eventType="touchUpInside" id="fc9-bP-plW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pN2-0M-E7G" customClass="PrettyStar" customModule="CoffeeFinder" customModuleProvider="target">
                                 <rect key="frame" x="87" y="254" width="128" height="129"/>
@@ -225,6 +248,9 @@
                                         <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="prettyStar:" destination="XKA-ks-VRO" eventType="touchUpInside" id="7nO-FZ-JdQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCo-YV-Z5O" customClass="PrettyStar" customModule="CoffeeFinder" customModuleProvider="target">
                                 <rect key="frame" x="250" y="177" width="128" height="129"/>
@@ -243,6 +269,9 @@
                                         <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="prettyStar:" destination="XKA-ks-VRO" eventType="touchUpInside" id="QvV-B6-dwL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7F-f9-NIg" customClass="PrettyStar" customModule="CoffeeFinder" customModuleProvider="target">
                                 <rect key="frame" x="250" y="253" width="128" height="130"/>
@@ -261,9 +290,33 @@
                                         <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="prettyStar:" destination="XKA-ks-VRO" eventType="touchUpInside" id="9LS-Yw-KGf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xn2-Zy-ckG" customClass="PrettyStar" customModule="CoffeeFinder" customModuleProvider="target">
+                                <rect key="frame" x="87" y="28" width="128" height="129"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                        <color key="value" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="prettyStar:" destination="XKA-ks-VRO" eventType="touchUpInside" id="G2B-6a-xsJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Xf-ph-Z4t" customClass="PrettyStar" customModule="CoffeeFinder" customModuleProvider="target">
-                                <rect key="frame" x="169" y="109" width="128" height="129"/>
+                                <rect key="frame" x="174" y="109" width="128" height="129"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -279,24 +332,9 @@
                                         <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8L-3I-N2u" customClass="PrettyStar" customModule="CoffeeFinder" customModuleProvider="target">
-                                <rect key="frame" x="87" y="27" width="128" height="129"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
-                                        <color key="value" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
-                                        <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="prettyStar:" destination="XKA-ks-VRO" eventType="touchUpInside" id="Jqj-Yv-toe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -304,6 +342,9 @@
                     <navigationItem key="navigationItem" id="vpp-8D-AFC"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="340" height="600"/>
+                    <connections>
+                        <outlet property="prettystarOutlet" destination="xn2-Zy-ckG" id="qxR-TY-o9x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s9H-F1-o4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -325,7 +366,7 @@
                                 <rect key="frame" x="-145" y="-54" width="640" height="1136"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q3c-9i-p5g">
-                                <rect key="frame" x="26" y="94" width="298" height="258"/>
+                                <rect key="frame" x="26" y="98" width="298" height="258"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -345,7 +386,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="submitButton:" destination="asp-vh-gdK" eventType="touchUpInside" id="1QR-Ag-J9d"/>
+                                    <action selector="nextButton:" destination="asp-vh-gdK" eventType="touchUpInside" id="6RM-8J-Xn6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ve-i5-eHp">
@@ -358,14 +399,6 @@
                                 <connections>
                                     <action selector="takePic:" destination="asp-vh-gdK" eventType="touchUpInside" id="0oK-S4-usn"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKQ-tf-25R">
-                                <rect key="frame" x="113" y="364" width="84" height="39"/>
-                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="36"/>
-                                <state key="normal" title="SAVE">
-                                    <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -399,18 +432,62 @@
                                     <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="submitReview:" destination="fh7-7P-vsT" eventType="touchUpInside" id="Ssc-gH-eaE"/>
-                                </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="coffea_v2" translatesAutoresizingMaskIntoConstraints="NO" id="IiF-UO-XGb">
                                 <rect key="frame" x="-144" y="-55" width="640" height="1136"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sFT-tV-MrK">
+                                <rect key="frame" x="15" y="9" width="241" height="179"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DsA-U1-iiI">
+                                <rect key="frame" x="16" y="381" width="240" height="45"/>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="29"/>
+                                <state key="normal" title="SUBMIT REVIEW">
+                                    <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitReview:" destination="fh7-7P-vsT" eventType="touchUpInside" id="u69-VV-HTR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IS3-hi-dGK">
+                                <rect key="frame" x="264" y="271" width="60" height="43"/>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="19"/>
+                                <state key="normal" title="EDIT TEXT">
+                                    <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="editReview:" destination="fh7-7P-vsT" eventType="touchUpInside" id="er4-Ly-aYM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8Q-oJ-bk6">
+                                <rect key="frame" x="265" y="77" width="49" height="33"/>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="19"/>
+                                <state key="normal" title="EDIT PIC">
+                                    <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="editPic:" destination="fh7-7P-vsT" eventType="touchUpInside" id="xvk-Qr-VCq"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Md5-Fe-jUn">
+                                <rect key="frame" x="16" y="213" width="240" height="160"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="340" height="600"/>
+                    <connections>
+                        <outlet property="userImage" destination="sFT-tV-MrK" id="qpv-GF-dfs"/>
+                        <outlet property="userReview" destination="Md5-Fe-jUn" id="fb5-YG-NLP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BTk-sl-3qk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

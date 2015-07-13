@@ -35,10 +35,7 @@ class RegisterViewController: UIViewController {
         RailsRequest.session().email = emailOutlet.text
         RailsRequest.session().registerWithCompletion { () -> Void in
         
-        var homeVC = self.storyboard?.instantiateViewControllerWithIdentifier("homeVC")
-            as! HomeViewController
-        
-        self.navigationController?.pushViewController(homeVC, animated: true)
+        self.dismissViewControllerAnimated(false, completion: nil)
        
         }
     
