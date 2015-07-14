@@ -43,22 +43,23 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
             
             let resizedImage = resizeImage(image, withSize: size)
             
+            self.image = resizedImage
+            
             S3ImageRequest().saveImageToS3(resizedImage)
             
             UIImageWriteToSavedPhotosAlbum (image, nil, nil , nil)
             
-            
-            let submitVC = self.storyboard?.instantiateViewControllerWithIdentifier("submitVC") as! SubmitViewController
-            
-            
-          
-             submitVC.image = self.image
-            
-            self.navigationController?.pushViewController(submitVC, animated: true)
-            
-           
 
         }
+        
+        let submitVC = self.storyboard?.instantiateViewControllerWithIdentifier("submitVC") as! SubmitViewController
+        
+        submitVC.image = self.image
+    
+
+        println("Camera VC nav stack: \(self.navigationController!.viewControllers)")
+        
+        self.navigationController?.pushViewController(submitVC, animated: true)
         
         
     }

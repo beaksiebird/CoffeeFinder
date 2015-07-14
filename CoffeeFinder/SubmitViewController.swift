@@ -27,10 +27,10 @@ class SubmitViewController: UIViewController, UIImagePickerControllerDelegate  {
         
         self.navigationController?.pushViewController(writereviewVC, animated: true)
         
-        
-    }
+        }
     
     
+
     
     @IBAction func editPic(sender: UIButton) {
         
@@ -40,14 +40,25 @@ class SubmitViewController: UIViewController, UIImagePickerControllerDelegate  {
         
         self.navigationController?.pushViewController(cameraVC, animated: true)
         
+        }
+    
+
+    
+    @IBAction func createReview(sender: AnyObject) {
         
+        
+        RailsRequest.session().content = userReview.text
+       //RailsRequest.session().imageURL = userImage
+            
+        RailsRequest.session().createReviewWithCompletion { () -> Void in
+        
+        
+    
     }
     
     
+        
     
-    @IBAction func submitReview(sender: UIButton) {
-        
-        
         
         
         
@@ -56,17 +67,19 @@ class SubmitViewController: UIViewController, UIImagePickerControllerDelegate  {
         
         self.presentViewController(venueVC, animated: false, completion: nil)
         
+        }
         
-        
-    }
     
     
+//ASK JO
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         userImage.image = image
         userReview.text = review
+        
+      //  let imageData = NSData(contentsOfURL: )
         
         // Do any additional setup after loading the view.
     }

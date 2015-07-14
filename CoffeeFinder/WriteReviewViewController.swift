@@ -8,13 +8,17 @@
 
 import UIKit
 
-class WriteReviewViewController: UIViewController {
-    
+class WriteReviewViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var writeReview: UITextView!
+
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
     
-    
+
     @IBAction func nextButton(sender: UIButton) {
         
         RailsRequest.session().content = writeReview.text
@@ -25,6 +29,8 @@ class WriteReviewViewController: UIViewController {
             as! SubmitViewController
             
             submitVC.review = self.writeReview.text
+            
+            println("Write VC current nav stack: \(self.navigationController?.viewControllers)")
             
             self.navigationController?.pushViewController(submitVC, animated: true)
             
@@ -38,17 +44,12 @@ class WriteReviewViewController: UIViewController {
         var cameraVC = self.storyboard?.instantiateViewControllerWithIdentifier("cameraVC")
             as! CameraViewController
         
-        self.presentViewController(cameraVC, animated: false, completion: nil)
-        
+//        self.presentViewController(cameraVC, animated: false, completion: nil)
+        self.navigationController?.pushViewController(cameraVC, animated: true)
         
     }
     
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

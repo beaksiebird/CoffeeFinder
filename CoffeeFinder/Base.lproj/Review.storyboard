@@ -447,7 +447,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="submitReview:" destination="fh7-7P-vsT" eventType="touchUpInside" id="u69-VV-HTR"/>
+                                    <action selector="createReview:" destination="fh7-7P-vsT" eventType="touchUpInside" id="2ht-bk-13b"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IS3-hi-dGK">

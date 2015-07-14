@@ -40,7 +40,7 @@ class RailsRequest: NSObject {
     var imageURL: String?
     var content: String?
     var reviewid: Int?
-    var userid: String?
+    var user_id: Int?
     var establishmentid: Int?
     
     //begin repeated stuff
@@ -124,16 +124,12 @@ class RailsRequest: NSObject {
             "endpoint" : "reviews/new",
             "parameters" : [
                 
-//                "user" : userid!,
-//                "venueid" : venueid!,
-//                "image" : "https://coffeecollection.s3.amazonaws.com/myImage_1435934260.png",
-//                "text" : text!
-
                 
-                "user" : "1",
-                "establishment" : "23454324",
-                "image" : "https://coffeecollection.s3.amazonaws.com/myImage_1435934260.png",
-                "content" : "boom"
+                "user_id" : "user_id",
+                "establishment" : "establishmentid!",
+                "image" : "https: //coffeecollection.s3.amazonaws.com/myImage_1435934260.png",
+                "content" : "content",
+                "review_id" : "review_id"
                 
             ]
             ] as [String:AnyObject]

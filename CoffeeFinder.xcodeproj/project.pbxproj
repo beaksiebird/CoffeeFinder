@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CD7686FE1B5416A90011373C /* ReviewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7686FD1B5416A90011373C /* ReviewsTableViewController.swift */; };
+		CD7687001B555D750011373C /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7686FF1B555D750011373C /* ReviewTableViewCell.swift */; };
 		CD8266861B45B5080085302A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8266851B45B5080085302A /* AppDelegate.swift */; };
 		CD8266881B45B5080085302A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8266871B45B5080085302A /* ViewController.swift */; };
 		CD82668B1B45B5080085302A /* Review.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8266891B45B5080085302A /* Review.storyboard */; };
@@ -60,6 +61,7 @@
 
 /* Begin PBXFileReference section */
 		CD7686FD1B5416A90011373C /* ReviewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewsTableViewController.swift; sourceTree = "<group>"; };
+		CD7686FF1B555D750011373C /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		CD8266801B45B5080085302A /* CoffeeFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD8266841B45B5080085302A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD8266851B45B5080085302A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				CD8266C01B45CC9D0085302A /* ViewControllers */,
 				CD8266C11B45CCA70085302A /* Requests */,
 				CD8266831B45B5080085302A /* Supporting Files */,
+				CD7686FF1B555D750011373C /* ReviewTableViewCell.swift */,
 			);
 			path = CoffeeFinder;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				CDD4019D1B4D969B00282B36 /* VenueViewController.swift in Sources */,
 				CD8266E91B45DE530085302A /* AFURLConnectionOperation.m in Sources */,
 				CD8266CD1B45DE0A0085302A /* AFAmazonS3Manager.m in Sources */,
+				CD7687001B555D750011373C /* ReviewTableViewCell.swift in Sources */,
 				CD8266B11B45C9940085302A /* RegisterViewController.swift in Sources */,
 				CD8266EA1B45DE530085302A /* AFURLRequestSerialization.m in Sources */,
 				CD8266881B45B5080085302A /* ViewController.swift in Sources */,

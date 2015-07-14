@@ -12,9 +12,7 @@ import CoreLocation
 class VenueViewController: UIViewController, UIImagePickerControllerDelegate {
     
     var venueInfo: [String:AnyObject]?
-    
-    
-    
+    var venueID: String?
     
     @IBAction func createReview(sender: UIButton) {
         
@@ -66,13 +64,11 @@ class VenueViewController: UIViewController, UIImagePickerControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
  
-    
+        
         nameInfo.text = venueInfo?["name"] as? String
-        
+        var venueIDID = venueInfo?["id"] as? String
+        print("This is venueID \(venueIDID)")
         addressInfo.text = venueInfo?["address"] as? String
-        
-        
-        
         
     }
 
