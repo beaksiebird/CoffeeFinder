@@ -117,7 +117,7 @@ class ResultsViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         
         let endpoint = apiUrl + "venues/search?client_id=\(foursquareId)&client_secret=\(client_secret)&ll=\(location.coordinate.latitude),\(location.coordinate.longitude)&v=20150101&query=coffee"
         
-        println(endpoint)
+//        println(endpoint)
         
         if let url = NSURL(string: endpoint) {
             
@@ -128,7 +128,7 @@ class ResultsViewController: UIViewController, CLLocationManagerDelegate, MKMapV
                 
                 if let returnedInfo = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: nil) as? [String:AnyObject] {
                     
-                    println("Test 123 \(returnedInfo)")
+//                    println("Test 123 \(returnedInfo)")
                     
                     if let responseInfo = returnedInfo["response"] as? [String:AnyObject] {
                         

@@ -447,7 +447,6 @@
                                 </state>
                                 <connections>
                                     <action selector="reviewButton:" destination="fZI-V2-hi9" eventType="touchUpInside" id="Lay-yL-uPF"/>
-                                    <segue destination="pjR-Mn-Pot" kind="show" id="hzY-Ae-2Oi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLY-hy-kNh" customClass="PrettyStar" customModule="CoffeeFinder" customModuleProvider="target">
@@ -601,7 +600,7 @@
         <scene sceneID="xiI-L6-Zro">
             <objects>
                 <tableViewController storyboardIdentifier="readreviewVC" id="pjR-Mn-Pot" customClass="ReviewsTableViewController" customModule="CoffeeFinder" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="com-04-bfQ" customClass="ReviewsTableView" customModule="CoffeeFinder" customModuleProvider="target">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="com-04-bfQ">
                         <rect key="frame" x="0.0" y="0.0" width="340" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

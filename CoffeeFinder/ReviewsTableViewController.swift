@@ -11,8 +11,17 @@ import CoreLocation
 
 class ReviewsTableViewController: UITableViewController {
     
-    var item: [[String:AnyObject]]?
-    
+    var items: [[String:AnyObject]] = []
+    var venueID: String? {
+        
+        didSet {
+            
+            requestReviews()
+            
+        }
+        
+    }
+
     @IBAction func backButton(sender: UIButton) {
         
         
@@ -21,7 +30,7 @@ class ReviewsTableViewController: UITableViewController {
         
         self.presentViewController(venueVC, animated: false, completion: nil)
         
-        //venue id, request with id
+       
         
     }
     
@@ -29,45 +38,62 @@ class ReviewsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        func requestReviewsWithLocation(location: CLLocation, completion: (venues: [AnyObject]) -> ()) {
+        
+    }
+    
+    func requestReviews() {
+        
+        let apiUrl = "https://api.foursquare.com/v2/"
+        let foursquareId = "NEEAYQOQJE3WHXMGFYAPORCOB34JIWSIEVKBXIE3NUDDPBYU"
+        let client_secret = "M2QIQDADDASWMBXX2GCR3WQZQA3IVBBNREEWEACRYKM3SJIP"
+        
+        println(venueID)
+        
+        let endpoint = apiUrl + "venues/\(venueID!)?client_id=\(foursquareId)&client_secret=\(client_secret)&v=20150101"
+        
+        println(endpoint)
+        
+        if let url = NSURL(string: endpoint) {
             
-            let apiUrl = "https://api.foursquare.com/v2/"
-            let foursquareId = "NEEAYQOQJE3WHXMGFYAPORCOB34JIWSIEVKBXIE3NUDDPBYU"
-            let client_secret = "M2QIQDADDASWMBXX2GCR3WQZQA3IVBBNREEWEACRYKM3SJIP"
+            let request = NSURLRequest(URL: url)
             
-            let endpoint = apiUrl + "venues/50d0277fe4b0e7c004e620df"
-            
-            println(endpoint)
-            
-            if let url = NSURL(string: endpoint) {
+            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
                 
-                let request = NSURLRequest(URL: url)
+//                print(response)
                 
-                NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
+                if let returnedInfo = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: nil) as? [String:AnyObject] {
                     
-                    print(response)
+                    self.items = []
                     
-                    if let returnedInfo = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: nil) as? [String:AnyObject] {
+//                    println(returnedInfo)
+                    
+                    if let responseInfo = returnedInfo["response"] as? [String:AnyObject] {
+//                        println(responseInfo)
                         
-                      println(returnedInfo)
-                        
-                        if let responseInfo = returnedInfo["response"] as? [String:AnyObject] {
-                            println(responseInfo)
+                        if let venueInfo = responseInfo["venue"] as? [String:AnyObject] {
                             
-                            if let tips = responseInfo["tips"] as? [String:AnyObject] {
+//                            println(venueInfo)
+                            
+                            if let tips = venueInfo["tips"] as? [String:AnyObject] {
                                 
                                 println(tips)
                                 
-                                if let items = tips["items"] as? [[String:AnyObject]] {
-                                    
-                                    self.item = items
-                                }
-                   //             completion(venues: venueid)
                                 
-//                                if let  venuetips = responseInfo["tips"] as? [AnyObject] {
-//                                    
-//                                    println(venuetips)
-//                                }
+                                if let groups = tips["groups"] as? [[String:AnyObject]] {
+                                    
+                                    for group in groups {
+                                        
+                                        
+                                        if let items = group["items"] as? [[String:AnyObject]] {
+                                            
+                                            self.items += items
+                                            self.tableView.reloadData()
+                                            
+                                        }
+                                        
+                                    }
+                                    
+                                }
                                 
                             }
                             
@@ -75,16 +101,16 @@ class ReviewsTableViewController: UITableViewController {
                         
                     }
                     
-                    
-                })
+                }
                 
                 
-            }
-       
+            })
+            
+            
         }
         
-        
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -102,13 +128,13 @@ class ReviewsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete met
         // Return the number of rows in the section.
-        return 10//item!.count
+        return items.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reviewCell", forIndexPath: indexPath) as! ReviewTableViewCell
         
-//        cell.reviewTextView.text = item![indexPath.row]["text"] as? String
+        cell.reviewTextView.text = items[indexPath.row]["text"] as? String
         
       return cell
 

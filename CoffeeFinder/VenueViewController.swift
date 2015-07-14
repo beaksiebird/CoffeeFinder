@@ -27,6 +27,12 @@ class VenueViewController: UIViewController, UIImagePickerControllerDelegate {
     
     @IBAction func reviewButton(sender: UIButton) {
         
+        var reviewsTVC = self.storyboard?.instantiateViewControllerWithIdentifier("readreviewVC")
+            as! ReviewsTableViewController
+        
+        reviewsTVC.venueID = venueID
+        
+        self.presentViewController(reviewsTVC, animated: false, completion: nil)
         
     }
     
@@ -66,8 +72,8 @@ class VenueViewController: UIViewController, UIImagePickerControllerDelegate {
  
         
         nameInfo.text = venueInfo?["name"] as? String
-        var venueIDID = venueInfo?["id"] as? String
-        print("This is venueID \(venueIDID)")
+        venueID = venueInfo?["id"] as? String
+        print("This is venueID \(venueID)")
         addressInfo.text = venueInfo?["address"] as? String
         
     }
