@@ -39,11 +39,137 @@ class RailsRequest: NSObject {
     var password: String?
     var imageURL: String?
     var content: String?
-    var reviewid: Int?
+    var review_id: Int?
     var user_id: Int?
-    var establishmentid: Int?
+    var establishment_id: Int?
+    var name: String?
+    var street_address: String?
+    var city: String?
+    var state: String?
+    var zip_code: Int?
+    var coffee_quality: Int?
+    var price: Int?
+    var ambiance: Int?
+    var wifi: Int?
     
-    //begin repeated stuff
+    func createnewEstablishmentWithCompletion(completion: () -> Void) {
+        
+        var info = [
+            
+            "method" : "POST",
+            "endpoint" : "establishments/new",
+            "parameters" : [
+                
+                "name" : "name",
+                "street_address" : "street_address",
+                "city" : "city",
+                "state" : "state",
+                "zip_code" : "zip_code",
+                "coffee_quality" : "coffee_quality",
+                "price": "price",
+                "ambiance" : "ambiance",
+                "wifi" : "wifi",
+            ]
+            
+            ] as [String:AnyObject]
+        
+        requestWithInfo(info, andCompletion: { (responseInfo) -> Void in
+            
+            println(responseInfo)
+            
+            if let accessToken = responseInfo?["access_token"] as? String {
+                
+                self.token = accessToken
+                
+                completion()
+                //end repeated stuff
+                
+            }
+            
+        })
+        
+        completion()
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    func getEstablishmentWithCompletion(completion: () -> Void) {
+        
+        var info = [
+            
+            "method" : "POST",
+            "endpoint" : "users/signup",
+            "parameters" : [
+                
+                "establishment_id" : establishment_id!,
+            
+                ]
+            
+            ] as [String:AnyObject]
+        
+        requestWithInfo(info, andCompletion: { (responseInfo) -> Void in
+            
+            println(responseInfo)
+            
+            if let accessToken = responseInfo?["access_token"] as? String {
+                
+                self.token = accessToken
+                
+                completion()
+               
+                
+            }
+            
+        })
+        
+        completion()
+        
+    }
+    
+    
+    
+    
+    
+    func getReviewWithCompletion(completion: () -> Void) {
+        
+        var info = [
+            
+            "method" : "GET",
+            "endpoint" : "review/:id",
+            "parameters" : [
+                
+                "review_id" : review_id!,
+              
+                ]
+            
+            ] as [String:AnyObject]
+        
+        requestWithInfo(info, andCompletion: { (responseInfo) -> Void in
+            
+            println(responseInfo)
+            
+            if let accessToken = responseInfo?["access_token"] as? String {
+                
+                self.token = accessToken
+                
+                completion()
+                //end repeated stuff
+                
+            }
+            
+        })
+        
+        completion()
+        
+    }
+    
+    
     func registerWithCompletion(completion: () -> Void) {
         
         var info = [
@@ -126,10 +252,9 @@ class RailsRequest: NSObject {
                 
                 
                 "user_id" : "user_id",
-                "establishment" : "establishmentid!",
+                "establishment_id" : "establishment_id!",
                 "image" : "https: //coffeecollection.s3.amazonaws.com/myImage_1435934260.png",
-                "content" : "content",
-                "review_id" : "review_id"
+                "content" : "content"
                 
             ]
             ] as [String:AnyObject]
@@ -154,7 +279,7 @@ class RailsRequest: NSObject {
             "endpoint" : "/users/login",
             "parameters" : [
                 
-                "reviewid" : reviewid!,
+                "reviewid" : review_id!,
                 
                 
             ]
@@ -189,7 +314,7 @@ class RailsRequest: NSObject {
             "endpoint" : "review/:id",
             "parameters" : [
                 
-                "reviewid" : reviewid!,
+                "reviewid" : review_id!,
                 
                 
             ]

@@ -14,6 +14,27 @@ class VenueViewController: UIViewController, UIImagePickerControllerDelegate {
     var venueInfo: [String:AnyObject]?
     var venueID: String?
     
+    
+    @IBAction func seePics(sender: UIButton) {
+        
+      //  var seeImagesVC = self.storyboard?.instantiateViewControllerWithIdentifier("seeImagesVC")
+        //    as! ImageCollectionViewController
+        
+       // seeImagesVC.venueID = venueID
+        
+      //  self.presentViewController(seeImagesVC, animated: false, completion: nil)
+        
+    
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
     @IBAction func createReview(sender: UIButton) {
         
         var storyboard = UIStoryboard(name: "Review", bundle: nil)
@@ -64,6 +85,7 @@ class VenueViewController: UIViewController, UIImagePickerControllerDelegate {
     
     @IBOutlet weak var nameInfo: UILabel!
     @IBOutlet weak var addressInfo: UILabel!
+    @IBOutlet weak var hoursInfo: UILabel!
         
     
     
@@ -76,7 +98,9 @@ class VenueViewController: UIViewController, UIImagePickerControllerDelegate {
         print("This is venueID \(venueID)")
         addressInfo.text = venueInfo?["address"] as? String
         
-    }
+        hoursInfo.text = venueInfo?["hours"] as? String
+       
+     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

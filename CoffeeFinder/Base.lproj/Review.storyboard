@@ -48,30 +48,35 @@
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="35"/>
                                 <color key="textColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="COFFEE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0H-nq-7eq">
                                 <rect key="frame" x="9" y="102" width="84" height="39"/>
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="28"/>
                                 <color key="textColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WIFI" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lyj-zh-p9j">
                                 <rect key="frame" x="16" y="170" width="84" height="39"/>
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="28"/>
                                 <color key="textColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PRICE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkt-EX-4Qr">
-                                <rect key="frame" x="9" y="251" width="84" height="39"/>
+                                <rect key="frame" x="9" y="253" width="84" height="39"/>
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="28"/>
                                 <color key="textColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AMBIANCE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbN-DN-tdB">
                                 <rect key="frame" x="0.0" y="343" width="84" height="39"/>
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="27"/>
                                 <color key="textColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jod-ri-164" customClass="PrettyStar" customModule="CoffeeFinder" customModuleProvider="target">
                                 <rect key="frame" x="169" y="27" width="128" height="129"/>
@@ -92,17 +97,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="prettyStar:" destination="XKA-ks-VRO" eventType="touchUpInside" id="OZ5-51-xlz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoW-EJ-LIW">
-                                <rect key="frame" x="212" y="409" width="128" height="30"/>
-                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="36"/>
-                                <state key="normal" title="NEXT">
-                                    <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="nextButton:" destination="XKA-ks-VRO" eventType="touchUpInside" id="2mA-ie-Jg2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOl-kT-hBr" customClass="PrettyStar" customModule="CoffeeFinder" customModuleProvider="target">
@@ -336,6 +330,17 @@
                                     <action selector="prettyStar:" destination="XKA-ks-VRO" eventType="touchUpInside" id="Jqj-Yv-toe"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoW-EJ-LIW">
+                                <rect key="frame" x="212" y="409" width="128" height="30"/>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="36"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButton:" destination="XKA-ks-VRO" eventType="touchUpInside" id="2mA-ie-Jg2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -377,27 +382,28 @@
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="36"/>
                                 <color key="textColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIk-sd-BZd">
-                                <rect key="frame" x="-8" y="369" width="128" height="30"/>
-                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="36"/>
-                                <state key="normal" title="NEXT">
-                                    <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="nextButton:" destination="asp-vh-gdK" eventType="touchUpInside" id="6RM-8J-Xn6"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ve-i5-eHp">
                                 <rect key="frame" x="212" y="369" width="128" height="30"/>
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="36"/>
                                 <state key="normal" title="TAKE A PIC">
                                     <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="takePic:" destination="asp-vh-gdK" eventType="touchUpInside" id="0oK-S4-usn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIk-sd-BZd">
+                                <rect key="frame" x="-7" y="369" width="128" height="30"/>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="36"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButton:" destination="asp-vh-gdK" eventType="touchUpInside" id="6RM-8J-Xn6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -439,23 +445,12 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sFT-tV-MrK">
                                 <rect key="frame" x="15" y="9" width="241" height="179"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DsA-U1-iiI">
-                                <rect key="frame" x="16" y="381" width="240" height="45"/>
-                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="29"/>
-                                <state key="normal" title="SUBMIT REVIEW">
-                                    <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="createReview:" destination="fh7-7P-vsT" eventType="touchUpInside" id="2ht-bk-13b"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IS3-hi-dGK">
                                 <rect key="frame" x="264" y="271" width="60" height="43"/>
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="19"/>
                                 <state key="normal" title="EDIT TEXT">
                                     <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="editReview:" destination="fh7-7P-vsT" eventType="touchUpInside" id="er4-Ly-aYM"/>
@@ -466,7 +461,7 @@
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="19"/>
                                 <state key="normal" title="EDIT PIC">
                                     <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="editPic:" destination="fh7-7P-vsT" eventType="touchUpInside" id="xvk-Qr-VCq"/>
@@ -479,6 +474,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DsA-U1-iiI">
+                                <rect key="frame" x="16" y="381" width="240" height="45"/>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="29"/>
+                                <state key="normal" title="SUBMIT REVIEW">
+                                    <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="createReview:" destination="fh7-7P-vsT" eventType="touchUpInside" id="2ht-bk-13b"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

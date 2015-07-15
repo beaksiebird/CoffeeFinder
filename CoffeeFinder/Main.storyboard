@@ -27,7 +27,6 @@
             <string>BlackCoffeeShadow-Bold</string>
             <string>BlackCoffeeShadow-Bold</string>
             <string>BlackCoffeeShadow-Bold</string>
-            <string>BlackCoffeeShadow-Bold</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -57,7 +56,7 @@
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="40"/>
                                 <state key="normal" title="FIND COFFEE NEAR ME">
                                     <color key="titleColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="searchCoffee:" destination="uv7-cB-Tz4" eventType="touchUpInside" id="3vq-lz-TFp"/>
@@ -69,12 +68,14 @@
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="22"/>
                                 <color key="textColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NEED COFFEE ASAP?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZy-fl-dlD">
                                 <rect key="frame" x="26" y="44" width="288" height="33"/>
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="26"/>
                                 <color key="textColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CoffeeBeans" translatesAutoresizingMaskIntoConstraints="NO" id="xcL-fs-9ha">
                                 <rect key="frame" x="46" y="148" width="249" height="149"/>
@@ -84,7 +85,7 @@
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="40"/>
                                 <state key="normal" title="SEARCH REVIEWED ">
                                     <color key="titleColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="searchReviewed:" destination="uv7-cB-Tz4" eventType="touchUpInside" id="1M1-eY-M3C"/>
@@ -144,14 +145,12 @@
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="23"/>
                                 <state key="normal" title="BACK">
                                     <color key="titleColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="backButton:" destination="4OP-Bq-Wxa" eventType="touchUpInside" id="wb1-tx-oWr"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="djo-6h-T5c">
-                                <rect key="frame" x="-93" y="28" width="340" height="162"/>
-                            </pickerView>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AwX-px-bbg">
                                 <rect key="frame" x="52" y="158" width="340" height="162"/>
                             </pickerView>
@@ -160,6 +159,7 @@
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="31"/>
                                 <color key="textColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3kS-r7-0wa">
                                 <rect key="frame" x="-93" y="158" width="340" height="162"/>
@@ -169,41 +169,36 @@
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="30"/>
                                 <color key="textColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AMBIANCE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Xf-b7-dI0">
                                 <rect key="frame" x="167" y="191" width="111" height="32"/>
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="30"/>
                                 <color key="textColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KE7-c8-ZSd">
-                                <rect key="frame" x="137" y="20" width="60" height="30"/>
-                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="29"/>
-                                <state key="normal" title="RESET">
-                                    <color key="titleColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="resetChoices:" destination="4OP-Bq-Wxa" eventType="touchUpInside" id="xAc-Vi-OcR"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WIFI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egQ-9h-fy4">
                                 <rect key="frame" x="189" y="63" width="93" height="32"/>
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="30"/>
                                 <color key="textColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBA-Fk-wCb">
                                 <rect key="frame" x="128" y="357" width="69" height="38"/>
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="30"/>
                                 <state key="normal" title="SEARCH">
                                     <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="searchButton:" destination="4OP-Bq-Wxa" eventType="touchUpInside" id="poU-0r-nlT"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="djo-6h-T5c">
+                                <rect key="frame" x="-93" y="28" width="340" height="162"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -241,6 +236,7 @@
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="25"/>
                                 <state key="normal" title="BACK">
                                     <color key="titleColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="backButton:" destination="IcA-0Q-eDH" eventType="touchUpInside" id="Ffc-VM-BKc"/>
@@ -282,285 +278,96 @@
                                 <rect key="frame" x="-150" y="-61" width="640" height="1136"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHb-WW-Zel">
-                                <rect key="frame" x="-35" y="48" width="156" height="35"/>
+                                <rect key="frame" x="-33" y="167" width="156" height="35"/>
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="31"/>
                                 <color key="textColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ADDRESS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZx-DF-7ES">
-                                <rect key="frame" x="-24" y="91" width="156" height="35"/>
-                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="31"/>
-                                <color key="textColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXg-iI-IPl">
-                                <rect key="frame" x="6" y="-7" width="181" height="60"/>
+                                <rect key="frame" x="7" y="20" width="181" height="60"/>
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="31"/>
                                 <state key="normal" title="BACK TO RESULTS">
                                     <color key="titleColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="resultsButton:" destination="fZI-V2-hi9" eventType="touchUpInside" id="PNL-Ct-Rit"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojf-Eg-EYg">
-                                <rect key="frame" x="223" y="190" width="150" height="44"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FDSGDFG" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDw-mK-KLh">
-                                <rect key="frame" x="109" y="43" width="276" height="37"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nf9-b6-SXE">
-                                <rect key="frame" x="11" y="531" width="75" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="kQ3-3K-HWB"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nf9-b6-SXE">
+                                <rect key="frame" x="32" y="111" width="262" height="60"/>
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="34"/>
-                                <state key="normal" title="CREATE">
+                                <state key="normal" title="CREATE A REVIEW">
                                     <color key="titleColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="createReview:" destination="fZI-V2-hi9" eventType="touchUpInside" id="Bn2-Y1-rly"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFr-d0-Ov0" customClass="PrettyStar" customModule="CoffeeFinder" customModuleProvider="target">
-                                <rect key="frame" x="167" y="142" width="79" height="129"/>
-                                <state key="normal">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXz-gm-iK2">
+                                <rect key="frame" x="205" y="67" width="108" height="46.5"/>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="34"/>
+                                <state key="normal" title="SEE PICS">
                                     <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
-                                        <color key="value" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="seePics:" destination="fZI-V2-hi9" eventType="touchUpInside" id="YCG-fu-3Kk"/>
+                                    <segue destination="naN-c4-LWj" kind="show" id="Ft7-ci-gb7"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDo-fn-j73" customClass="PrettyStar" customModule="CoffeeFinder" customModuleProvider="target">
-                                <rect key="frame" x="240" y="67" width="79" height="129"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
-                                        <color key="value" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wi4-Wz-K4S" customClass="PrettyStar" customModule="CoffeeFinder" customModuleProvider="target">
-                                <rect key="frame" x="167" y="67" width="79" height="129"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
-                                        <color key="value" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NN1-JK-SmE" customClass="PrettyStar" customModule="CoffeeFinder" customModuleProvider="target">
-                                <rect key="frame" x="93" y="142" width="79" height="129"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
-                                        <color key="value" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPU-Z3-fvT" customClass="PrettyStar" customModule="CoffeeFinder" customModuleProvider="target">
-                                <rect key="frame" x="93" y="215" width="79" height="129"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
-                                        <color key="value" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgt-UA-hat" customClass="PrettyStar" customModule="CoffeeFinder" customModuleProvider="target">
-                                <rect key="frame" x="172" y="210" width="79" height="129"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
-                                        <color key="value" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7K-Ur-tYS" customClass="PrettyStar" customModule="CoffeeFinder" customModuleProvider="target">
-                                <rect key="frame" x="172" y="279" width="79" height="129"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
-                                        <color key="value" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7YX-L0-0MW">
-                                <rect key="frame" x="191" y="542" width="149" height="38"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="guW-Ih-HuT"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7YX-L0-0MW">
+                                <rect key="frame" x="16" y="76" width="149" height="38"/>
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="34"/>
                                 <state key="normal" title="READ REVIEWS">
                                     <color key="titleColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="reviewButton:" destination="fZI-V2-hi9" eventType="touchUpInside" id="Lay-yL-uPF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLY-hy-kNh" customClass="PrettyStar" customModule="CoffeeFinder" customModuleProvider="target">
-                                <rect key="frame" x="98" y="279" width="79" height="129"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
-                                        <color key="value" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZeX-JG-44d" customClass="PrettyStar" customModule="CoffeeFinder" customModuleProvider="target">
-                                <rect key="frame" x="245" y="142" width="79" height="129"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
-                                        <color key="value" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bw-m6-4ZH" customClass="PrettyStar" customModule="CoffeeFinder" customModuleProvider="target">
-                                <rect key="frame" x="245" y="279" width="79" height="129"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
-                                        <color key="value" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FqT-LB-Y5g" customClass="PrettyStar" customModule="CoffeeFinder" customModuleProvider="target">
-                                <rect key="frame" x="93" y="67" width="79" height="129"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
-                                        <color key="value" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="COFFEE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jdu-wH-2EC">
-                                <rect key="frame" x="-30" y="149" width="156" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ADDRESS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qmF-A8-PO4">
+                                <rect key="frame" x="0.0" y="242" width="107" height="35"/>
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="31"/>
                                 <color key="textColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
+                                <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WIFI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjK-d4-xuo">
-                                <rect key="frame" x="-35" y="215" width="156" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HOURS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFD-KH-zGO">
+                                <rect key="frame" x="-23" y="309" width="123" height="35"/>
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="31"/>
                                 <color key="textColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pej-3I-owC">
+                                <rect key="frame" x="7" y="337" width="317" height="74"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PRICE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="649-iW-4wT">
-                                <rect key="frame" x="-30" y="302" width="156" height="35"/>
-                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="31"/>
-                                <color key="textColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FDSGDFG" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDw-mK-KLh">
+                                <rect key="frame" x="7" y="197" width="372" height="37"/>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AMBIANCE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5A-85-8rP">
-                                <rect key="frame" x="-24" y="362" width="156" height="35"/>
-                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="31"/>
-                                <color key="textColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbq-LS-4Dz">
+                                <rect key="frame" x="7" y="277" width="339" height="31"/>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOo-6a-B3g" customClass="PrettyStar" customModule="CoffeeFinder" customModuleProvider="target">
-                                <rect key="frame" x="245" y="210" width="79" height="129"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
-                                        <color key="value" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="nf9-b6-SXE" firstAttribute="leading" secondItem="Dj2-JA-26p" secondAttribute="leading" constant="11" id="O2G-xB-tfw"/>
-                            <constraint firstItem="uk4-Ur-b2I" firstAttribute="top" secondItem="7YX-L0-0MW" secondAttribute="bottom" constant="20" id="X9Q-Oy-P8k"/>
-                            <constraint firstItem="uk4-Ur-b2I" firstAttribute="top" secondItem="nf9-b6-SXE" secondAttribute="bottom" constant="9" id="XTV-gR-o0W"/>
-                            <constraint firstAttribute="trailing" secondItem="7YX-L0-0MW" secondAttribute="trailing" id="qjw-3w-zL6"/>
-                        </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="340" height="600"/>
                     <connections>
-                        <outlet property="addressInfo" destination="ojf-Eg-EYg" id="5Wg-OY-twx"/>
+                        <outlet property="addressInfo" destination="cbq-LS-4Dz" id="ahD-WG-Wzt"/>
+                        <outlet property="hoursInfo" destination="pej-3I-owC" id="a18-YM-FQf"/>
                         <outlet property="nameInfo" destination="hDw-mK-KLh" id="hux-I1-JAm"/>
                     </connections>
                 </viewController>
@@ -568,33 +375,42 @@
             </objects>
             <point key="canvasLocation" x="1366" y="-253"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="GbJ-P4-5e8">
+        <!--View Controller-->
+        <scene sceneID="rCF-Yy-sa9">
             <objects>
-                <tableViewController id="oZd-vY-YvR" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="vk4-m0-3ed" customClass="ImagesTableView" customModule="CoffeeFinder" customModuleProvider="target">
+                <viewController storyboardIdentifier="seeImagesVC" id="naN-c4-LWj" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="qCl-Wb-zD0">
                         <rect key="frame" x="0.0" y="0.0" width="340" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="402-TQ-d8f">
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Qu3-U7-QIs">
+                            <size key="itemSize" width="144" height="144"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="18" minY="11" maxX="18" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="establishmentImages" id="45G-P0-ljR">
+                                <rect key="frame" x="0.0" y="0.0" width="144" height="144"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="402-TQ-d8f" id="bfK-Du-6jc">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="144" height="144"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="oZd-vY-YvR" id="P0W-ju-LKL"/>
-                            <outlet property="delegate" destination="oZd-vY-YvR" id="bXZ-PM-7YL"/>
-                        </connections>
-                    </tableView>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EiV-YL-Qnv">
+                                            <rect key="frame" x="0.0" y="0.0" width="144" height="144"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                    </collectionView>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="340" height="600"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0Nb-OT-Uxv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l8e-Jl-alz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1790" y="12"/>
+            <point key="canvasLocation" x="1790" y="-48"/>
         </scene>
         <!--Reviews Table View Controller-->
         <scene sceneID="xiI-L6-Zro">
@@ -613,7 +429,7 @@
                                     <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="25"/>
                                     <state key="normal" title="REPORT">
                                         <color key="titleColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWM-62-hBW">
@@ -621,7 +437,7 @@
                                     <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="26"/>
                                     <state key="normal" title="BACK">
                                         <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <connections>
                                         <action selector="backButton:" destination="pjR-Mn-Pot" eventType="touchUpInside" id="LHO-ZW-g49"/>
@@ -661,23 +477,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tuk-ot-9VQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1790" y="-688"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="XeF-OC-5B6">
-            <objects>
-                <viewController id="8aF-sz-7ah" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="u04-NF-6dr"/>
-                        <viewControllerLayoutGuide type="bottom" id="a9E-mi-YoR"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ni3-MH-Pez">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wPC-mu-Gh1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>

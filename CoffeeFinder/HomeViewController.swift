@@ -52,16 +52,11 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
     
     @IBAction func searchButton(sender: UIButton) {
         
-    }
-    //DO I NEED THIS?
-    @IBAction func resetChoices(sender: UIButton) {
+        //RAILS REQUEST HERE
         
-        func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-            
-            return 0
-        }
-    
+        
     }
+    
 
     
     @IBAction func backButton(sender: UIButton) {

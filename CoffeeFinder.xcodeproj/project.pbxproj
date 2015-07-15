@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CD7686FE1B5416A90011373C /* ReviewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7686FD1B5416A90011373C /* ReviewsTableViewController.swift */; };
 		CD7687001B555D750011373C /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7686FF1B555D750011373C /* ReviewTableViewCell.swift */; };
+		CD7687381B56ED580011373C /* ImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7687371B56ED580011373C /* ImageCollectionViewController.swift */; };
 		CD8266861B45B5080085302A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8266851B45B5080085302A /* AppDelegate.swift */; };
 		CD8266881B45B5080085302A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8266871B45B5080085302A /* ViewController.swift */; };
 		CD82668B1B45B5080085302A /* Review.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8266891B45B5080085302A /* Review.storyboard */; };
@@ -38,7 +39,6 @@
 		CD8266EE1B46BC780085302A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8266ED1B46BC780085302A /* Keys.swift */; };
 		CD8266F01B46C5570085302A /* SocialData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8266EF1B46C5570085302A /* SocialData.swift */; };
 		CDD4019D1B4D969B00282B36 /* VenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD4019C1B4D969B00282B36 /* VenueViewController.swift */; };
-		CDD401A41B4DAB9500282B36 /* ImagesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD401A31B4DAB9500282B36 /* ImagesCollectionView.swift */; };
 		CDD401A81B4EB51000282B36 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDD401A71B4EB51000282B36 /* Login.storyboard */; };
 		CDD401AA1B4EB5BE00282B36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDD401A91B4EB5BE00282B36 /* Main.storyboard */; };
 		CDD401AC1B4EBAF700282B36 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD401AB1B4EBAF700282B36 /* SearchViewController.swift */; };
@@ -62,6 +62,7 @@
 /* Begin PBXFileReference section */
 		CD7686FD1B5416A90011373C /* ReviewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewsTableViewController.swift; sourceTree = "<group>"; };
 		CD7686FF1B555D750011373C /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
+		CD7687371B56ED580011373C /* ImageCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewController.swift; sourceTree = "<group>"; };
 		CD8266801B45B5080085302A /* CoffeeFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD8266841B45B5080085302A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD8266851B45B5080085302A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,7 +109,6 @@
 		CD8266ED1B46BC780085302A /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		CD8266EF1B46C5570085302A /* SocialData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialData.swift; sourceTree = "<group>"; };
 		CDD4019C1B4D969B00282B36 /* VenueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueViewController.swift; sourceTree = "<group>"; };
-		CDD401A31B4DAB9500282B36 /* ImagesCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesCollectionView.swift; sourceTree = "<group>"; };
 		CDD401A71B4EB51000282B36 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		CDD401A91B4EB5BE00282B36 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CDD401AB1B4EBAF700282B36 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -282,8 +282,8 @@
 		CDD401A21B4DA6E500282B36 /* CollectionViews */ = {
 			isa = PBXGroup;
 			children = (
-				CDD401A31B4DAB9500282B36 /* ImagesCollectionView.swift */,
 				CD7686FD1B5416A90011373C /* ReviewsTableViewController.swift */,
+				CD7687371B56ED580011373C /* ImageCollectionViewController.swift */,
 			);
 			name = CollectionViews;
 			sourceTree = "<group>";
@@ -405,6 +405,7 @@
 				CD7687001B555D750011373C /* ReviewTableViewCell.swift in Sources */,
 				CD8266B11B45C9940085302A /* RegisterViewController.swift in Sources */,
 				CD8266EA1B45DE530085302A /* AFURLRequestSerialization.m in Sources */,
+				CD7687381B56ED580011373C /* ImageCollectionViewController.swift in Sources */,
 				CD8266881B45B5080085302A /* ViewController.swift in Sources */,
 				CDD401BA1B4EC65800282B36 /* PrettyStar.swift in Sources */,
 				CD7686FE1B5416A90011373C /* ReviewsTableViewController.swift in Sources */,
@@ -418,7 +419,6 @@
 				CDD401B21B4EBF6A00282B36 /* WriteReviewViewController.swift in Sources */,
 				CD8266E71B45DE530085302A /* AFNetworkReachabilityManager.m in Sources */,
 				CD8266EC1B45DE530085302A /* AFURLSessionManager.m in Sources */,
-				CDD401A41B4DAB9500282B36 /* ImagesCollectionView.swift in Sources */,
 				CD8266861B45B5080085302A /* AppDelegate.swift in Sources */,
 				CD8266BD1B45CB710085302A /* CameraViewController.swift in Sources */,
 				CDD401B41B4EBFA700282B36 /* SubmitViewController.swift in Sources */,

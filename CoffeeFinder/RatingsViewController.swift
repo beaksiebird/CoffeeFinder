@@ -26,6 +26,13 @@ class RatingsViewController: UIViewController {
     
     @IBAction func nextButton(sender: UIButton) {
         
+        
+        
+        RailsRequest.session().createnewEstablishmentWithCompletion { () -> Void in
+            
+        }
+        
+        
         var writereviewVC = self.storyboard?.instantiateViewControllerWithIdentifier("writereviewVC")
             as! WriteReviewViewController
         

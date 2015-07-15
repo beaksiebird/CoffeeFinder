@@ -13,6 +13,8 @@ class SearchViewController: UIViewController {
     
     @IBAction func searchReviewed(sender: UIButton) {
         
+        
+        
         var homeVC = self.storyboard?.instantiateViewControllerWithIdentifier("homeVC")
             as! HomeViewController
         
