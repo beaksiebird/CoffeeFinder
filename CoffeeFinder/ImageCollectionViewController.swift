@@ -19,7 +19,7 @@ class ImageCollectionViewController: UICollectionViewController {
     
     
     
-    var items : [[String:AnyObject]] = []
+    var urlArray: NSMutableArray = []
     var venueID : String? {
     
     didSet {
@@ -35,9 +35,12 @@ class ImageCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
-     
-        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "establishmentImages")
+
+        self.collectionView!.registerClass(ImageCollectionViewCell.self,
+            forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
+            withReuseIdentifier: "establishmentImages")
 
 
     }
@@ -61,30 +64,61 @@ class ImageCollectionViewController: UICollectionViewController {
             
             NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
                 
-                                println(response)
+                    println("response: \(response)")
                 
                 if let returnedInfo = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: nil) as? [String:AnyObject] {
                     
-                    self.items = []
-                    
-                                       println(returnedInfo)
+                    println("returned info: \(returnedInfo)")
                     
                     if let responseInfo = returnedInfo["response"] as? [String:AnyObject] {
-                                              println(responseInfo)
                         
-                        if let photosInfo = responseInfo["photos"] as? [String:AnyObject] {
+                        if let venueInfo = responseInfo["venue"] as? [String:AnyObject] {
                             
-                                println(photosInfo)
+                            if let photosInfo = venueInfo["photos"] as? [String:AnyObject] {
+                                
+                                println("photos info: \(photosInfo)")
+                                
+                                if let groupsInfo = photosInfo["groups"] as? [AnyObject] {
+                                    println("groups info: \(groupsInfo[0])")
+                                    
+                                    if let itemsInfo = groupsInfo[0]["items"] as? [AnyObject] {
                                         
-                                        if let items = photosInfo["items"] as? [[String:AnyObject]] {
+                                        println("items info: \(itemsInfo)")
+                                        
+                                        for item in itemsInfo {
                                             
-                            
+                                            var urlString = String()
                                             
-                                            self.items += items
+                                            let prefix = item["prefix"] as? String
+                                            urlString += prefix!
+                                            
+                                            
+                                            let width = item["width"] as? Int
+                                            urlString += String(width!)
+                                            
+                                            urlString += "x"
+                                            
+                                            let height = item["height"] as? Int
+                                            urlString += String(height!)
+                                            
+                                            
+                                            let suffix = item["suffix"] as? String
+                                            urlString += suffix!
+                                            
+                                            
+                                            println(urlString)
+                                            self.urlArray.addObject(urlString)
+                                            println(self.urlArray.count)
                                             self.collectionView!.reloadData()
-                                            
-                            }
+                                        }
+                                    }
+                                    
+                                }
 
+
+                                
+                                
+                            }
                             
                         }
                         
@@ -119,13 +153,24 @@ class ImageCollectionViewController: UICollectionViewController {
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //#warning Incomplete method implementation -- Return the number of items in the section
-        return items.count
+        return urlArray.count
     }
 
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("establishmentImages", forIndexPath: indexPath) as! UICollectionViewCell
+    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> ImageCollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("establishmentImages", forIndexPath: indexPath) as! ImageCollectionViewCell
+
     
         
+        let url = NSURL(string: urlArray[indexPath.row] as! String)
+        
+        println(url)
+        let data = NSData(contentsOfURL: url!)
+        let image = UIImage(data: data!)
+        
+        
+        cell.image.image = image
+    
       
         return cell
     }

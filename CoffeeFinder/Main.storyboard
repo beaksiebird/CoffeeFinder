@@ -389,7 +389,7 @@
                             <inset key="sectionInset" minX="18" minY="11" maxX="18" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="establishmentImages" id="45G-P0-ljR">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="establishmentImages" id="45G-P0-ljR" customClass="ImageCollectionViewCell" customModule="CoffeeFinder" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="144" height="144"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -402,6 +402,9 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <outlet property="image" destination="PEZ-5u-yYl" id="CX6-og-6Pq"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                     </collectionView>

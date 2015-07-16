@@ -22,6 +22,8 @@ class VenueViewController: UIViewController, UIImagePickerControllerDelegate {
         var seeImagesVC = self.storyboard?.instantiateViewControllerWithIdentifier("seeImagesVC")
             as! ImageCollectionViewController
         
+        seeImagesVC.venueID = self.venueID
+        
         self.presentViewController(seeImagesVC, animated: false, completion: nil)
     }
     
