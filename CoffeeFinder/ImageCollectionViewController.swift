@@ -9,20 +9,29 @@
 import UIKit
 import CoreLocation
 
+
+
+
 let reuseIdentifier = "establishmentImages"
 
 class ImageCollectionViewController: UICollectionViewController {
+    
+    
+    
     
     var items : [[String:AnyObject]] = []
     var venueID : String? {
     
     didSet {
     
-        requestImages()
-    
+        if venueID != nil { requestImages() }
+       
         }
     
     }
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,45 +61,30 @@ class ImageCollectionViewController: UICollectionViewController {
             
             NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
                 
-                //                print(response)
+                                println(response)
                 
                 if let returnedInfo = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: nil) as? [String:AnyObject] {
                     
                     self.items = []
                     
-                    //                    println(returnedInfo)
+                                       println(returnedInfo)
                     
                     if let responseInfo = returnedInfo["response"] as? [String:AnyObject] {
-                        //                        println(responseInfo)
+                                              println(responseInfo)
                         
-                        if let venueInfo = responseInfo["venue"] as? [String:AnyObject] {
+                        if let photosInfo = responseInfo["photos"] as? [String:AnyObject] {
                             
-                            //                            println(venueInfo)
-                            
-                            if let tips = venueInfo["tips"] as? [String:AnyObject] {
-                                
-                                println(tips)
-                                
-                                
-                                if let groups = tips["groups"] as? [[String:AnyObject]] {
-                                    
-                                    for group in groups {
+                                println(photosInfo)
                                         
-                                        
-                                        if let items = group["items"] as? [[String:AnyObject]] {
+                                        if let items = photosInfo["items"] as? [[String:AnyObject]] {
                                             
                             
                                             
                                             self.items += items
                                             self.collectionView!.reloadData()
                                             
-                                        }
-                                        
-                                    }
-                                    
-                                }
-                                
                             }
+
                             
                         }
                         
@@ -119,20 +113,20 @@ class ImageCollectionViewController: UICollectionViewController {
 
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         //#warning Incomplete method implementation -- Return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //#warning Incomplete method implementation -- Return the number of items in the section
-        return 0
+        return items.count
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("establishmentImages", forIndexPath: indexPath) as! UICollectionViewCell
     
-        // Configure the cell
-    
+        
+      
         return cell
     }
 

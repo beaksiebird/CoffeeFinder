@@ -16,7 +16,7 @@ class ReviewsTableViewController: UITableViewController {
         
         didSet {
             
-            requestReviews()
+            if venueID != nil { requestReviews() }
             
         }
         
@@ -24,23 +24,17 @@ class ReviewsTableViewController: UITableViewController {
 
     @IBAction func backButton(sender: UIButton) {
         
-        
-        var venueVC = self.storyboard?.instantiateViewControllerWithIdentifier("venueVC")
-            as! VenueViewController
-        
-        self.presentViewController(venueVC, animated: false, completion: nil)
-        
-       
-        
+
+        dismissViewControllerAnimated(true, completion: nil)
+
     }
     
-
     override func viewDidLoad() {
-        super.viewDidLoad()
-
-        
+       
     }
     
+    
+
     func requestReviews() {
         
         let apiUrl = "https://api.foursquare.com/v2/"
@@ -50,6 +44,8 @@ class ReviewsTableViewController: UITableViewController {
         println(venueID)
         
         let endpoint = apiUrl + "venues/\(venueID!)?client_id=\(foursquareId)&client_secret=\(client_secret)&v=20150101"
+        
+        
         
         println(endpoint)
         

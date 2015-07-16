@@ -15,7 +15,7 @@ class SubmitViewController: UIViewController, UIImagePickerControllerDelegate  {
     @IBOutlet weak var userReview: UITextView!
     @IBOutlet weak var userImage: UIImageView!
     
-    var image: UIImage!
+    var imageURL: UIImage!
     var review: String!
     
     
@@ -48,40 +48,32 @@ class SubmitViewController: UIViewController, UIImagePickerControllerDelegate  {
         
         
         RailsRequest.session().content = userReview.text
-       //RailsRequest.session().imageURL = userImage
+    
+        RailsRequest.session().imageURL = userImage.image
             
-        RailsRequest.session().createReviewWithCompletion { () -> Void in
+        RailsRequest.session().createnewEstablishmentWithCompletion { () -> Void in
+            
+        RailsRequest.session().createReviewWithCompletion({ () -> Void in
+            
+        })
         
         
     
-    }
-    
-    
-        
-    
-        
-        
-        
-        var venueVC = self.storyboard?.instantiateViewControllerWithIdentifier("venueVC")
-            as! ResultsViewController
-        
-        self.presentViewController(venueVC, animated: false, completion: nil)
+        self.dismissViewControllerAnimated(true, completion: nil)
         
         }
         
+    }
     
-    
-//ASK JO
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        userImage.image = image
+        userImage.image = imageURL
         userReview.text = review
         
-      //  let imageData = NSData(contentsOfURL: )
-        
-        // Do any additional setup after loading the view.
+    
     }
 
     override func didReceiveMemoryWarning() {

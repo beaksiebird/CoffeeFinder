@@ -42,7 +42,6 @@
 		CDD401A81B4EB51000282B36 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDD401A71B4EB51000282B36 /* Login.storyboard */; };
 		CDD401AA1B4EB5BE00282B36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDD401A91B4EB5BE00282B36 /* Main.storyboard */; };
 		CDD401AC1B4EBAF700282B36 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD401AB1B4EBAF700282B36 /* SearchViewController.swift */; };
-		CDD401AE1B4EBE3100282B36 /* ImagesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD401AD1B4EBE3100282B36 /* ImagesTableView.swift */; };
 		CDD401B01B4EBF2700282B36 /* RatingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD401AF1B4EBF2700282B36 /* RatingsViewController.swift */; };
 		CDD401B21B4EBF6A00282B36 /* WriteReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD401B11B4EBF6A00282B36 /* WriteReviewViewController.swift */; };
 		CDD401B41B4EBFA700282B36 /* SubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD401B31B4EBFA700282B36 /* SubmitViewController.swift */; };
@@ -112,7 +111,6 @@
 		CDD401A71B4EB51000282B36 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		CDD401A91B4EB5BE00282B36 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CDD401AB1B4EBAF700282B36 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		CDD401AD1B4EBE3100282B36 /* ImagesTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesTableView.swift; sourceTree = "<group>"; };
 		CDD401AF1B4EBF2700282B36 /* RatingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingsViewController.swift; sourceTree = "<group>"; };
 		CDD401B11B4EBF6A00282B36 /* WriteReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteReviewViewController.swift; sourceTree = "<group>"; };
 		CDD401B31B4EBFA700282B36 /* SubmitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitViewController.swift; sourceTree = "<group>"; };
@@ -211,7 +209,6 @@
 				CD8266BC1B45CB710085302A /* CameraViewController.swift */,
 				CDD4019C1B4D969B00282B36 /* VenueViewController.swift */,
 				CDD401AB1B4EBAF700282B36 /* SearchViewController.swift */,
-				CDD401AD1B4EBE3100282B36 /* ImagesTableView.swift */,
 				CDD401AF1B4EBF2700282B36 /* RatingsViewController.swift */,
 				CDD401B11B4EBF6A00282B36 /* WriteReviewViewController.swift */,
 				CDD401B31B4EBFA700282B36 /* SubmitViewController.swift */,
@@ -409,7 +406,6 @@
 				CD8266881B45B5080085302A /* ViewController.swift in Sources */,
 				CDD401BA1B4EC65800282B36 /* PrettyStar.swift in Sources */,
 				CD7686FE1B5416A90011373C /* ReviewsTableViewController.swift in Sources */,
-				CDD401AE1B4EBE3100282B36 /* ImagesTableView.swift in Sources */,
 				CDD401B01B4EBF2700282B36 /* RatingsViewController.swift in Sources */,
 				CD8266E61B45DE530085302A /* AFHTTPSessionManager.m in Sources */,
 				CD8266E41B45DE530085302A /* AFHTTPRequestOperation.m in Sources */,

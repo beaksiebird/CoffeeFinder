@@ -52,19 +52,21 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
     
     @IBAction func searchButton(sender: UIButton) {
         
-        //RAILS REQUEST HERE
-        
-        
+         RailsRequest.session().searchEstablishmentsWithCompletion { () -> Void in
+            
+            
+            
+        }
     }
     
 
     
     @IBAction func backButton(sender: UIButton) {
-    
-        var loginVC = self.storyboard?.instantiateViewControllerWithIdentifier("loginVC")
-        as! ViewController
-    
-        presentViewController(loginVC, animated: false, completion: nil)
+        
+        var searchVC = storyboard?.instantiateViewControllerWithIdentifier("searchVC")
+            as! SearchViewController
+        
+        self.presentViewController(searchVC, animated: false, completion: nil)
     }
     
     
@@ -92,12 +94,6 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
         
     }
     
-    var coffeeChoice: String?
-    var wifiChoice: String?
-    var priceChoice: String?
-    var ambianceChoice: String?
-    
-    
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         let choice = pickerData[pickerView.tag][row]
@@ -106,20 +102,22 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
             
         case 0:
             
-            coffeeChoice = choice
+            RailsRequest.session().coffee_quality = row
             
         case 1:
             
-            wifiChoice = choice
+            RailsRequest.session().wifi = row
             
             
         case 2:
             
-            priceChoice = choice
+            RailsRequest.session().price = row
+            
             
         case 3:
             
-            ambianceChoice = choice
+            RailsRequest.session().ambiance = row
+            
             
         default:
             

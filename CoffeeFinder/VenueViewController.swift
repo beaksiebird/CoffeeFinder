@@ -12,22 +12,17 @@ import CoreLocation
 class VenueViewController: UIViewController, UIImagePickerControllerDelegate {
     
     var venueInfo: [String:AnyObject]?
+    var locationInfo: [String:AnyObject]?
+    var venueHours: [String:AnyObject]?
     var venueID: String?
-    
+    var locationAddress: String?
     
     @IBAction func seePics(sender: UIButton) {
+
+        var seeImagesVC = self.storyboard?.instantiateViewControllerWithIdentifier("seeImagesVC")
+            as! ImageCollectionViewController
         
-      //  var seeImagesVC = self.storyboard?.instantiateViewControllerWithIdentifier("seeImagesVC")
-        //    as! ImageCollectionViewController
-        
-       // seeImagesVC.venueID = venueID
-        
-      //  self.presentViewController(seeImagesVC, animated: false, completion: nil)
-        
-    
-        
-        
-        
+        self.presentViewController(seeImagesVC, animated: false, completion: nil)
     }
     
     
@@ -96,9 +91,34 @@ class VenueViewController: UIViewController, UIImagePickerControllerDelegate {
         nameInfo.text = venueInfo?["name"] as? String
         venueID = venueInfo?["id"] as? String
         print("This is venueID \(venueID)")
-        addressInfo.text = venueInfo?["address"] as? String
         
-        hoursInfo.text = venueInfo?["hours"] as? String
+        if let location = venueInfo?["location"] as? [String:AnyObject] {
+            
+            //println("This is the location: \(location)")
+            
+            let address = location["address"] as? String
+            
+            //println("This is the address: \(address)")
+            addressInfo.text = address
+            
+            
+            if let location = venueInfo?["location"] as? [String:AnyObject] {
+                
+                let city = location["city"] as? String
+                
+                hoursInfo.text = city
+                
+           
+            
+            
+            }
+            
+            
+        
+        }
+        
+        
+      
        
      }
 

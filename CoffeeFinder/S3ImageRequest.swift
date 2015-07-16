@@ -48,9 +48,9 @@ class S3ImageRequest: NSObject {
                     
                     println("\(info.URL.absoluteString)")
                     
-                    var imageURL:String?
+
                     
-                    RailsRequest.session().imageURL = info.URL.absoluteString
+                    //RailsRequest.session().imageURL = info.URL.
                     
                 }, failure: { (error) -> Void in
                     

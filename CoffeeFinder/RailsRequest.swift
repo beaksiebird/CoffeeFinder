@@ -37,7 +37,7 @@ class RailsRequest: NSObject {
     var username: String?
     var email: String?
     var password: String?
-    var imageURL: String?
+    var imageURL: UIImage?
     var content: String?
     var review_id: Int?
     var user_id: Int?
@@ -47,10 +47,32 @@ class RailsRequest: NSObject {
     var city: String?
     var state: String?
     var zip_code: Int?
-    var coffee_quality: Int?
-    var price: Int?
-    var ambiance: Int?
-    var wifi: Int?
+    var coffee_quality = 0
+    var price = 0
+    var ambiance = 0
+    var wifi = 0
+    
+    
+    func searchEstablishmentsWithCompletion(completion: () -> Void) {
+        
+        var info = [
+        
+            "method" : "GET",
+            "endpoint" : "establishments/search?price=&coffee_quality=&price=&ambiance=&wifi=",
+
+            
+            ] as [String:AnyObject]
+        
+        requestWithInfo(info, andCompletion: { (responseInfo) -> Void in
+        
+            println(responseInfo)
+            
+            completion()
+
+        })
+    }
+    
+   
     
     func createnewEstablishmentWithCompletion(completion: () -> Void) {
         
@@ -421,10 +443,9 @@ class RailsRequest: NSObject {
             
             if let token = token {
                 
-                request.setValue(token, forHTTPHeaderField: "access_token")
+                request.setValue(token, forHTTPHeaderField: "Access-Token")
+                
             }
-            
-
             
             if let bodyInfo = info["parameters"] as? [String:AnyObject] {
                 
@@ -447,10 +468,15 @@ class RailsRequest: NSObject {
             
             NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
                 
+                println(data)
                 
-                if let json: AnyObject = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: nil) {
+                if data != nil {
                     
-                    completion?(responseInfo: json)
+                    if let json: AnyObject = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: nil) {
+                        
+                        completion?(responseInfo: json)
+                        
+                    }
                     
                 }
                 

@@ -54,7 +54,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         let submitVC = self.storyboard?.instantiateViewControllerWithIdentifier("submitVC") as! SubmitViewController
         
-        submitVC.image = self.image
+        submitVC.userImage = UIImageView()
     
 
         println("Camera VC nav stack: \(self.navigationController!.viewControllers)")

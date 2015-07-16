@@ -21,10 +21,10 @@ class ResultsViewController: UIViewController, CLLocationManagerDelegate, MKMapV
     
    @IBAction func backButton(sender: UIButton) {
         
-        var homeVC = self.storyboard?.instantiateViewControllerWithIdentifier("homeVC")
-            as! HomeViewController
+        var searchVC = self.storyboard?.instantiateViewControllerWithIdentifier("searchVC")
+            as! SearchViewController
         
-        self.presentViewController(homeVC, animated: false, completion: nil)
+        self.presentViewController(searchVC, animated: false, completion: nil)
         
         
     }
@@ -184,6 +184,7 @@ class ResultsViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         var venueVC = storyboard?.instantiateViewControllerWithIdentifier("venueVC") as! VenueViewController
         
         venueVC.venueInfo = allVenues[sender.tag]
+        venueVC.venueID = venueVC.venueInfo?["id"] as? String
         
         presentViewController(venueVC, animated: false, completion: nil)
         
