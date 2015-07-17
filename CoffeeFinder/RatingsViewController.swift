@@ -10,33 +10,41 @@ import UIKit
 
 class RatingsViewController: UIViewController {
     
-    @IBAction func prettyStar(sender: PrettyStar) {
-        
-        sender.isStarSelected = !sender.isStarSelected
-    
-        
-        
-    }
-    
 
     
-    @IBOutlet weak var prettystarOutlet: PrettyStar!
+
+    var venuePackagedInfo: [String:AnyObject] = [:]
+
     
     
+    @IBOutlet weak var coffeeSegControl: UISegmentedControl!
+    @IBOutlet weak var wifiSegControl: UISegmentedControl!
+    @IBOutlet weak var priceSegControl: UISegmentedControl!
+    @IBOutlet weak var ambianceSegControl: UISegmentedControl!
     
     @IBAction func nextButton(sender: UIButton) {
         
+        venuePackagedInfo["coffee_quality"] = coffeeSegControl.selectedSegmentIndex + 1 as Int
+        venuePackagedInfo["price"] = priceSegControl.selectedSegmentIndex + 1 as Int
+        venuePackagedInfo["ambiance"] = ambianceSegControl.selectedSegmentIndex + 1 as Int
+        venuePackagedInfo["wifi"] = wifiSegControl.selectedSegmentIndex + 1 as Int
         
+//        if coffeeSegControl.selectedSegmentIndex == UISegmentedControlNoSegment {
+//            println("no seg, set to 1")
+//            venuePackagedInfo["coffee_quality"] = 1
+//        }
+
+        println(venuePackagedInfo)
         
-        RailsRequest.session().createnewEstablishmentWithCompletion { () -> Void in
+        RailsRequest.session().createnewEstablishmentWithCompletion(venuePackagedInfo, completion: { () -> Void in
             
-        }
-        
-        
-        var writereviewVC = self.storyboard?.instantiateViewControllerWithIdentifier("writereviewVC")
-            as! WriteReviewViewController
-        
-        self.navigationController?.pushViewController(writereviewVC, animated: false)
+            println(self.venuePackagedInfo)
+            
+            var writereviewVC = self.storyboard?.instantiateViewControllerWithIdentifier("writereviewVC")
+                as! WriteReviewViewController
+            
+            self.navigationController?.pushViewController(writereviewVC, animated: false)
+        })
         
     }
     
@@ -44,7 +52,13 @@ class RatingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        coffeeSegControl.selectedSegmentIndex = 0
+        priceSegControl.selectedSegmentIndex = 0
+        ambianceSegControl.selectedSegmentIndex = 0
+        wifiSegControl.selectedSegmentIndex = 0
+
+
+        println("Ratings VC view did load: \(venuePackagedInfo)")
 
     }
 

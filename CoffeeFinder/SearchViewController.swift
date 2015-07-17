@@ -11,6 +11,23 @@ import UIKit
 class SearchViewController: UIViewController {
     
     
+    @IBAction func deleteAccount(sender: UIButton) {
+        
+        
+        RailsRequest.session().deleteUserWithCompletion { () -> Void in
+            
+            }
+        
+        //var loginVC = self.storyboard?.instantiateViewControllerWithIdentifier("loginVC")
+        //    as! WriteReviewViewController
+        
+        //self.navigationController?.pushViewController(loginVC, animated: false)
+        
+        
+    }
+    
+    
+    
     @IBAction func searchReviewed(sender: UIButton) {
         
             

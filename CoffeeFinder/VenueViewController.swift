@@ -11,6 +11,8 @@ import CoreLocation
 
 class VenueViewController: UIViewController, UIImagePickerControllerDelegate {
     
+    var venuePackagedInfo: [String:AnyObject] = [:]
+    
     var venueInfo: [String:AnyObject]?
     var locationInfo: [String:AnyObject]?
     var venueHours: [String:AnyObject]?
@@ -37,9 +39,11 @@ class VenueViewController: UIViewController, UIImagePickerControllerDelegate {
         var storyboard = UIStoryboard(name: "Review", bundle: nil)
         
         
-        var reviewVC = storyboard.instantiateInitialViewController() as! UINavigationController
-        
-        self.presentViewController(reviewVC, animated: true, completion: nil)
+        var reviewNVC = storyboard.instantiateInitialViewController() as! UINavigationController
+        if let pleaseWork = reviewNVC.viewControllers[0] as? RatingsViewController {
+            pleaseWork.venuePackagedInfo = venuePackagedInfo
+        }
+        self.presentViewController(reviewNVC, animated: true, completion: nil)
         
     }
     
@@ -89,10 +93,13 @@ class VenueViewController: UIViewController, UIImagePickerControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
  
+        println(venueInfo)
         
         nameInfo.text = venueInfo?["name"] as? String
+        venuePackagedInfo["name"] = venueInfo?["name"]
+        
         venueID = venueInfo?["id"] as? String
-        print("This is venueID \(venueID)")
+        println("This is venueID \(venueID)")
         
         if let location = venueInfo?["location"] as? [String:AnyObject] {
             
@@ -102,13 +109,16 @@ class VenueViewController: UIViewController, UIImagePickerControllerDelegate {
             
             //println("This is the address: \(address)")
             addressInfo.text = address
-            
+            venuePackagedInfo["address"] = address
+            venuePackagedInfo["state"] = location["state"] as? String
+            venuePackagedInfo["zip_code"] = location["postalCode"] as? String
             
             if let location = venueInfo?["location"] as? [String:AnyObject] {
                 
                 let city = location["city"] as? String
                 
                 hoursInfo.text = city
+                venuePackagedInfo["city"] = city
                 
            
             
@@ -119,7 +129,7 @@ class VenueViewController: UIViewController, UIImagePickerControllerDelegate {
         
         }
         
-        
+        println("end of view did load \(venuePackagedInfo)")
       
        
      }

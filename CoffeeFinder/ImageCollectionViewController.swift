@@ -83,39 +83,47 @@ class ImageCollectionViewController: UICollectionViewController {
                                 println("photos info: \(photosInfo)")
                                 
                                 if let groupsInfo = photosInfo["groups"] as? [AnyObject] {
-                                    println("groups info: \(groupsInfo[0])")
                                     
-                                    if let itemsInfo = groupsInfo[0]["items"] as? [AnyObject] {
+                                    if groupsInfo.count > 0 {
                                         
-                                        println("items info: \(itemsInfo)")
+                                        println("groups info: \(groupsInfo[0])")
                                         
-                                        for item in itemsInfo {
+                                        if let itemsInfo = groupsInfo[0]["items"] as? [AnyObject] {
                                             
-                                            var urlString = String()
+                                            println("items info: \(itemsInfo)")
                                             
-                                            let prefix = item["prefix"] as? String
-                                            urlString += prefix!
+                                            for item in itemsInfo {
+                                                
+                                                var urlString = String()
+                                                
+                                                let prefix = item["prefix"] as? String
+                                                urlString += prefix!
+                                                
+                                                
+                                                let width = item["width"] as? Int
+                                                urlString += String(width!)
+                                                
+                                                urlString += "x"
+                                                
+                                                let height = item["height"] as? Int
+                                                urlString += String(height!)
+                                                
+                                                
+                                                let suffix = item["suffix"] as? String
+                                                urlString += suffix!
+                                                
+                                                
+                                                println(urlString)
+                                                self.urlArray.addObject(urlString)
+                                                println(self.urlArray.count)
+                                                self.collectionView!.reloadData()
+                                            }
                                             
-                                            
-                                            let width = item["width"] as? Int
-                                            urlString += String(width!)
-                                            
-                                            urlString += "x"
-                                            
-                                            let height = item["height"] as? Int
-                                            urlString += String(height!)
-                                            
-                                            
-                                            let suffix = item["suffix"] as? String
-                                            urlString += suffix!
-                                            
-                                            
-                                            println(urlString)
-                                            self.urlArray.addObject(urlString)
-                                            println(self.urlArray.count)
-                                            self.collectionView!.reloadData()
                                         }
+
+                                        
                                     }
+                                    
                                     
                                 }
 

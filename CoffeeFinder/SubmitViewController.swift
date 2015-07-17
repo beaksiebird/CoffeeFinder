@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SubmitViewController: UIViewController, UIImagePickerControllerDelegate  {
+class SubmitViewController: UIViewController, UIImagePickerControllerDelegate, UITextViewDelegate {
     
     
     
@@ -51,31 +51,46 @@ class SubmitViewController: UIViewController, UIImagePickerControllerDelegate  {
     
         RailsRequest.session().imageURL = userImage.image
             
-        RailsRequest.session().createnewEstablishmentWithCompletion { () -> Void in
-            
-        RailsRequest.session().createReviewWithCompletion({ () -> Void in
-            
-        })
-        
-        
-    
-        self.dismissViewControllerAnimated(true, completion: nil)
-        
-        }
+//        RailsRequest.session().createnewEstablishmentWithCompletion { () -> Void in
+//            
+//        RailsRequest.session().createReviewWithCompletion({ () -> Void in
+//            
+//        })
+//        
+//        
+//    
+//        self.dismissViewControllerAnimated(true, completion: nil)
+//        
+//        }
         
     }
     
 
+    @IBOutlet weak var textView: UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        textView.delegate = self
+        
         userImage.image = imageURL
         userReview.text = review
         
-    
     }
 
+    
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n"
+        {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
+    
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

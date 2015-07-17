@@ -11,6 +11,9 @@
 		CD7687001B555D750011373C /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7686FF1B555D750011373C /* ReviewTableViewCell.swift */; };
 		CD7687381B56ED580011373C /* ImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7687371B56ED580011373C /* ImageCollectionViewController.swift */; };
 		CD76873A1B585B420011373C /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7687391B585B420011373C /* ImageCollectionViewCell.swift */; };
+		CD76873E1B59660A0011373C /* UserCoffeeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD76873D1B59660A0011373C /* UserCoffeeTableViewController.swift */; };
+		CD7687441B5968920011373C /* UserCoffeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7687431B5968920011373C /* UserCoffeeTableViewCell.swift */; };
+		CD7687461B5994700011373C /* StarsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7687451B5994700011373C /* StarsData.swift */; };
 		CD8266861B45B5080085302A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8266851B45B5080085302A /* AppDelegate.swift */; };
 		CD8266881B45B5080085302A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8266871B45B5080085302A /* ViewController.swift */; };
 		CD82668B1B45B5080085302A /* Review.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8266891B45B5080085302A /* Review.storyboard */; };
@@ -63,6 +66,9 @@
 		CD7686FF1B555D750011373C /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		CD7687371B56ED580011373C /* ImageCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewController.swift; sourceTree = "<group>"; };
 		CD7687391B585B420011373C /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		CD76873D1B59660A0011373C /* UserCoffeeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCoffeeTableViewController.swift; sourceTree = "<group>"; };
+		CD7687431B5968920011373C /* UserCoffeeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCoffeeTableViewCell.swift; sourceTree = "<group>"; };
+		CD7687451B5994700011373C /* StarsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarsData.swift; sourceTree = "<group>"; };
 		CD8266801B45B5080085302A /* CoffeeFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD8266841B45B5080085302A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD8266851B45B5080085302A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -165,7 +171,6 @@
 				CD8266C01B45CC9D0085302A /* ViewControllers */,
 				CD8266C11B45CCA70085302A /* Requests */,
 				CD8266831B45B5080085302A /* Supporting Files */,
-				CD7686FF1B555D750011373C /* ReviewTableViewCell.swift */,
 			);
 			path = CoffeeFinder;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 				CD8266C61B45DE0A0085302A /* CoffeeFinder-Bridging-Header.h */,
 				CD8266BE1B45CC940085302A /* S3ImageRequest.swift */,
 				CD8266B81B45CB380085302A /* RailsRequest.swift */,
+				CD7687451B5994700011373C /* StarsData.swift */,
 				CD8266ED1B46BC780085302A /* Keys.swift */,
 			);
 			name = Requests;
@@ -279,8 +285,11 @@
 			isa = PBXGroup;
 			children = (
 				CD7686FD1B5416A90011373C /* ReviewsTableViewController.swift */,
+				CD7686FF1B555D750011373C /* ReviewTableViewCell.swift */,
 				CD7687371B56ED580011373C /* ImageCollectionViewController.swift */,
 				CD7687391B585B420011373C /* ImageCollectionViewCell.swift */,
+				CD76873D1B59660A0011373C /* UserCoffeeTableViewController.swift */,
+				CD7687431B5968920011373C /* UserCoffeeTableViewCell.swift */,
 			);
 			name = CollectionViews;
 			sourceTree = "<group>";
@@ -398,10 +407,13 @@
 				CDD4019D1B4D969B00282B36 /* VenueViewController.swift in Sources */,
 				CD8266E91B45DE530085302A /* AFURLConnectionOperation.m in Sources */,
 				CD8266CD1B45DE0A0085302A /* AFAmazonS3Manager.m in Sources */,
+				CD7687441B5968920011373C /* UserCoffeeTableViewCell.swift in Sources */,
+				CD7687461B5994700011373C /* StarsData.swift in Sources */,
 				CD7687001B555D750011373C /* ReviewTableViewCell.swift in Sources */,
 				CD8266B11B45C9940085302A /* RegisterViewController.swift in Sources */,
 				CD8266EA1B45DE530085302A /* AFURLRequestSerialization.m in Sources */,
 				CD7687381B56ED580011373C /* ImageCollectionViewController.swift in Sources */,
+				CD76873E1B59660A0011373C /* UserCoffeeTableViewController.swift in Sources */,
 				CD8266881B45B5080085302A /* ViewController.swift in Sources */,
 				CDD401BA1B4EC65800282B36 /* PrettyStar.swift in Sources */,
 				CD7686FE1B5416A90011373C /* ReviewsTableViewController.swift in Sources */,

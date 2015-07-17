@@ -52,6 +52,11 @@ class RailsRequest: NSObject {
     var ambiance = 0
     var wifi = 0
     
+    //// review info
+    
+    /// coffee rating
+    //
+    
     
     func searchEstablishmentsWithCompletion(completion: () -> Void) {
         
@@ -74,7 +79,27 @@ class RailsRequest: NSObject {
     
    
     
-    func createnewEstablishmentWithCompletion(completion: () -> Void) {
+    func createnewEstablishmentWithCompletion(venuePackagedInfo: [String:AnyObject], completion: () -> Void) {
+        
+        var name = venuePackagedInfo["name"] as? String
+        var address = venuePackagedInfo["address"] as? String
+        var city = venuePackagedInfo["city"] as? String
+        var state = venuePackagedInfo["state"] as? String
+        
+        var zipCode = venuePackagedInfo["zip_code"] as? String
+        var intZipCode = zipCode?.toInt()
+        var coffeeQuality = venuePackagedInfo["coffee_quality"] as? Int
+        var price = venuePackagedInfo["price"] as? Int
+        var ambiance = venuePackagedInfo["ambiance"] as? Int
+        var wifi = venuePackagedInfo["wifi"] as? Int
+        
+        println(zipCode)
+        
+//        var intZipCode = zipCode?.toInt()
+//        var intCoffeeQuality = coffeeQuality?.toInt()
+//        var intPrice = price?.toInt()
+//        var intAmbiance = ambiance?.toInt()
+//        var intWifi = wifi?.toInt()
         
         var info = [
             
@@ -82,18 +107,20 @@ class RailsRequest: NSObject {
             "endpoint" : "establishments/new",
             "parameters" : [
                 
-                "name" : "name",
-                "street_address" : "street_address",
-                "city" : "city",
-                "state" : "state",
-                "zip_code" : "zip_code",
-                "coffee_quality" : "coffee_quality",
-                "price": "price",
-                "ambiance" : "ambiance",
-                "wifi" : "wifi",
-            ]
+                "name" : name!,
+                "street_address" : address!,
+                "city" : city!,
+                "state" : state!,
+                "zip_code" : intZipCode!,
+                "coffee_quality" : coffeeQuality!,
+                "price": price!,
+                "ambiance" : ambiance!,
+                "wifi" : wifi!,
+                ]
             
             ] as [String:AnyObject]
+        
+        println("create new establishment rails request info:\n \(info)")
         
         requestWithInfo(info, andCompletion: { (responseInfo) -> Void in
             
@@ -367,10 +394,10 @@ class RailsRequest: NSObject {
         var info = [
             
             "method" : "DELETE",
-            "endpoint" : "user/username/delete",
+            "endpoint" : "user/:username/delete",
             "parameters" : [
                 
-                "username" : username!,
+                "username" : "username",
                 
             ]
             ] as [String:AnyObject]
