@@ -8,15 +8,31 @@
 
 import UIKit
 
-class WriteReviewViewController: UIViewController, UITextFieldDelegate {
+class WriteReviewViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var writeReview: UITextView!
 
+  
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        writeReview.delegate = self 
+      }
+    
+    
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n"
+        {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
     }
+    
+    
+    
     
 
     @IBAction func nextButton(sender: UIButton) {

@@ -16,7 +16,11 @@ let reuseIdentifier = "establishmentImages"
 
 class ImageCollectionViewController: UICollectionViewController {
     
-    
+   
+    @IBAction func backButton(sender: UIButton) {
+        
+        self.dismissViewControllerAnimated(false, completion: nil)        
+    }
     
     
     var urlArray: NSMutableArray = []
@@ -115,8 +119,6 @@ class ImageCollectionViewController: UICollectionViewController {
                                     
                                 }
 
-
-                                
                                 
                             }
                             

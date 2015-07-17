@@ -99,6 +99,17 @@
                                     <action selector="prettyStar:" destination="XKA-ks-VRO" eventType="touchUpInside" id="OZ5-51-xlz"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoW-EJ-LIW">
+                                <rect key="frame" x="212" y="409" width="128" height="30"/>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="36"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButton:" destination="XKA-ks-VRO" eventType="touchUpInside" id="2mA-ie-Jg2"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOl-kT-hBr" customClass="PrettyStar" customModule="CoffeeFinder" customModuleProvider="target">
                                 <rect key="frame" x="87" y="109" width="128" height="129"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -121,7 +132,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uks-Qg-9y3" customClass="PrettyStar" customModule="CoffeeFinder" customModuleProvider="target">
-                                <rect key="frame" x="263" y="27" width="128" height="130"/>
+                                <rect key="frame" x="258" y="26" width="128" height="130"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -139,27 +150,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="prettyStar:" destination="XKA-ks-VRO" eventType="touchUpInside" id="oBF-zi-E8v"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7A1-n3-Ftp" customClass="PrettyStar" customModule="CoffeeFinder" customModuleProvider="target">
-                                <rect key="frame" x="94" y="182" width="128" height="129"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
-                                        <color key="value" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
-                                        <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="prettyStar:" destination="XKA-ks-VRO" eventType="touchUpInside" id="CLz-2Z-9Hw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mei-2U-MIZ" customClass="PrettyStar" customModule="CoffeeFinder" customModuleProvider="target">
@@ -310,7 +300,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Xf-ph-Z4t" customClass="PrettyStar" customModule="CoffeeFinder" customModuleProvider="target">
-                                <rect key="frame" x="174" y="109" width="128" height="129"/>
+                                <rect key="frame" x="169" y="109" width="128" height="129"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -330,15 +320,25 @@
                                     <action selector="prettyStar:" destination="XKA-ks-VRO" eventType="touchUpInside" id="Jqj-Yv-toe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoW-EJ-LIW">
-                                <rect key="frame" x="212" y="409" width="128" height="30"/>
-                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="36"/>
-                                <state key="normal" title="NEXT">
-                                    <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7A1-n3-Ftp" customClass="PrettyStar" customModule="CoffeeFinder" customModuleProvider="target">
+                                <rect key="frame" x="94" y="182" width="128" height="129"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                        <color key="value" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="nextButton:" destination="XKA-ks-VRO" eventType="touchUpInside" id="2mA-ie-Jg2"/>
+                                    <action selector="prettyStar:" destination="XKA-ks-VRO" eventType="touchUpInside" id="CLz-2Z-9Hw"/>
                                 </connections>
                             </button>
                         </subviews>
