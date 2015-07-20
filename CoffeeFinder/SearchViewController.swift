@@ -14,23 +14,21 @@ class SearchViewController: UIViewController {
     @IBAction func deleteAccount(sender: UIButton) {
         
         
+        
         RailsRequest.session().deleteUserWithCompletion { () -> Void in
-            
-            }
+
+        }
         
-        //var loginVC = self.storyboard?.instantiateViewControllerWithIdentifier("loginVC")
-        //    as! WriteReviewViewController
+        let loginSB = UIStoryboard(name: "Login", bundle: nil)
         
-        //self.navigationController?.pushViewController(loginVC, animated: false)
+        let loginVC = loginSB.instantiateInitialViewController() as! ViewController
         
+        presentViewController(loginVC, animated: false, completion: nil)
         
     }
     
     
-    
     @IBAction func searchReviewed(sender: UIButton) {
-        
-            
         
         var homeVC = self.storyboard?.instantiateViewControllerWithIdentifier("homeVC")
             as! HomeViewController
@@ -42,14 +40,15 @@ class SearchViewController: UIViewController {
     
     
     @IBAction func searchCoffee(sender: UIButton) {
+        
     }
     
-    
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
+        println("This is the current users, username \(RailsRequest.session().username)")
+        
         // Do any additional setup after loading the view.
     }
     
@@ -62,10 +61,8 @@ class SearchViewController: UIViewController {
             let loginVC = loginSB.instantiateInitialViewController() as! ViewController
             
             presentViewController(loginVC, animated: false, completion: nil)
-
             
         }
-        
         
         // present loginVC
         

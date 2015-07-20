@@ -14,6 +14,9 @@
 		CD76873E1B59660A0011373C /* UserCoffeeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD76873D1B59660A0011373C /* UserCoffeeTableViewController.swift */; };
 		CD7687441B5968920011373C /* UserCoffeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7687431B5968920011373C /* UserCoffeeTableViewCell.swift */; };
 		CD7687461B5994700011373C /* StarsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7687451B5994700011373C /* StarsData.swift */; };
+		CD7687481B5B0FFB0011373C /* UserImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7687471B5B0FFB0011373C /* UserImageCollectionViewController.swift */; };
+		CD76874A1B5B10450011373C /* UserImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7687491B5B10450011373C /* UserImageCollectionViewCell.swift */; };
+		CD76874C1B5C136C0011373C /* UserVenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD76874B1B5C136C0011373C /* UserVenueViewController.swift */; };
 		CD8266861B45B5080085302A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8266851B45B5080085302A /* AppDelegate.swift */; };
 		CD8266881B45B5080085302A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8266871B45B5080085302A /* ViewController.swift */; };
 		CD82668B1B45B5080085302A /* Review.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8266891B45B5080085302A /* Review.storyboard */; };
@@ -69,6 +72,9 @@
 		CD76873D1B59660A0011373C /* UserCoffeeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCoffeeTableViewController.swift; sourceTree = "<group>"; };
 		CD7687431B5968920011373C /* UserCoffeeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCoffeeTableViewCell.swift; sourceTree = "<group>"; };
 		CD7687451B5994700011373C /* StarsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarsData.swift; sourceTree = "<group>"; };
+		CD7687471B5B0FFB0011373C /* UserImageCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserImageCollectionViewController.swift; sourceTree = "<group>"; };
+		CD7687491B5B10450011373C /* UserImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		CD76874B1B5C136C0011373C /* UserVenueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserVenueViewController.swift; sourceTree = "<group>"; };
 		CD8266801B45B5080085302A /* CoffeeFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD8266841B45B5080085302A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD8266851B45B5080085302A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -217,6 +223,7 @@
 				CDD401AF1B4EBF2700282B36 /* RatingsViewController.swift */,
 				CDD401B11B4EBF6A00282B36 /* WriteReviewViewController.swift */,
 				CDD401B31B4EBFA700282B36 /* SubmitViewController.swift */,
+				CD76874B1B5C136C0011373C /* UserVenueViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -290,6 +297,8 @@
 				CD7687391B585B420011373C /* ImageCollectionViewCell.swift */,
 				CD76873D1B59660A0011373C /* UserCoffeeTableViewController.swift */,
 				CD7687431B5968920011373C /* UserCoffeeTableViewCell.swift */,
+				CD7687471B5B0FFB0011373C /* UserImageCollectionViewController.swift */,
+				CD7687491B5B10450011373C /* UserImageCollectionViewCell.swift */,
 			);
 			name = CollectionViews;
 			sourceTree = "<group>";
@@ -402,12 +411,14 @@
 				CD8266BF1B45CC940085302A /* S3ImageRequest.swift in Sources */,
 				CD8266B51B45C9DB0085302A /* HomeViewController.swift in Sources */,
 				CDD401AC1B4EBAF700282B36 /* SearchViewController.swift in Sources */,
+				CD76874A1B5B10450011373C /* UserImageCollectionViewCell.swift in Sources */,
 				CD8266EE1B46BC780085302A /* Keys.swift in Sources */,
 				CD8266E51B45DE530085302A /* AFHTTPRequestOperationManager.m in Sources */,
 				CDD4019D1B4D969B00282B36 /* VenueViewController.swift in Sources */,
 				CD8266E91B45DE530085302A /* AFURLConnectionOperation.m in Sources */,
 				CD8266CD1B45DE0A0085302A /* AFAmazonS3Manager.m in Sources */,
 				CD7687441B5968920011373C /* UserCoffeeTableViewCell.swift in Sources */,
+				CD76874C1B5C136C0011373C /* UserVenueViewController.swift in Sources */,
 				CD7687461B5994700011373C /* StarsData.swift in Sources */,
 				CD7687001B555D750011373C /* ReviewTableViewCell.swift in Sources */,
 				CD8266B11B45C9940085302A /* RegisterViewController.swift in Sources */,
@@ -422,6 +433,7 @@
 				CD8266E41B45DE530085302A /* AFHTTPRequestOperation.m in Sources */,
 				CD8266B71B45CACE0085302A /* ResultsViewController.swift in Sources */,
 				CD8266E81B45DE530085302A /* AFSecurityPolicy.m in Sources */,
+				CD7687481B5B0FFB0011373C /* UserImageCollectionViewController.swift in Sources */,
 				CD8266CF1B45DE0A0085302A /* AFAmazonS3ResponseSerializer.m in Sources */,
 				CDD401B21B4EBF6A00282B36 /* WriteReviewViewController.swift in Sources */,
 				CD76873A1B585B420011373C /* ImageCollectionViewCell.swift in Sources */,

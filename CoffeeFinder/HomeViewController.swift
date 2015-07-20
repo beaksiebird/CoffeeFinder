@@ -55,7 +55,10 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
          RailsRequest.session().searchEstablishmentsWithCompletion { () -> Void in
             
             
+            var uservenueVC = self.storyboard?.instantiateViewControllerWithIdentifier("uservenueVC")
+                as! UserVenueViewController
             
+            self.presentViewController(uservenueVC, animated: false, completion: nil)
         }
     }
     

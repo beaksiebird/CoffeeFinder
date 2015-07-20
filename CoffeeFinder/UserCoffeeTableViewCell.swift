@@ -10,7 +10,7 @@ import UIKit
 
 class UserCoffeeTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var userReviews: UIView!
+    @IBOutlet weak var userReviews: UITextView!
     
     
 

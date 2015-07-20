@@ -50,8 +50,6 @@ class S3ImageRequest: NSObject {
                     
 
                     
-                    //RailsRequest.session().imageURL = info.URL.
-                    
                 }, failure: { (error) -> Void in
                     
                     println("\(error)")

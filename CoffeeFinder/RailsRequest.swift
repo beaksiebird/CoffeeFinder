@@ -33,6 +33,18 @@ class RailsRequest: NSObject {
         }
     }
    
+    var setUsername: String? {
+        
+        get {
+            
+            return defaults.objectForKey("USER") as? String
+        }
+        set {
+            
+            defaults.setValue(newValue, forKey: "USER")
+            defaults.synchronize()
+        }
+    }
     
     var username: String?
     var email: String?
@@ -47,15 +59,12 @@ class RailsRequest: NSObject {
     var city: String?
     var state: String?
     var zip_code: Int?
+    var flagged: Bool?
     var coffee_quality = 0
     var price = 0
     var ambiance = 0
     var wifi = 0
     
-    //// review info
-    
-    /// coffee rating
-    //
     
     
     func searchEstablishmentsWithCompletion(completion: () -> Void) {
@@ -63,7 +72,7 @@ class RailsRequest: NSObject {
         var info = [
         
             "method" : "GET",
-            "endpoint" : "establishments/search?price=&coffee_quality=&price=&ambiance=&wifi=",
+            "endpoint" : "establishments/search?price=&coffee_quality=&price=&ambiance=&wifi=&page=1&per=1",
 
             
             ] as [String:AnyObject]
@@ -72,9 +81,27 @@ class RailsRequest: NSObject {
         
             println(responseInfo)
             
+            if let name = responseInfo?[0]["name"] as? String {
+                
+                self.name = name
+                
+                println(name)
+            }
+            
+            if let streetaddress = responseInfo?[0]["street_address"] as? String {
+                
+                self.street_address = streetaddress
+            }
+            
+            if let city = responseInfo?[0]["city"] as? String {
+                
+                self.city = city 
+            }
+            
             completion()
-
+            
         })
+        
     }
     
    
@@ -95,12 +122,7 @@ class RailsRequest: NSObject {
         
         println(zipCode)
         
-//        var intZipCode = zipCode?.toInt()
-//        var intCoffeeQuality = coffeeQuality?.toInt()
-//        var intPrice = price?.toInt()
-//        var intAmbiance = ambiance?.toInt()
-//        var intWifi = wifi?.toInt()
-        
+
         var info = [
             
             "method" : "POST",
@@ -152,8 +174,8 @@ class RailsRequest: NSObject {
         
         var info = [
             
-            "method" : "POST",
-            "endpoint" : "users/signup",
+            "method" : "GET",
+            "endpoint" : "establishment/\(establishment_id!)",
             "parameters" : [
                 
                 "establishment_id" : establishment_id!,
@@ -190,10 +212,10 @@ class RailsRequest: NSObject {
         var info = [
             
             "method" : "GET",
-            "endpoint" : "review/:id",
+            "endpoint" : "review/\(review_id!)",
             "parameters" : [
                 
-                "review_id" : review_id!,
+                "review_id" : "\(review_id!)",
               
                 ]
             
@@ -246,7 +268,6 @@ class RailsRequest: NSObject {
                 
                 completion()
                 //end repeated stuff
-                
             }
             
         })
@@ -283,6 +304,8 @@ class RailsRequest: NSObject {
                     completion()
                     
                 }
+                
+                self.username = user["username"] as? String
                 
             }
             
@@ -324,11 +347,15 @@ class RailsRequest: NSObject {
         
         var info = [
             
-            "method" : "POST",
-            "endpoint" : "/users/login",
+            "method" : "PATCH",
+            "endpoint" : "/review/\(review_id!)",
             "parameters" : [
                 
-                "reviewid" : review_id!,
+                "content" : "content!",
+                "flagged" : "flagged!",
+                "imageURL" : "imageURL",
+                
+                
                 
                 
             ]
@@ -360,7 +387,7 @@ class RailsRequest: NSObject {
         var info = [
             
             "method" : "DELETE",
-            "endpoint" : "review/:id",
+            "endpoint" : "review/\(review_id!)",
             "parameters" : [
                 
                 "reviewid" : review_id!,
@@ -394,25 +421,23 @@ class RailsRequest: NSObject {
         var info = [
             
             "method" : "DELETE",
-            "endpoint" : "user/:username/delete",
-            "parameters" : [
-                
-                "username" : "username",
-                
-            ]
+            "endpoint" : "user/delete/\(username!)",
+//            "parameters" : [
+//                
+//                "username" : "\(username!)",
+//                
+//                
+//            ]
+           
             ] as [String:AnyObject]
+        
+        println("This is the railsrequest username \(username)")
         
         requestWithInfo(info, andCompletion: { (responseInfo) -> Void in
             
             println(responseInfo)
             
-            if let accessToken = responseInfo?["access_token"] as? String {
-                
-                self.token = accessToken
-                
-                completion()
-                
-            }
+
             
         })
         

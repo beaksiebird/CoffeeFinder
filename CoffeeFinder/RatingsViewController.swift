@@ -24,15 +24,14 @@ class RatingsViewController: UIViewController {
     
     @IBAction func nextButton(sender: UIButton) {
         
+       // venuePackagedInfo["name"]
+        
         venuePackagedInfo["coffee_quality"] = coffeeSegControl.selectedSegmentIndex + 1 as Int
         venuePackagedInfo["price"] = priceSegControl.selectedSegmentIndex + 1 as Int
         venuePackagedInfo["ambiance"] = ambianceSegControl.selectedSegmentIndex + 1 as Int
         venuePackagedInfo["wifi"] = wifiSegControl.selectedSegmentIndex + 1 as Int
         
-//        if coffeeSegControl.selectedSegmentIndex == UISegmentedControlNoSegment {
-//            println("no seg, set to 1")
-//            venuePackagedInfo["coffee_quality"] = 1
-//        }
+
 
         println(venuePackagedInfo)
         

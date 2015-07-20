@@ -51,19 +51,18 @@ class SubmitViewController: UIViewController, UIImagePickerControllerDelegate, U
     
         RailsRequest.session().imageURL = userImage.image
             
-//        RailsRequest.session().createnewEstablishmentWithCompletion { () -> Void in
-//            
-//        RailsRequest.session().createReviewWithCompletion({ () -> Void in
-//            
-//        })
-//        
-//        
-//    
-//        self.dismissViewControllerAnimated(true, completion: nil)
-//        
-//        }
+       
         
-    }
+        RailsRequest.session().createReviewWithCompletion({ () -> Void in
+        
+        })
+        
+        
+    
+        self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        
+    
     
 
     @IBOutlet weak var textView: UITextView!

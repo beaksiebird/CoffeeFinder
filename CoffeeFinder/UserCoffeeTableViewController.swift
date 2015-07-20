@@ -7,21 +7,53 @@
 //
 
 import UIKit
+import CoreLocation
 
 class UserCoffeeTableViewController: UITableViewController {
     
     
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    @IBAction func reportReview(sender: UIButton) {
         
-        RailsRequest.session().getReviewWithCompletion { () -> Void in
+        RailsRequest.session().flagReviewWithCompletion { () -> Void in
             
         }
         
         
         
+    }
+    
+    
+    
+    @IBAction func backButton(sender: UIButton) {
+        
+        
+        
+        var uservenueVC = storyboard?.instantiateViewControllerWithIdentifier("uservenueVC")
+            as! UserVenueViewController
+        
+        self.presentViewController(uservenueVC, animated: false, completion: nil)
+        
+        
+    }
+    
+    
+    
+    var items: [[String:AnyObject]] = []
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+
+        
+        RailsRequest.session().getReviewWithCompletion { () -> Void in
+            
+            
+            
+        }
+        
+        
+    
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -46,18 +78,18 @@ class UserCoffeeTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return items.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("userReviewCell", forIndexPath: indexPath) as! UserCoffeeTableViewCell
 
-        // Configure the cell...
-
+      cell.userReviews.text = items[indexPath.row]["text"] as? String
+        
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
