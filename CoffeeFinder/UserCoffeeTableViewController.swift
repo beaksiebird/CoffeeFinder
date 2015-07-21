@@ -18,7 +18,9 @@ class UserCoffeeTableViewController: UITableViewController {
         
         let reviewId = items[cellButton.tag]["id"] as! Int
         
-        RailsRequest.session().updateReviewWithCompletion(reviewId, completion: { () -> Void in
+        RailsRequest.session().updateReviewWithCompletion(reviewId, completion: { () -> Void
+            
+            in
             
             
         })
