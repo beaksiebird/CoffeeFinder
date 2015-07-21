@@ -156,13 +156,13 @@ class ImageCollectionViewController: UICollectionViewController {
   
 
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        //#warning Incomplete method implementation -- Return the number of sections
+        
         return 1
     }
 
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //#warning Incomplete method implementation -- Return the number of items in the section
+       
         return urlArray.count
     }
 
@@ -174,7 +174,7 @@ class ImageCollectionViewController: UICollectionViewController {
         
         let url = NSURL(string: urlArray[indexPath.row] as! String)
         
-        println(url)
+       
         let data = NSData(contentsOfURL: url!)
         let image = UIImage(data: data!)
         

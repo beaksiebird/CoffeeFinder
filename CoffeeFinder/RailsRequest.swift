@@ -46,6 +46,11 @@ class RailsRequest: NSObject {
         }
     }
     
+    
+    
+    
+    
+    
     var username: String?
     var email: String?
     var password: String?
@@ -72,7 +77,7 @@ class RailsRequest: NSObject {
         var info = [
         
             "method" : "GET",
-            "endpoint" : "establishments/search?price=&coffee_quality=&price=&ambiance=&wifi=&page=1&per=1",
+            "endpoint" : "establishments/search?price=&coffee_quality=&price=&ambiance=&wifi=",
 
             
             ] as [String:AnyObject]
@@ -81,19 +86,19 @@ class RailsRequest: NSObject {
         
             println(responseInfo)
             
-            if let name = responseInfo?[0]["name"] as? String {
+            if let name = responseInfo?["name"] as? String {
                 
                 self.name = name
                 
                 println(name)
             }
             
-            if let streetaddress = responseInfo?[0]["street_address"] as? String {
+            if let streetaddress = responseInfo?["street_address"] as? String {
                 
                 self.street_address = streetaddress
             }
             
-            if let city = responseInfo?[0]["city"] as? String {
+            if let city = responseInfo?["city"] as? String {
                 
                 self.city = city 
             }
@@ -165,9 +170,31 @@ class RailsRequest: NSObject {
     
     
     
+    func getAvailableReviewsWithCompletion(completion: (reviews: [[String:AnyObject]]) -> Void) {
+        
+        var info = [
+            
+            "method" : "GET",
+            "endpoint" : "reviews/available"
+            
+            ] as [String:AnyObject]
+        
+        requestWithInfo(info, andCompletion: { (responseInfo) -> Void in
+            
+          
+            
+            if let reviews = responseInfo as? [[String:AnyObject]] {
+                
+                completion(reviews: reviews)
+                
+            }
+            
+        })
+                
+    }
     
     
-    
+
     
     
     func getEstablishmentWithCompletion(completion: () -> Void) {
@@ -185,8 +212,7 @@ class RailsRequest: NSObject {
             ] as [String:AnyObject]
         
         requestWithInfo(info, andCompletion: { (responseInfo) -> Void in
-            
-            println(responseInfo)
+    
             
             if let accessToken = responseInfo?["access_token"] as? String {
                 
@@ -230,7 +256,7 @@ class RailsRequest: NSObject {
                 self.token = accessToken
                 
                 completion()
-                //end repeated stuff
+              
                 
             }
             
@@ -351,9 +377,9 @@ class RailsRequest: NSObject {
             "endpoint" : "/review/\(review_id!)",
             "parameters" : [
                 
-                "content" : "content!",
+                //"content" : "content!",
                 "flagged" : "flagged!",
-                "imageURL" : "imageURL",
+                //"imageURL" : "imageURL",
                 
                 
                 
@@ -422,12 +448,8 @@ class RailsRequest: NSObject {
             
             "method" : "DELETE",
             "endpoint" : "user/delete/\(username!)",
-//            "parameters" : [
-//                
-//                "username" : "\(username!)",
-//                
-//                
-//            ]
+
+
            
             ] as [String:AnyObject]
         

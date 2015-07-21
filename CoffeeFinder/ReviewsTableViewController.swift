@@ -41,14 +41,11 @@ class ReviewsTableViewController: UITableViewController {
         let apiUrl = "https://api.foursquare.com/v2/"
         let foursquareId = "NEEAYQOQJE3WHXMGFYAPORCOB34JIWSIEVKBXIE3NUDDPBYU"
         let client_secret = "M2QIQDADDASWMBXX2GCR3WQZQA3IVBBNREEWEACRYKM3SJIP"
-        
-        println(venueID)
-        
         let endpoint = apiUrl + "venues/\(venueID!)?client_id=\(foursquareId)&client_secret=\(client_secret)&v=20150101"
         
         
         
-        println(endpoint)
+      
         
         if let url = NSURL(string: endpoint) {
             
@@ -56,25 +53,22 @@ class ReviewsTableViewController: UITableViewController {
             
             NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
                 
-//                print(response)
+
                 
                 if let returnedInfo = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: nil) as? [String:AnyObject] {
                     
                     self.items = []
                     
-//                    println(returnedInfo)
+
                     
                     if let responseInfo = returnedInfo["response"] as? [String:AnyObject] {
-//                        println(responseInfo)
-                        
+
                         if let venueInfo = responseInfo["venue"] as? [String:AnyObject] {
                             
-//                            println(venueInfo)
-                            
+
                             if let tips = venueInfo["tips"] as? [String:AnyObject] {
                                 
-                                println(tips)
-                                
+                             
                                 
                                 if let groups = tips["groups"] as? [[String:AnyObject]] {
                                     
