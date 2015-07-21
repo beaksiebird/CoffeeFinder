@@ -35,10 +35,12 @@ class ViewController: UIViewController {
         
         RailsRequest.session().loginWithCompletion { () -> Void in
             
+            var storyboard = UIStoryboard(name: "Main", bundle: nil)
             
-         self.dismissViewControllerAnimated(true, completion: nil)
             
-        
+            var mainNVC = storyboard.instantiateInitialViewController() as! UINavigationController
+           
+            self.presentViewController(mainNVC, animated: true, completion: nil)
         }
     
     }

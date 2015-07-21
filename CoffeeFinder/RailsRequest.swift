@@ -180,11 +180,12 @@ class RailsRequest: NSObject {
             ] as [String:AnyObject]
         
         requestWithInfo(info, andCompletion: { (responseInfo) -> Void in
-            
-          
-            
+        
+            println("This is for the responseInfo in get request \(responseInfo)")
+
             if let reviews = responseInfo as? [[String:AnyObject]] {
                 
+                println("This is for the responseInfo in get request \(responseInfo)")
                 completion(reviews: reviews)
                 
             }
@@ -367,14 +368,55 @@ class RailsRequest: NSObject {
         
     }
     
-    
-    func flagReviewWithCompletion(completion: () -> Void) {
+    func updateReviewWithCompletion(reviewId: Int, completion: () -> Void) {
         
         
         var info = [
             
             "method" : "PATCH",
-            "endpoint" : "/review/\(review_id!)",
+            "endpoint" : "/review/flag/\(reviewId)",
+            "parameters" : [
+                
+                //"content" : "content!",
+                "flagged" : "flagged!",
+                //"imageURL" : "imageURL",
+                
+                
+                
+                
+            ]
+            ] as [String:AnyObject]
+        
+        requestWithInfo(info, andCompletion: { (responseInfo) -> Void in
+            
+            println(responseInfo)
+            
+            if let accessToken = responseInfo?["access_token"] as? String {
+                
+                self.token = accessToken
+                
+                completion()
+                
+            }
+            
+        })
+        
+        completion()
+        
+    }
+    
+    
+    
+    
+    
+    
+    func flagReviewWithCompletion(reviewId: Int, completion: () -> Void) {
+        
+        
+        var info = [
+            
+            "method" : "PATCH",
+            "endpoint" : "/review/\(reviewId)",
             "parameters" : [
                 
                 //"content" : "content!",

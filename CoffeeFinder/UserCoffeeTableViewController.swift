@@ -14,13 +14,14 @@ class UserCoffeeTableViewController: UITableViewController {
     
     @IBAction func reportReview(sender: UIButton) {
         
+        let cellButton = sender
         
+        let reviewId = items[cellButton.tag]["id"] as! Int
         
-        RailsRequest.session().flagReviewWithCompletion { () -> Void in
+        RailsRequest.session().updateReviewWithCompletion(reviewId, completion: { () -> Void in
             
             
-            
-        }
+        })
         
         
         
@@ -40,56 +41,51 @@ class UserCoffeeTableViewController: UITableViewController {
         
     }
     
-    
-    
     var items: [[String:AnyObject]] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         RailsRequest.session().getAvailableReviewsWithCompletion { (reviews) -> Void in
             
-        
-            
+            println("This is running reviews & reloading tableview \(reviews)")
             self.items = reviews
             self.tableView.reloadData()
         }
         
-    
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-      
+        
     }
-
- 
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
     
+    
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        
         return 1
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-     
+        
         return items.count
     }
-
+    
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("userReviewCell", forIndexPath: indexPath) as! UserCoffeeTableViewCell
         
-
-
-      cell.userReviews.text = items[indexPath.row]["content"] as? String
         
         
+        cell.userReviews.text = items[indexPath.row]["content"] as? String
+        
+        cell.reportReview.tag = indexPath.row
         
         return cell
     }
     
-
-  
+    
+    
 }

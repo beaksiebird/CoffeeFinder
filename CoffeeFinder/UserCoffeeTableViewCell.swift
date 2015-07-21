@@ -13,6 +13,8 @@ class UserCoffeeTableViewCell: UITableViewCell {
     @IBOutlet weak var userReviews: UITextView!
     
     
+    @IBOutlet weak var reportReview: UIButton!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

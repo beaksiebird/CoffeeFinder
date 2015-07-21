@@ -34,8 +34,13 @@ class RegisterViewController: UIViewController {
         RailsRequest.session().password = passwordOulet.text
         RailsRequest.session().email = emailOutlet.text
         RailsRequest.session().registerWithCompletion { () -> Void in
-        
-        self.dismissViewControllerAnimated(false, completion: nil)
+            
+            var storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            
+            var mainNVC = storyboard.instantiateInitialViewController() as! UINavigationController
+            
+            self.presentViewController(mainNVC, animated: true, completion: nil)
        
         }
     

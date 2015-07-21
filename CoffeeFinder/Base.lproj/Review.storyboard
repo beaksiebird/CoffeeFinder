@@ -215,12 +215,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="coffea_v2" translatesAutoresizingMaskIntoConstraints="NO" id="8Mo-8B-q4K">
-                                <rect key="frame" x="-145" y="-54" width="640" height="1136"/>
+                                <rect key="frame" x="-145" y="-23" width="640" height="1136"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHARE YOUR THOUGHTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIW-aX-mFk">
                                 <rect key="frame" x="26" y="28" width="298" height="36"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="eiD-Kt-Pyi"/>
+                                    <constraint firstAttribute="height" constant="36" id="Rxt-wm-G1V"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="36"/>
                                 <color key="textColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -228,7 +228,7 @@
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIk-sd-BZd">
-                                <rect key="frame" x="-7" y="369" width="128" height="30"/>
+                                <rect key="frame" x="26" y="364" width="59" height="30"/>
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="36"/>
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -238,8 +238,19 @@
                                     <action selector="nextButton:" destination="asp-vh-gdK" eventType="touchUpInside" id="6RM-8J-Xn6"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q3c-9i-p5g">
+                                <rect key="frame" x="22" y="70" width="294" height="258"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="322" id="ZlT-yl-icg"/>
+                                    <constraint firstAttribute="height" constant="258" id="pZQ-qG-fQS"/>
+                                </constraints>
+                                <inset key="scrollIndicatorInsets" minX="3" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ve-i5-eHp">
-                                <rect key="frame" x="212" y="369" width="128" height="30"/>
+                                <rect key="frame" x="196" y="359" width="120" height="39"/>
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="36"/>
                                 <state key="normal" title="TAKE A PIC">
                                     <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -249,18 +260,15 @@
                                     <action selector="takePic:" destination="asp-vh-gdK" eventType="touchUpInside" id="0oK-S4-usn"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q3c-9i-p5g">
-                                <rect key="frame" x="16" y="97" width="298" height="258"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="qIW-aX-mFk" firstAttribute="leading" secondItem="baA-4y-1bn" secondAttribute="leading" constant="26" id="8YL-m9-h3j"/>
-                            <constraint firstAttribute="trailing" secondItem="qIW-aX-mFk" secondAttribute="trailing" constant="16" id="Wgt-gx-Goz"/>
-                            <constraint firstItem="qIW-aX-mFk" firstAttribute="top" secondItem="rI7-sp-u9s" secondAttribute="bottom" constant="8" id="qVO-BH-kns"/>
+                            <constraint firstAttribute="trailing" secondItem="qIW-aX-mFk" secondAttribute="trailing" constant="16" id="2c3-Fh-Sm3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Q3c-9i-p5g" secondAttribute="trailing" constant="8" id="9dI-0z-spr"/>
+                            <constraint firstItem="Q3c-9i-p5g" firstAttribute="top" secondItem="qIW-aX-mFk" secondAttribute="bottom" constant="6" id="erS-tr-Pga"/>
+                            <constraint firstItem="Q3c-9i-p5g" firstAttribute="leading" secondItem="baA-4y-1bn" secondAttribute="leadingMargin" constant="6" id="kBa-xk-UDs"/>
+                            <constraint firstItem="qIW-aX-mFk" firstAttribute="top" secondItem="rI7-sp-u9s" secondAttribute="bottom" constant="8" id="qbL-HC-GtY"/>
+                            <constraint firstItem="qIW-aX-mFk" firstAttribute="leading" secondItem="baA-4y-1bn" secondAttribute="leading" constant="26" id="r5I-ux-xyj"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

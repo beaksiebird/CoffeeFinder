@@ -65,8 +65,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJN-ot-MGw">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJN-ot-MGw">
                                 <rect key="frame" x="10" y="85" width="314" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="BM5-ra-YZi"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="40"/>
                                 <state key="normal" title="FIND COFFEE NEAR ME">
                                     <color key="titleColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
@@ -77,22 +80,21 @@
                                     <segue destination="IcA-0Q-eDH" kind="presentation" id="2ee-vg-KIA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="REVIEWED BY OUR OWN COFFEE ADDICTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrP-Tc-hog">
-                                <rect key="frame" x="29" y="310" width="288" height="33"/>
-                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="22"/>
-                                <color key="textColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NEED COFFEE ASAP?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZy-fl-dlD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEED COFFEE ASAP?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZy-fl-dlD">
                                 <rect key="frame" x="26" y="44" width="288" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="8fV-X7-TAD"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="26"/>
                                 <color key="textColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6v-9E-yNV">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6v-9E-yNV">
                                 <rect key="frame" x="16" y="344" width="314" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="irm-hR-eCg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="40"/>
                                 <state key="normal" title="SEARCH REVIEWED ">
                                     <color key="titleColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
@@ -113,11 +115,43 @@
                                     <action selector="deleteAccount:" destination="uv7-cB-Tz4" eventType="touchUpInside" id="TAe-DL-ebj"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CoffeeBeans" translatesAutoresizingMaskIntoConstraints="NO" id="xcL-fs-9ha">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CoffeeBeans" translatesAutoresizingMaskIntoConstraints="NO" id="xcL-fs-9ha">
                                 <rect key="frame" x="49" y="148" width="249" height="149"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="149" id="4yg-ZZ-G63"/>
+                                    <constraint firstAttribute="width" constant="249" id="uZX-4c-DXe"/>
+                                </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REVIEWED BY OUR OWN USERS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrP-Tc-hog">
+                                <rect key="frame" x="29" y="310" width="288" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="CgJ-il-ta9"/>
+                                    <constraint firstAttribute="height" constant="33" id="aH6-9D-I58"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="22"/>
+                                <color key="textColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vZy-fl-dlD" secondAttribute="trailing" constant="26" id="1TG-0S-qTj"/>
+                            <constraint firstItem="l6v-9E-yNV" firstAttribute="leading" secondItem="Sbo-jO-53Y" secondAttribute="leading" constant="16" id="Ab1-2h-4lG"/>
+                            <constraint firstItem="xcL-fs-9ha" firstAttribute="top" secondItem="yJN-ot-MGw" secondAttribute="bottom" constant="8" id="Cao-sM-R9K"/>
+                            <constraint firstAttribute="trailing" secondItem="lrP-Tc-hog" secondAttribute="trailing" constant="23" id="D1T-ma-tFm"/>
+                            <constraint firstItem="lrP-Tc-hog" firstAttribute="top" secondItem="xcL-fs-9ha" secondAttribute="bottom" constant="13" id="I8z-vN-lKY"/>
+                            <constraint firstAttribute="trailing" secondItem="xcL-fs-9ha" secondAttribute="trailing" constant="42" id="Ii6-V2-goR"/>
+                            <constraint firstItem="yJN-ot-MGw" firstAttribute="top" secondItem="vZy-fl-dlD" secondAttribute="bottom" constant="8" id="JjD-my-Dr9"/>
+                            <constraint firstItem="l6v-9E-yNV" firstAttribute="top" secondItem="lrP-Tc-hog" secondAttribute="bottom" constant="1" id="MtS-Jz-eBz"/>
+                            <constraint firstItem="lrP-Tc-hog" firstAttribute="leading" secondItem="Sbo-jO-53Y" secondAttribute="leading" constant="29" id="d5D-Nq-SCK"/>
+                            <constraint firstAttribute="trailing" secondItem="yJN-ot-MGw" secondAttribute="trailing" constant="16" id="ekJ-4c-yVg"/>
+                            <constraint firstItem="yJN-ot-MGw" firstAttribute="leading" secondItem="Sbo-jO-53Y" secondAttribute="leading" constant="10" id="jAC-ie-0xe"/>
+                            <constraint firstItem="vZy-fl-dlD" firstAttribute="top" secondItem="elG-Iz-I7c" secondAttribute="bottom" constant="24" id="lx9-EK-tmU"/>
+                            <constraint firstItem="vZy-fl-dlD" firstAttribute="leading" secondItem="Sbo-jO-53Y" secondAttribute="leading" constant="26" id="nou-mP-HHW"/>
+                            <constraint firstItem="xcL-fs-9ha" firstAttribute="leading" secondItem="Sbo-jO-53Y" secondAttribute="leading" constant="49" id="qIf-CE-enP"/>
+                            <constraint firstAttribute="trailing" secondItem="l6v-9E-yNV" secondAttribute="trailing" constant="10" id="xaT-Dz-iOr"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SXc-Nd-M54"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -344,17 +378,6 @@
                                     <action selector="createReview:" destination="fZI-V2-hi9" eventType="touchUpInside" id="Bn2-Y1-rly"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXz-gm-iK2">
-                                <rect key="frame" x="205" y="67" width="108" height="46.5"/>
-                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="34"/>
-                                <state key="normal" title="SEE PICS">
-                                    <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="seePics:" destination="fZI-V2-hi9" eventType="touchUpInside" id="YCG-fu-3Kk"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7YX-L0-0MW">
                                 <rect key="frame" x="16" y="76" width="149" height="38"/>
                                 <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="34"/>
@@ -397,6 +420,17 @@
                                 <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXz-gm-iK2">
+                                <rect key="frame" x="204" y="71" width="108" height="46.5"/>
+                                <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="34"/>
+                                <state key="normal" title="SEE PICS">
+                                    <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="seePics:" destination="fZI-V2-hi9" eventType="touchUpInside" id="YCG-fu-3Kk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -540,19 +574,8 @@
                             <rect key="frame" x="0.0" y="0.0" width="340" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQ3-xh-aBc">
-                                    <rect key="frame" x="-112" y="0.0" width="340" height="44"/>
-                                    <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="25"/>
-                                    <state key="normal" title="REPORT">
-                                        <color key="titleColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="reportReview:" destination="fOQ-E9-FuA" eventType="touchUpInside" id="TUi-Qf-Iif"/>
-                                    </connections>
-                                </button>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1e-Tt-N1Z">
-                                    <rect key="frame" x="134" y="0.0" width="72" height="43.5"/>
+                                    <rect key="frame" x="134" y="-1" width="72" height="43.5"/>
                                     <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="26"/>
                                     <state key="normal" title="BACK">
                                         <color key="titleColor" red="0.83743351060000004" green="0.43518493829999999" blue="0.097593343200000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -577,9 +600,21 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQ3-xh-aBc">
+                                            <rect key="frame" x="127" y="0.0" width="312" height="44"/>
+                                            <fontDescription key="fontDescription" name="BlackCoffeeShadow-Bold" family="Black Coffee Shadow" pointSize="25"/>
+                                            <state key="normal" title="REPORT">
+                                                <color key="titleColor" red="0.80000000000000004" green="0.44213226370000003" blue="0.1707185903" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="reportReview:" destination="fOQ-E9-FuA" eventType="touchUpInside" id="TUi-Qf-Iif"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="reportReview" destination="SQ3-xh-aBc" id="7ZE-Nl-j05"/>
                                     <outlet property="userReviews" destination="VUN-40-Y0f" id="rPJ-PA-mrN"/>
                                 </connections>
                             </tableViewCell>
@@ -594,7 +629,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gn1-OX-zo5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1822" y="468"/>
+            <point key="canvasLocation" x="1806" y="451"/>
         </scene>
         <!--User Image Collection View Controller-->
         <scene sceneID="Xjw-RH-OSX">
