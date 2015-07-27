@@ -35,10 +35,9 @@ class UserCoffeeTableViewController: UITableViewController {
         
         
         
-        var uservenueVC = storyboard?.instantiateViewControllerWithIdentifier("uservenueVC")
-            as! UserVenueViewController
+        dismissViewControllerAnimated(true, completion: nil)
         
-        self.presentViewController(uservenueVC, animated: false, completion: nil)
+
         
         
     }

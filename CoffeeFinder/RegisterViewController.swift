@@ -14,10 +14,7 @@ class RegisterViewController: UIViewController {
     
     @IBAction func backButton(sender: UIButton) {
         
-        var loginVC = self.storyboard?.instantiateViewControllerWithIdentifier("loginVC")
-            as! ViewController
-        
-        self.presentViewController(loginVC, animated: false, completion: nil)
+       self.dismissViewControllerAnimated(true, completion: nil)
     }
    
     

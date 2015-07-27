@@ -20,13 +20,13 @@ class MyAnnotation : MKPointAnnotation {
 class ResultsViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
    @IBAction func backButton(sender: UIButton) {
-        
-        var searchVC = self.storyboard?.instantiateViewControllerWithIdentifier("searchVC")
-            as! SearchViewController
-        
-        self.presentViewController(searchVC, animated: false, completion: nil)
-        
-        
+    
+    var searchVC = self.storyboard?.instantiateViewControllerWithIdentifier("searchVC")
+        as! SearchViewController
+    
+    self.presentViewController(searchVC, animated: false, completion: nil)
+    
+    
     }
     
     

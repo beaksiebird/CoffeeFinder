@@ -17,11 +17,8 @@ class UserImageCollectionViewController: UICollectionViewController {
     
     @IBAction func backButton(sender: UIButton) {
         
-        var uservenueVC = storyboard?.instantiateViewControllerWithIdentifier("uservenueVC")
-            as! UserVenueViewController
-        
-        self.presentViewController(uservenueVC, animated: false, completion: nil)
-        
+      
+        dismissViewControllerAnimated(true, completion: nil)
         
         
     }

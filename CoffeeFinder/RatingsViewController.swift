@@ -24,7 +24,7 @@ class RatingsViewController: UIViewController {
     
     @IBAction func nextButton(sender: UIButton) {
         
-       // venuePackagedInfo["name"]
+    
         
         venuePackagedInfo["coffee_quality"] = coffeeSegControl.selectedSegmentIndex + 1 as Int
         venuePackagedInfo["price"] = priceSegControl.selectedSegmentIndex + 1 as Int

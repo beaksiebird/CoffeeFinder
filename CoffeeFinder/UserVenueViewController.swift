@@ -57,10 +57,7 @@ class UserVenueViewController: UIViewController {
     @IBAction func backButton(sender: UIButton) {
         
         
-        var homeVC = self.storyboard?.instantiateViewControllerWithIdentifier("homeVC")
-            as! HomeViewController
-        
-        self.presentViewController(homeVC, animated: false, completion: nil)
+       self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     

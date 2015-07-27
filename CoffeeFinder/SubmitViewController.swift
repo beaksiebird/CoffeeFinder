@@ -22,10 +22,7 @@ class SubmitViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBAction func editReview(sender: UIButton) {
         
         
-        var writereviewVC = self.storyboard?.instantiateViewControllerWithIdentifier("writereviewVC")
-            as! WriteReviewViewController
-        
-        self.navigationController?.pushViewController(writereviewVC, animated: true)
+        self.dismissViewControllerAnimated(true, completion: nil)
         
         }
     
@@ -35,10 +32,7 @@ class SubmitViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBAction func editPic(sender: UIButton) {
         
         
-        var cameraVC = self.storyboard?.instantiateViewControllerWithIdentifier("cameraVC")
-            as! CameraViewController
-        
-        self.navigationController?.pushViewController(cameraVC, animated: true)
+      self.dismissViewControllerAnimated(true, completion: nil)
         
         }
     

@@ -65,11 +65,9 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
 
     
     @IBAction func backButton(sender: UIButton) {
+      
+        self.dismissViewControllerAnimated(true, completion: nil)
         
-        var searchVC = storyboard?.instantiateViewControllerWithIdentifier("searchVC")
-            as! SearchViewController
-        
-        self.presentViewController(searchVC, animated: false, completion: nil)
     }
     
     
