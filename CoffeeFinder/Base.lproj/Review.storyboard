@@ -35,7 +35,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="340" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="coffea_v2" translatesAutoresizingMaskIntoConstraints="NO" id="gr3-G7-Ix5">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="coffea_v2" translatesAutoresizingMaskIntoConstraints="NO" id="gr3-G7-Ix5">
                                 <rect key="frame" x="-150" y="-41" width="640" height="1136"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Hb-VI-v0S">
@@ -174,12 +174,14 @@
                             <constraint firstItem="FvC-Q1-8nK" firstAttribute="trailing" secondItem="YY4-Vc-QaZ" secondAttribute="trailingMargin" id="MMP-uy-hN6"/>
                             <constraint firstItem="PbN-DN-tdB" firstAttribute="top" secondItem="qkt-EX-4Qr" secondAttribute="bottom" constant="33" id="OsH-eY-Ub3"/>
                             <constraint firstItem="PbN-DN-tdB" firstAttribute="leading" secondItem="YY4-Vc-QaZ" secondAttribute="leadingMargin" id="TLF-7a-VQi"/>
+                            <constraint firstAttribute="centerY" secondItem="gr3-G7-Ix5" secondAttribute="centerY" constant="-227" id="YpE-zz-fWS"/>
                             <constraint firstItem="BKW-05-IY4" firstAttribute="top" secondItem="dGQ-vP-0lb" secondAttribute="bottom" constant="28" id="cC7-QF-IyH"/>
                             <constraint firstAttribute="centerX" secondItem="dGQ-vP-0lb" secondAttribute="centerX" id="cCs-vo-EB5"/>
                             <constraint firstItem="qkt-EX-4Qr" firstAttribute="top" secondItem="Lyj-zh-p9j" secondAttribute="bottom" constant="33" id="cf3-h0-ESw"/>
                             <constraint firstItem="TIq-Ig-XNw" firstAttribute="trailing" secondItem="YY4-Vc-QaZ" secondAttribute="trailingMargin" id="gNO-2n-L5a"/>
                             <constraint firstItem="BKW-05-IY4" firstAttribute="trailing" secondItem="YY4-Vc-QaZ" secondAttribute="trailingMargin" id="k6I-aa-2WN"/>
                             <constraint firstItem="BKW-05-IY4" firstAttribute="leading" secondItem="D0H-nq-7eq" secondAttribute="trailing" constant="8" id="lTl-ax-nfH"/>
+                            <constraint firstAttribute="centerX" secondItem="gr3-G7-Ix5" secondAttribute="centerX" id="pco-Il-cSL"/>
                             <constraint firstItem="FQm-MT-JGp" firstAttribute="top" secondItem="BKW-05-IY4" secondAttribute="bottom" constant="22" id="qhA-Ou-YSe"/>
                             <constraint firstItem="D0H-nq-7eq" firstAttribute="top" secondItem="dGQ-vP-0lb" secondAttribute="bottom" constant="33" id="sVR-x7-yUb"/>
                             <constraint firstItem="TIq-Ig-XNw" firstAttribute="top" secondItem="FQm-MT-JGp" secondAttribute="bottom" constant="22" id="ujQ-Me-vaS"/>
@@ -214,7 +216,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="340" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="coffea_v2" translatesAutoresizingMaskIntoConstraints="NO" id="8Mo-8B-q4K">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="coffea_v2" translatesAutoresizingMaskIntoConstraints="NO" id="8Mo-8B-q4K">
                                 <rect key="frame" x="-145" y="-23" width="640" height="1136"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHARE YOUR THOUGHTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIW-aX-mFk">
@@ -263,7 +265,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerY" secondItem="8Mo-8B-q4K" secondAttribute="centerY" constant="-245" id="0vE-B6-reU"/>
                             <constraint firstAttribute="trailing" secondItem="qIW-aX-mFk" secondAttribute="trailing" constant="16" id="2c3-Fh-Sm3"/>
+                            <constraint firstAttribute="centerX" secondItem="8Mo-8B-q4K" secondAttribute="centerX" constant="-5" id="7ee-Rg-yDE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Q3c-9i-p5g" secondAttribute="trailing" constant="8" id="9dI-0z-spr"/>
                             <constraint firstItem="Q3c-9i-p5g" firstAttribute="top" secondItem="qIW-aX-mFk" secondAttribute="bottom" constant="6" id="erS-tr-Pga"/>
                             <constraint firstItem="Q3c-9i-p5g" firstAttribute="leading" secondItem="baA-4y-1bn" secondAttribute="leadingMargin" constant="6" id="kBa-xk-UDs"/>
@@ -301,7 +305,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="coffea_v2" translatesAutoresizingMaskIntoConstraints="NO" id="IiF-UO-XGb">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="coffea_v2" translatesAutoresizingMaskIntoConstraints="NO" id="IiF-UO-XGb">
                                 <rect key="frame" x="-144" y="-55" width="640" height="1136"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sFT-tV-MrK">
@@ -348,6 +352,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="IiF-UO-XGb" secondAttribute="centerX" constant="-6" id="3xi-UQ-Bx9"/>
+                            <constraint firstAttribute="centerY" secondItem="IiF-UO-XGb" secondAttribute="centerY" constant="-213" id="Ujy-zR-MeM"/>
+                        </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="340" height="600"/>

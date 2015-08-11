@@ -93,13 +93,13 @@ class VenueViewController: UIViewController, UIImagePickerControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
  
-        println(venueInfo)
+       
         
         nameInfo.text = venueInfo?["name"] as? String
         venuePackagedInfo["name"] = venueInfo?["name"]
         
         venueID = venueInfo?["id"] as? String
-        println("This is venueID \(venueID)")
+    
         
         if let location = venueInfo?["location"] as? [String:AnyObject] {
             
@@ -129,7 +129,7 @@ class VenueViewController: UIViewController, UIImagePickerControllerDelegate {
         
         }
         
-        println("end of view did load \(venuePackagedInfo)")
+       
       
        
      }
