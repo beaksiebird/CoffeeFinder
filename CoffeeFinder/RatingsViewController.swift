@@ -10,12 +10,7 @@ import UIKit
 
 class RatingsViewController: UIViewController {
     
-
-    
-
     var venuePackagedInfo: [String:AnyObject] = [:]
-
-    
     
     @IBOutlet weak var coffeeSegControl: UISegmentedControl!
     @IBOutlet weak var wifiSegControl: UISegmentedControl!
@@ -24,15 +19,11 @@ class RatingsViewController: UIViewController {
     
     @IBAction func nextButton(sender: UIButton) {
         
-    
-        
         venuePackagedInfo["coffee_quality"] = coffeeSegControl.selectedSegmentIndex + 1 as Int
         venuePackagedInfo["price"] = priceSegControl.selectedSegmentIndex + 1 as Int
         venuePackagedInfo["ambiance"] = ambianceSegControl.selectedSegmentIndex + 1 as Int
         venuePackagedInfo["wifi"] = wifiSegControl.selectedSegmentIndex + 1 as Int
         
-
-
         println(venuePackagedInfo)
         
         RailsRequest.session().createnewEstablishmentWithCompletion(venuePackagedInfo, completion: { () -> Void in
@@ -43,11 +34,11 @@ class RatingsViewController: UIViewController {
                 as! WriteReviewViewController
             
             self.navigationController?.pushViewController(writereviewVC, animated: false)
+            
         })
         
     }
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,18 +46,14 @@ class RatingsViewController: UIViewController {
         priceSegControl.selectedSegmentIndex = 0
         ambianceSegControl.selectedSegmentIndex = 0
         wifiSegControl.selectedSegmentIndex = 0
-
-
+        
         println("Ratings VC view did load: \(venuePackagedInfo)")
-
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-       
+        
     }
     
-
-   
-
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        
+    }
+    
 }

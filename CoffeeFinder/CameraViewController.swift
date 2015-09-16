@@ -17,23 +17,24 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     let screenWidth = UIScreen.mainScreen().bounds.size.width
     let screenHeight = UIScreen.mainScreen().bounds.size.height
     
+    let imagePicker = UIImagePickerController()
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .Camera
+        imagePicker.cameraCaptureMode = .Photo
         imagePicker.delegate = self
         
         if hasTaken { return }
         
         self.presentViewController(imagePicker, animated: false, completion: nil)
+        
     }
-    
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
      
         hasTaken = true
-        
         
         picker.dismissViewControllerAnimated(true, completion: nil)
 
@@ -57,10 +58,16 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
             
             self.navigationController?.pushViewController(submitVC, animated: true)
 
-
         }
         
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         
+        hasTaken = true
+        
+        picker.dismissViewControllerAnimated(true, completion: nil)
+        self.navigationController?.popViewControllerAnimated(true)
         
     }
     
@@ -84,8 +91,6 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
                 var newX = (newSize.width - newWidth) / 2;
                 scaleImageRect = CGRectMake(0, newX, newWidth, newSize.height);
     
-    
-    
             }
     
         }
@@ -93,7 +98,6 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         UIGraphicsBeginImageContext(newSize)
         
         image.drawInRect(CGRectMake(0, 0, newSize.width, newSize.height))
-    
        
         var newImage = UIGraphicsGetImageFromCurrentImageContext()
     
@@ -102,22 +106,5 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         return newImage
     
     }
-
-    
+   
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

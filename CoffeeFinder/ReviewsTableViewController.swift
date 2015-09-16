@@ -23,7 +23,6 @@ class ReviewsTableViewController: UITableViewController {
     }
 
     @IBAction func backButton(sender: UIButton) {
-        
 
         dismissViewControllerAnimated(true, completion: nil)
 
@@ -33,8 +32,6 @@ class ReviewsTableViewController: UITableViewController {
        
     }
     
-    
-
     func requestReviews() {
         
         

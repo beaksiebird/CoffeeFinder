@@ -10,10 +10,7 @@ import UIKit
 
 class SearchViewController: UIViewController {
     
-    
     @IBAction func deleteAccount(sender: UIButton) {
-        
-        
         
         RailsRequest.session().deleteUserWithCompletion { () -> Void in
 
@@ -27,7 +24,6 @@ class SearchViewController: UIViewController {
         
     }
     
-    
     @IBAction func searchReviewed(sender: UIButton) {
         
         var homeVC = self.storyboard?.instantiateViewControllerWithIdentifier("homeVC")
@@ -35,9 +31,7 @@ class SearchViewController: UIViewController {
         
         self.presentViewController(homeVC, animated: false, completion: nil)
         
-        }
-    
-    
+    }
     
     @IBAction func searchCoffee(sender: UIButton) {
         
@@ -46,10 +40,10 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
         println("This is the current users, username \(RailsRequest.session().username)")
         
         // Do any additional setup after loading the view.
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -73,5 +67,4 @@ class SearchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
 }

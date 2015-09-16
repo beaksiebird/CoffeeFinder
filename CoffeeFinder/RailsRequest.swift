@@ -33,7 +33,7 @@ class RailsRequest: NSObject {
         }
     }
    
-    var setUsername: String? {
+    var username: String? {
         
         get {
             
@@ -46,18 +46,44 @@ class RailsRequest: NSObject {
         }
     }
     
+    var email: String? {
+        
+        get {
+            
+            return defaults.objectForKey("EMAIL") as? String
+        }
+        set {
+            
+            defaults.setValue(newValue, forKey: "EMAIL")
+            defaults.synchronize()
+        }
+    }
+    
+    var user_id: String? {
+        
+        get {
+            
+            return defaults.objectForKey("ID") as? String
+        }
+        set {
+            
+            defaults.setValue(newValue, forKey: "ID")
+            defaults.synchronize()
+        }
+    }
     
     
     
     
     
-    var username: String?
-    var email: String?
+    
+//    var username: String?
+//    var email: String?
     var password: String?
     var imageURL: UIImage?
     var content: String?
     var review_id: Int?
-    var user_id: Int?
+//    var user_id: Int?
     var establishment_id: Int?
     var name: String?
     var street_address: String?
@@ -350,9 +376,9 @@ class RailsRequest: NSObject {
             "parameters" : [
                 
                 
-                "user_id" : "user_id",
+                "user_id" : "user_id!",
                 "establishment_id" : "establishment_id!",
-                "image" : "https: //coffeecollection.s3.amazonaws.com/myImage_1435934260.png",
+                "image" : "https://coffeecollection.s3.amazonaws.com/myImage_1435934260.png",
                 "content" : "content"
                 
             ]
@@ -378,7 +404,7 @@ class RailsRequest: NSObject {
             "parameters" : [
                 
                 //"content" : "content!",
-                "flagged" : "flagged!",
+                "flagged" : flagged!,
                 //"imageURL" : "imageURL",
                 
                 
