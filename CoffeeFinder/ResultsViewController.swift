@@ -10,8 +10,6 @@ import UIKit
 import MapKit
 import CoreLocation
 
-
-
 class MyAnnotation : MKPointAnnotation {
     
     var venueIndex: Int!
@@ -20,61 +18,41 @@ class MyAnnotation : MKPointAnnotation {
 class ResultsViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
    @IBAction func backButton(sender: UIButton) {
-    
-    var searchVC = self.storyboard?.instantiateViewControllerWithIdentifier("searchVC")
-        as! SearchViewController
-    
-    self.presentViewController(searchVC, animated: false, completion: nil)
-    
+    self.dismiss(animated: false, completion: nil)
     
     }
     
-    
-    
+
     @IBOutlet weak var myMapView: MKMapView!
     
-    
-    var lManager = CLLocationManager()
-    
+
+    let lManager = CLLocationManager()
     var allVenues: [[String:AnyObject]] = []
+
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
         lManager.requestWhenInUseAuthorization()
-        
         lManager.delegate = self
-        
         myMapView.showsUserLocation = true
-        myMapView.userTrackingMode = .Follow
+        myMapView.userTrackingMode = .follow
         myMapView.delegate = self
-        
-        
         lManager.startUpdatingLocation()
-        
+
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-        
-        
-        
-        
-    }
     
+
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        
+        print("working")
         if let location = locations.first as? CLLocation {
             
-            println("latitude  \(location.coordinate.latitude) longitude \(location.coordinate.longitude)")
+            print("latitude  \(location.coordinate.latitude) longitude \(location.coordinate.longitude)")
             
-            requestVenuesWithLocation(location, completion: { (venues) -> () in
+            requestVenuesWithLocation(location: location, completion: { (venues) -> () in
                 
                 self.allVenues = venues as! [[String:AnyObject]]
                 
-                for (index,venue) in enumerate(venues as! [[String:AnyObject]]) {
+                for (index,venue) in venues.enumerated() {
                     
                     if let locationInfo = venue["location"] as? [String:AnyObject] {
                         
@@ -104,42 +82,35 @@ class ResultsViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         }
         
         
-        
-        
     }
     
     
-    func requestVenuesWithLocation(location: CLLocation, completion: (venues: [AnyObject]) -> ()) {
+    func requestVenuesWithLocation(location: CLLocation, completion: @escaping (_ venues: [AnyObject]) -> ()) {
+        print("Requesting Venues")
         
         let apiUrl = "https://api.foursquare.com/v2/"
         let foursquareId = "NEEAYQOQJE3WHXMGFYAPORCOB34JIWSIEVKBXIE3NUDDPBYU"
         let client_secret = "M2QIQDADDASWMBXX2GCR3WQZQA3IVBBNREEWEACRYKM3SJIP"
-        
-        let endpoint = apiUrl + "venues/search?client_id=\(foursquareId)&client_secret=\(client_secret)&ll=\(location.coordinate.latitude),\(location.coordinate.longitude)&v=20150101&query=coffee"
-        
-//        println(endpoint)
+
+        let endpoint = apiUrl + "search/recommendations?ll=\(location.coordinate.latitude),\(location.coordinate.longitude)&v=20160607&intent=coffee&limit=15&client_id=\(foursquareId)&client_secret=\(client_secret)"
+       // let endpoint = apiUrl + "venues/search?client_id=\(foursquareId)&client_secret=\(client_secret)&ll=\(location.coordinate.latitude),\(location.coordinate.longitude)&v=20150101&query=coffee"
         
         if let url = NSURL(string: endpoint) {
             
-            let request = NSURLRequest(URL: url)
+            let request = NSURLRequest(url: url as URL)
             
-            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
+            NSURLConnection.sendAsynchronousRequest(request as URLRequest, queue: OperationQueue.main, completionHandler: { (response, data, error) -> Void in
                 
                 
-                if let returnedInfo = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: nil) as? [String:AnyObject] {
+                if let returnedInfo = try! JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [String:AnyObject] {
                     
-//                    println("Test 123 \(returnedInfo)")
                     
                     if let responseInfo = returnedInfo["response"] as? [String:AnyObject] {
                         
                         
-                        if let venuesInfo = responseInfo["venues"]/*!["name"]*/ as? [AnyObject] {
-                        
-                                
-                                //println("This is venue type NAME :\(venuesInfo)")
-                                
-                            
-                            completion(venues: venuesInfo)
+                        if let venuesInfo = responseInfo["venues"] as? [AnyObject] {
+   
+                            completion(venuesInfo)
                             
                         }
                         
@@ -156,23 +127,24 @@ class ResultsViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         
     }
     
-    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+    
+ func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
         if annotation is MKUserLocation { return nil}
         
-        var annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "annotation")
+        let annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "annotation")
         
         
         annotationView.canShowCallout = true
-        annotationView.pinColor = MKPinAnnotationColor.Green
+        annotationView.pinColor = MKPinAnnotationColor.green
         
-        var button = UIButton.buttonWithType(UIButtonType.DetailDisclosure) as! UIButton
+        let button = UIButton(type: UIButton.ButtonType.detailDisclosure)
         
         annotationView.rightCalloutAccessoryView = button
         
         button.tag = (annotation as! MyAnnotation).venueIndex
         
-        button.addTarget(self, action: "showMoreInfo:", forControlEvents: UIControlEvents.TouchUpInside)
+        button.addTarget(self, action: Selector(("showMoreInfo:")), for: UIControl.Event.touchUpInside)
         
         return annotationView
     }
@@ -181,12 +153,12 @@ class ResultsViewController: UIViewController, CLLocationManagerDelegate, MKMapV
     
     func showMoreInfo(sender: UIButton) {
         
-        var venueVC = storyboard?.instantiateViewControllerWithIdentifier("venueVC") as! VenueViewController
+        let venueVC = storyboard?.instantiateViewController(withIdentifier: "venueVC") as! VenueViewController
         
         venueVC.venueInfo = allVenues[sender.tag]
         venueVC.venueID = venueVC.venueInfo?["id"] as? String
         
-        presentViewController(venueVC, animated: false, completion: nil)
+        present(venueVC, animated: false, completion: nil)
         
         
     }

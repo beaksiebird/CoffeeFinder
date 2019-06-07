@@ -7,7 +7,7 @@
 //
 
 import Foundation
-private let defaults = NSUserDefaults.standardUserDefaults()
+private let defaults = UserDefaults.standard
 private let _singleton = RailsRequest()
 
 let API_URL = "https://pacific-atoll-5255.herokuapp.com/"
@@ -21,7 +21,7 @@ class RailsRequest: NSObject {
         
         get {
             
-            return defaults.objectForKey("TOKEN") as? String
+            return defaults.object(forKey: "TOKEN") as? String
             
         }
         
@@ -32,58 +32,11 @@ class RailsRequest: NSObject {
             
         }
     }
-   
-    var username: String? {
-        
-        get {
-            
-            return defaults.objectForKey("USER") as? String
-        }
-        set {
-            
-            defaults.setValue(newValue, forKey: "USER")
-            defaults.synchronize()
-        }
-    }
-    
-    var email: String? {
-        
-        get {
-            
-            return defaults.objectForKey("EMAIL") as? String
-        }
-        set {
-            
-            defaults.setValue(newValue, forKey: "EMAIL")
-            defaults.synchronize()
-        }
-    }
-    
-    var user_id: String? {
-        
-        get {
-            
-            return defaults.objectForKey("ID") as? String
-        }
-        set {
-            
-            defaults.setValue(newValue, forKey: "ID")
-            defaults.synchronize()
-        }
-    }
-    
-    
-    
-    
-    
-    
-//    var username: String?
-//    var email: String?
+
     var password: String?
     var imageURL: UIImage?
     var content: String?
     var review_id: Int?
-//    var user_id: Int?
     var establishment_id: Int?
     var name: String?
     var street_address: String?
@@ -98,9 +51,9 @@ class RailsRequest: NSObject {
     
     
     
-    func searchEstablishmentsWithCompletion(completion: () -> Void) {
+    func searchEstablishmentsWithCompletion(completion: @escaping () -> Void) {
         
-        var info = [
+        let info = [
         
             "method" : "GET",
             "endpoint" : "establishments/search?price=&coffee_quality=&price=&ambiance=&wifi=",
@@ -108,15 +61,15 @@ class RailsRequest: NSObject {
             
             ] as [String:AnyObject]
         
-        requestWithInfo(info, andCompletion: { (responseInfo) -> Void in
+        requestWithInfo(info: info, andCompletion: { (responseInfo) -> Void in
         
-            println(responseInfo)
+            print(responseInfo as Any)
             
             if let name = responseInfo?["name"] as? String {
                 
                 self.name = name
                 
-                println(name)
+                print(name)
             }
             
             if let streetaddress = responseInfo?["street_address"] as? String {
@@ -136,83 +89,25 @@ class RailsRequest: NSObject {
     }
     
    
-    
-    func createnewEstablishmentWithCompletion(venuePackagedInfo: [String:AnyObject], completion: () -> Void) {
-        
-        var name = venuePackagedInfo["name"] as? String
-        var address = venuePackagedInfo["address"] as? String
-        var city = venuePackagedInfo["city"] as? String
-        var state = venuePackagedInfo["state"] as? String
-        
-        var zipCode = venuePackagedInfo["zip_code"] as? String
-        var intZipCode = zipCode?.toInt()
-        var coffeeQuality = venuePackagedInfo["coffee_quality"] as? Int
-        var price = venuePackagedInfo["price"] as? Int
-        var ambiance = venuePackagedInfo["ambiance"] as? Int
-        var wifi = venuePackagedInfo["wifi"] as? Int
-        
-        println(zipCode)
-        
 
-        var info = [
-            
-            "method" : "POST",
-            "endpoint" : "establishments/new",
-            "parameters" : [
-                
-                "name" : name!,
-                "street_address" : address!,
-                "city" : city!,
-                "state" : state!,
-                "zip_code" : intZipCode!,
-                "coffee_quality" : coffeeQuality!,
-                "price": price!,
-                "ambiance" : ambiance!,
-                "wifi" : wifi!,
-                ]
-            
-            ] as [String:AnyObject]
-        
-        println("create new establishment rails request info:\n \(info)")
-        
-        requestWithInfo(info, andCompletion: { (responseInfo) -> Void in
-            
-            println(responseInfo)
-            
-            if let accessToken = responseInfo?["access_token"] as? String {
-                
-                self.token = accessToken
-                
-                completion()
-                //end repeated stuff
-                
-            }
-            
-        })
-        
-        completion()
-        
-    }
     
-    
-    
-    func getAvailableReviewsWithCompletion(completion: (reviews: [[String:AnyObject]]) -> Void) {
+    func getAvailableReviewsWithCompletion(completion: @escaping (_ reviews: [[String:AnyObject]]) -> Void) {
         
-        var info = [
+        let info = [
             
             "method" : "GET",
             "endpoint" : "reviews/available"
             
             ] as [String:AnyObject]
         
-        requestWithInfo(info, andCompletion: { (responseInfo) -> Void in
+        requestWithInfo(info: info, andCompletion: { (responseInfo) -> Void in
         
-            println("This is for the responseInfo in get request \(responseInfo)")
+            print("This is for the responseInfo in get request \(String(describing: responseInfo))")
 
             if let reviews = responseInfo as? [[String:AnyObject]] {
                 
-                println("This is for the responseInfo in get request \(responseInfo)")
-                completion(reviews: reviews)
+                print("This is for the responseInfo in get request \(String(describing: responseInfo))")
+                completion(reviews)
                 
             }
             
@@ -224,9 +119,9 @@ class RailsRequest: NSObject {
 
     
     
-    func getEstablishmentWithCompletion(completion: () -> Void) {
+    func getEstablishmentWithCompletion(completion: @escaping () -> Void) {
         
-        var info = [
+        let info = [
             
             "method" : "GET",
             "endpoint" : "establishment/\(establishment_id!)",
@@ -238,7 +133,7 @@ class RailsRequest: NSObject {
             
             ] as [String:AnyObject]
         
-        requestWithInfo(info, andCompletion: { (responseInfo) -> Void in
+        requestWithInfo(info: info, andCompletion: { (responseInfo) -> Void in
     
             
             if let accessToken = responseInfo?["access_token"] as? String {
@@ -260,9 +155,9 @@ class RailsRequest: NSObject {
     
     
     
-    func getReviewWithCompletion(completion: () -> Void) {
+    func getReviewWithCompletion(completion: @escaping () -> Void) {
         
-        var info = [
+        let info = [
             
             "method" : "GET",
             "endpoint" : "review/\(review_id!)",
@@ -274,9 +169,9 @@ class RailsRequest: NSObject {
             
             ] as [String:AnyObject]
         
-        requestWithInfo(info, andCompletion: { (responseInfo) -> Void in
+        requestWithInfo(info: info, andCompletion: { (responseInfo) -> Void in
             
-            println(responseInfo)
+            print(responseInfo!)
             
             if let accessToken = responseInfo?["access_token"] as? String {
                 
@@ -292,296 +187,18 @@ class RailsRequest: NSObject {
         completion()
         
     }
-    
-    
-    func registerWithCompletion(completion: () -> Void) {
-        
-        var info = [
-            
-            "method" : "POST",
-            "endpoint" : "users/signup",
-            "parameters" : [
-                
-                "username" : username!,
-                "email" : email!,
-                "password" : password!,
-             
-                
-            ]
-            
-            ] as [String:AnyObject]
-        
-        requestWithInfo(info, andCompletion: { (responseInfo) -> Void in
-            
-            println(responseInfo)
-            
-            if let accessToken = responseInfo?["access_token"] as? String {
-                
-                self.token = accessToken
-                
-                completion()
-                //end repeated stuff
-            }
-            
-        })
-        
-        completion()
-        
-    }
-    
-    func loginWithCompletion(completion: () -> Void) {
-        
-        
-        var info = [
-            
-            "method" : "POST",
-            "endpoint" : "users/login",
-            "parameters" : [
-                
-                "username" : username!,
-                "password" : password!
-                
-            ]
-            ] as [String:AnyObject]
-        
-        requestWithInfo(info, andCompletion: { (responseInfo) -> Void in
-            
-            println(responseInfo)
-            
-            if let user = responseInfo?["user"] as? [String:AnyObject] {
-                
-                if let accessToken = user["access_token"] as? String {
-                    
-                    self.token = accessToken
-                    
-                    completion()
-                    
-                }
-                
-                self.username = user["username"] as? String
-                
-            }
-            
-        })
-        
-    }
 
-    func createReviewWithCompletion(completion: () -> Void) {
-        
-        
-        var info = [
-            
-            "method" : "POST",
-            "endpoint" : "reviews/new",
-            "parameters" : [
-                
-                
-                "user_id" : "user_id!",
-                "establishment_id" : "establishment_id!",
-                "image" : "https://coffeecollection.s3.amazonaws.com/myImage_1435934260.png",
-                "content" : "content"
-                
-            ]
-            ] as [String:AnyObject]
-        
-        requestWithInfo(info, andCompletion: { (responseInfo) -> Void in
-            
-            println(responseInfo)
-            
-            completion()
-            
-        })
-        
-    }
-    
-    func updateReviewWithCompletion(reviewId: Int, completion: () -> Void) {
-        
-        
-        var info = [
-            
-            "method" : "PATCH",
-            "endpoint" : "/review/flag/\(reviewId)",
-            "parameters" : [
-                
-                //"content" : "content!",
-                "flagged" : flagged!,
-                //"imageURL" : "imageURL",
-                
-                
-                
-                
-            ]
-            ] as [String:AnyObject]
-        
-        requestWithInfo(info, andCompletion: { (responseInfo) -> Void in
-            
-            println(responseInfo)
-            
-            if let accessToken = responseInfo?["access_token"] as? String {
-                
-                self.token = accessToken
-                
-                completion()
-                
-            }
-            
-        })
-        
-        completion()
-        
-    }
     
     
-    
-    
-    
-    
-    func flagReviewWithCompletion(reviewId: Int, completion: () -> Void) {
-        
-        
-        var info = [
-            
-            "method" : "PATCH",
-            "endpoint" : "/review/\(reviewId)",
-            "parameters" : [
-                
-                //"content" : "content!",
-                "flagged" : "flagged!",
-                //"imageURL" : "imageURL",
-                
-                
-                
-                
-            ]
-            ] as [String:AnyObject]
-        
-        requestWithInfo(info, andCompletion: { (responseInfo) -> Void in
-            
-            println(responseInfo)
-            
-            if let accessToken = responseInfo?["access_token"] as? String {
-                
-                self.token = accessToken
-                
-                completion()
-                
-            }
-            
-        })
-        
-        completion()
-        
-    }
-    
-    
-    
-    func deleteReviewWithCompletion(completion: () -> Void) {
-        
-        
-        var info = [
-            
-            "method" : "DELETE",
-            "endpoint" : "review/\(review_id!)",
-            "parameters" : [
-                
-                "reviewid" : review_id!,
-                
-                
-            ]
-            ] as [String:AnyObject]
-        
-        requestWithInfo(info, andCompletion: { (responseInfo) -> Void in
-            
-            println(responseInfo)
-            
-            if let accessToken = responseInfo?["access_token"] as? String {
-                
-                self.token = accessToken
-                
-                completion()
-                
-            }
-            
-        })
-        
-        completion()
-        
-    }
-    
-
-    func deleteUserWithCompletion(completion: () -> Void) {
-        
-        
-        var info = [
-            
-            "method" : "DELETE",
-            "endpoint" : "user/delete/\(username!)",
-
-
-           
-            ] as [String:AnyObject]
-        
-        println("This is the railsrequest username \(username)")
-        
-        requestWithInfo(info, andCompletion: { (responseInfo) -> Void in
-            
-            println(responseInfo)
-            
-
-            
-        })
-        
-        completion()
-        
-    }
-    
-    
-    
-    func updateUserWithCompletion(completion: () -> Void) {
-        
-        
-        var info = [
-            
-            "method" : "PATCH",
-            "endpoint" : "users/:id",
-            "parameters" : [
-                
-                "username" : username!,
-                "password" : password!,
-                "email" : email!
-                
-            ]
-            ] as [String:AnyObject]
-        
-        requestWithInfo(info, andCompletion: { (responseInfo) -> Void in
-            
-            println(responseInfo)
-            
-            if let accessToken = responseInfo?["access_token"] as? String {
-                
-                self.token = accessToken
-                
-                completion()
-                
-            }
-            
-        })
-        
-        completion()
-        
-    }
-    
-    
-    
-    func requestWithInfo(info: [String:AnyObject], andCompletion completion: ((responseInfo: AnyObject?) -> Void)?) {
+    func requestWithInfo(info: [String:AnyObject], andCompletion completion: ((_ responseInfo: AnyObject?) -> Void)?) {
         
         let endpoint = info["endpoint"] as! String
         
         if let url = NSURL(string: API_URL + endpoint) {
             
-            let request = NSMutableURLRequest(URL: url)
+            let request = NSMutableURLRequest(url: url as URL)
             
-            request.HTTPMethod = info["method"] as! String
+            request.httpMethod = info["method"] as! String
             
             if let token = token {
                 
@@ -591,32 +208,34 @@ class RailsRequest: NSObject {
             
             if let bodyInfo = info["parameters"] as? [String:AnyObject] {
                 
-                let requestData = NSJSONSerialization.dataWithJSONObject(bodyInfo, options: NSJSONWritingOptions.allZeros, error: nil)
+                let requestData = try! JSONSerialization.data(withJSONObject: bodyInfo, options: JSONSerialization.WritingOptions.prettyPrinted)
                 
-                let jsonString = NSString(data: requestData!, encoding: NSUTF8StringEncoding)
+                
+                let jsonString = NSString(data: requestData, encoding: String.Encoding.utf8.rawValue)
                 
                 let postLength = "\(jsonString!.length)"
                 
                 request.setValue(postLength, forHTTPHeaderField: "Content-Length")
-                
-                let postData = jsonString?.dataUsingEncoding(NSASCIIStringEncoding, allowLossyConversion: true)
-                
+
+                //let postData = jsonString?.dataUsingEncoding(NSASCIIStringEncoding, allowLossyConversion: true)
+                let postData = jsonString?.data(using: String.Encoding.ascii.rawValue, allowLossyConversion: true)
+            
                 request.setValue("application/json", forHTTPHeaderField: "Content-Type")
                 
-                request.HTTPBody = postData
+                request.httpBody = postData
                 
             }
             
             
-            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
+            NSURLConnection.sendAsynchronousRequest(request as URLRequest, queue: OperationQueue.main, completionHandler: { (response, data, error) -> Void in
                 
-                println(data)
+                print(data!)
                 
                 if data != nil {
                     
-                    if let json: AnyObject = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: nil) {
+                    if let json: AnyObject = try! JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as AnyObject {
                         
-                        completion?(responseInfo: json)
+                        completion?(json)
                         
                     }
                     

@@ -12,7 +12,6 @@ import CoreLocation
 class VenueViewController: UIViewController, UIImagePickerControllerDelegate {
     
     var venuePackagedInfo: [String:AnyObject] = [:]
-    
     var venueInfo: [String:AnyObject]?
     var locationInfo: [String:AnyObject]?
     var venueHours: [String:AnyObject]?
@@ -20,124 +19,89 @@ class VenueViewController: UIViewController, UIImagePickerControllerDelegate {
     var locationAddress: String?
     
     @IBAction func seePics(sender: UIButton) {
-
-        var seeImagesVC = self.storyboard?.instantiateViewControllerWithIdentifier("seeImagesVC")
+        
+        let seeImagesVC = self.storyboard?.instantiateViewController(withIdentifier: "seeImagesVC")
             as! ImageCollectionViewController
         
         seeImagesVC.venueID = self.venueID
         
-        self.presentViewController(seeImagesVC, animated: false, completion: nil)
+        self.present(seeImagesVC, animated: false, completion: nil)
     }
     
-    
-    
-    
-    
-    
-    @IBAction func createReview(sender: UIButton) {
-        
-        var storyboard = UIStoryboard(name: "Review", bundle: nil)
-        
-        
-        var reviewNVC = storyboard.instantiateInitialViewController() as! UINavigationController
-        if let pleaseWork = reviewNVC.viewControllers[0] as? RatingsViewController {
-            pleaseWork.venuePackagedInfo = venuePackagedInfo
-        }
-        self.presentViewController(reviewNVC, animated: true, completion: nil)
-        
-    }
     
     @IBAction func reviewButton(sender: UIButton) {
         
-        var reviewsTVC = self.storyboard?.instantiateViewControllerWithIdentifier("readreviewVC")
+        let reviewsTVC = self.storyboard?.instantiateViewController(withIdentifier: "readreviewVC")
             as! ReviewsTableViewController
         
         reviewsTVC.venueID = venueID
         
-        self.presentViewController(reviewsTVC, animated: false, completion: nil)
+        self.present(reviewsTVC, animated: false, completion: nil)
         
     }
     
     @IBAction func resultsButton(sender: UIButton) {
-        
-        var resultsVC = self.storyboard?.instantiateViewControllerWithIdentifier("resultsVC")
-            as! ResultsViewController
-        
-        self.presentViewController(resultsVC, animated: false, completion: nil)
-        
+        self.dismiss(animated: false, completion: nil)
+//
+//        let resultsVC = self.storyboard?.instantiateViewController(withIdentifier: "resultsVC")
+//            as! ResultsViewController
+//
+//        self.present(resultsVC, animated: false, completion: nil)
+//
         
     }
     
     
-    @IBOutlet weak var flagImage: UIButton!
-    
-    
-        
-    
     
     @IBOutlet weak var venueImage:
-        UIImageView!
-    
+    UIImageView!
     
     let imagePicker = UIImagePickerController()
-    
-  
-    
     
     @IBOutlet weak var nameInfo: UILabel!
     @IBOutlet weak var addressInfo: UILabel!
     @IBOutlet weak var hoursInfo: UILabel!
-        
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
- 
-       
+        
         
         nameInfo.text = venueInfo?["name"] as? String
         venuePackagedInfo["name"] = venueInfo?["name"]
         
         venueID = venueInfo?["id"] as? String
-    
+        
         
         if let location = venueInfo?["location"] as? [String:AnyObject] {
             
-            //println("This is the location: \(location)")
-            
             let address = location["address"] as? String
-            
-            //println("This is the address: \(address)")
+ 
             addressInfo.text = address
-            venuePackagedInfo["address"] = address
-            venuePackagedInfo["state"] = location["state"] as? String
-            venuePackagedInfo["zip_code"] = location["postalCode"] as? String
+            venuePackagedInfo["address"] = address as AnyObject?
+            venuePackagedInfo["state"] = location["state"] as? String as AnyObject?
+            venuePackagedInfo["zip_code"] = location["postalCode"] as? String as AnyObject?
             
             if let location = venueInfo?["location"] as? [String:AnyObject] {
                 
                 let city = location["city"] as? String
                 
                 hoursInfo.text = city
-                venuePackagedInfo["city"] = city
+                venuePackagedInfo["city"] = city as AnyObject?
                 
-           
-            
-            
+                
+                
+                
             }
             
             
-        
+            
         }
         
-       
-      
-       
-     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-      
+        
+        
     }
     
-
+    
 }

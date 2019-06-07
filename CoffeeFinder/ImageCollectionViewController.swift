@@ -11,68 +11,52 @@ import CoreLocation
 
 
 
-
-let reuseIdentifier = "establishmentImages"
-
 class ImageCollectionViewController: UICollectionViewController {
     
    
     @IBAction func backButton(sender: UIButton) {
         
-        self.dismissViewControllerAnimated(false, completion: nil)        
+        self.dismiss(animated: false, completion: nil)
     }
-    
     
     var urlArray: NSMutableArray = []
-    var venueID : String? {
-    
-    didSet {
-    
-        if venueID != nil { requestImages() }
-       
-        }
-    
-    }
-    
-    
-    
-    
+    var venueID : String?
+    let reuseIdentifier = "establishmentImages"
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-
-        self.collectionView!.registerClass(ImageCollectionViewCell.self,
-            forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
-            withReuseIdentifier: "establishmentImages")
-
-
+        if venueID != nil {
+            requestImages()
+        }
+        
+        self.collectionView!.register(ImageCollectionViewCell.self, forSupplementaryViewOfKind:UICollectionView.elementKindSectionHeader, withReuseIdentifier: "establishmentImages")
     }
 
     
     func requestImages() {
-        
+    
         let apiUrl = "https://api.foursquare.com/v2/"
         let foursquareId = "NEEAYQOQJE3WHXMGFYAPORCOB34JIWSIEVKBXIE3NUDDPBYU"
         let client_secret = "M2QIQDADDASWMBXX2GCR3WQZQA3IVBBNREEWEACRYKM3SJIP"
 
-        println(venueID)
+        print(venueID!)
         
         let endpoint = apiUrl + "venues/\(venueID!)?client_id=\(foursquareId)&client_secret=\(client_secret)&v=20150101"
         
-        println(endpoint)
+        print(endpoint)
         
         if let url = NSURL(string: endpoint) {
             
-            let request = NSURLRequest(URL: url)
+            let request = NSURLRequest(url: url as URL)
             
-            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
+            NSURLConnection.sendAsynchronousRequest(request as URLRequest, queue: OperationQueue.main, completionHandler: { (response, data, error) -> Void in
                 
-                    println("response: \(response)")
+                print("response: \(String(describing: response))")
                 
-                if let returnedInfo = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: nil) as? [String:AnyObject] {
+                if let returnedInfo = try! JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [String:AnyObject] {
                     
-                    println("returned info: \(returnedInfo)")
+                    print("returned info: \(returnedInfo)")
                     
                     if let responseInfo = returnedInfo["response"] as? [String:AnyObject] {
                         
@@ -80,17 +64,17 @@ class ImageCollectionViewController: UICollectionViewController {
                             
                             if let photosInfo = venueInfo["photos"] as? [String:AnyObject] {
                                 
-                                println("photos info: \(photosInfo)")
+                                print("photos info: \(photosInfo)")
                                 
                                 if let groupsInfo = photosInfo["groups"] as? [AnyObject] {
                                     
                                     if groupsInfo.count > 0 {
                                         
-                                        println("groups info: \(groupsInfo[0])")
+                                        print("groups info: \(groupsInfo[0])")
                                         
                                         if let itemsInfo = groupsInfo[0]["items"] as? [AnyObject] {
                                             
-                                            println("items info: \(itemsInfo)")
+                                            print("items info: \(itemsInfo)")
                                             
                                             for item in itemsInfo {
                                                 
@@ -113,9 +97,9 @@ class ImageCollectionViewController: UICollectionViewController {
                                                 urlString += suffix!
                                                 
                                                 
-                                                println(urlString)
-                                                self.urlArray.addObject(urlString)
-                                                println(self.urlArray.count)
+                                                print(urlString)
+                                                self.urlArray.add(urlString)
+                                                print(self.urlArray.count)
                                                 self.collectionView!.reloadData()
                                             }
                                             
@@ -144,39 +128,26 @@ class ImageCollectionViewController: UICollectionViewController {
         
     }
     
-    
-    
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-  
-
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         
         return 1
     }
 
 
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
        
         return urlArray.count
     }
 
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> ImageCollectionViewCell {
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> ImageCollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("establishmentImages", forIndexPath: indexPath) as! ImageCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "establishmentImages", for: indexPath as IndexPath) as! ImageCollectionViewCell
 
-    
-        
         let url = NSURL(string: urlArray[indexPath.row] as! String)
         
        
-        let data = NSData(contentsOfURL: url!)
-        let image = UIImage(data: data!)
+        let data = NSData(contentsOf: url! as URL)
+        let image = UIImage(data: data! as Data)
         
         
         cell.image.image = image
@@ -185,6 +156,6 @@ class ImageCollectionViewController: UICollectionViewController {
         return cell
     }
 
-  
+    
 
 }

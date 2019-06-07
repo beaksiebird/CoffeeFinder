@@ -24,39 +24,27 @@ class ReviewsTableViewController: UITableViewController {
 
     @IBAction func backButton(sender: UIButton) {
 
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
 
     }
-    
-    override func viewDidLoad() {
-       
-    }
-    
+
     func requestReviews() {
-        
         
         let apiUrl = "https://api.foursquare.com/v2/"
         let foursquareId = "NEEAYQOQJE3WHXMGFYAPORCOB34JIWSIEVKBXIE3NUDDPBYU"
         let client_secret = "M2QIQDADDASWMBXX2GCR3WQZQA3IVBBNREEWEACRYKM3SJIP"
         let endpoint = apiUrl + "venues/\(venueID!)?client_id=\(foursquareId)&client_secret=\(client_secret)&v=20150101"
         
-        
-        
-      
-        
+    
         if let url = NSURL(string: endpoint) {
             
-            let request = NSURLRequest(URL: url)
+            let request = NSURLRequest(url: url as URL)
             
-            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
+            NSURLConnection.sendAsynchronousRequest(request as URLRequest, queue: OperationQueue.main, completionHandler: { (response, data, error) -> Void in
                 
-
-                
-                if let returnedInfo = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: nil) as? [String:AnyObject] {
+                if let returnedInfo = try! JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [String:AnyObject] {
                     
                     self.items = []
-                    
-
                     
                     if let responseInfo = returnedInfo["response"] as? [String:AnyObject] {
 
@@ -100,34 +88,28 @@ class ReviewsTableViewController: UITableViewController {
     }
 
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
     // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        
         return 1
     }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete met
-        // Return the number of rows in the section.
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return items.count
     }
-
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reviewCell", forIndexPath: indexPath) as! ReviewTableViewCell
+    
+  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reviewCell", for: indexPath as IndexPath) as! ReviewTableViewCell
         
         cell.reviewTextView.text = items[indexPath.row]["text"] as? String
         
-      return cell
-
-   
-
-}
-
+        return cell
+        
+        
+        
+    }
+    
 }
