@@ -7,11 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B98B3CC122C2643700EA8EF6 /* VenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98B3CC022C2643700EA8EF6 /* VenueViewController.swift */; };
 		B9EA353B22AAD76100694142 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9EA353A22AAD76100694142 /* Main.storyboard */; };
-		CD7686FE1B5416A90011373C /* ReviewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7686FD1B5416A90011373C /* ReviewsTableViewController.swift */; };
-		CD7687001B555D750011373C /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7686FF1B555D750011373C /* ReviewTableViewCell.swift */; };
-		CD7687381B56ED580011373C /* ImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7687371B56ED580011373C /* ImageCollectionViewController.swift */; };
-		CD76873A1B585B420011373C /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7687391B585B420011373C /* ImageCollectionViewCell.swift */; };
 		CD8266861B45B5080085302A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8266851B45B5080085302A /* AppDelegate.swift */; };
 		CD8266901B45B5080085302A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD82668E1B45B5080085302A /* LaunchScreen.xib */; };
 		CD82669C1B45B5080085302A /* CoffeeFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD82669B1B45B5080085302A /* CoffeeFinderTests.swift */; };
@@ -32,7 +29,6 @@
 		CD8266EA1B45DE530085302A /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8266DF1B45DE530085302A /* AFURLRequestSerialization.m */; };
 		CD8266EB1B45DE530085302A /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8266E11B45DE530085302A /* AFURLResponseSerialization.m */; };
 		CD8266EC1B45DE530085302A /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8266E31B45DE530085302A /* AFURLSessionManager.m */; };
-		CDD4019D1B4D969B00282B36 /* VenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD4019C1B4D969B00282B36 /* VenueViewController.swift */; };
 		CDD401AC1B4EBAF700282B36 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD401AB1B4EBAF700282B36 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,11 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B98B3CC022C2643700EA8EF6 /* VenueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueViewController.swift; sourceTree = "<group>"; };
 		B9EA353A22AAD76100694142 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		CD7686FD1B5416A90011373C /* ReviewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewsTableViewController.swift; sourceTree = "<group>"; };
-		CD7686FF1B555D750011373C /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
-		CD7687371B56ED580011373C /* ImageCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewController.swift; sourceTree = "<group>"; };
-		CD7687391B585B420011373C /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		CD8266801B45B5080085302A /* CoffeeFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD8266841B45B5080085302A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD8266851B45B5080085302A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,7 +82,6 @@
 		CD8266E11B45DE530085302A /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		CD8266E21B45DE530085302A /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		CD8266E31B45DE530085302A /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		CDD4019C1B4D969B00282B36 /* VenueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueViewController.swift; sourceTree = "<group>"; };
 		CDD401AB1B4EBAF700282B36 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,7 +126,6 @@
 			isa = PBXGroup;
 			children = (
 				B9EA353A22AAD76100694142 /* Main.storyboard */,
-				CDD401A21B4DA6E500282B36 /* CollectionViews */,
 				CD8266C01B45CC9D0085302A /* ViewControllers */,
 				CD8266C11B45CCA70085302A /* Requests */,
 				CD8266831B45B5080085302A /* Supporting Files */,
@@ -176,7 +167,7 @@
 			children = (
 				CDD401AB1B4EBAF700282B36 /* SearchViewController.swift */,
 				CD8266B61B45CACE0085302A /* ResultsViewController.swift */,
-				CDD4019C1B4D969B00282B36 /* VenueViewController.swift */,
+				B98B3CC022C2643700EA8EF6 /* VenueViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -236,17 +227,6 @@
 				CD8266E31B45DE530085302A /* AFURLSessionManager.m */,
 			);
 			name = AFNetworking;
-			sourceTree = "<group>";
-		};
-		CDD401A21B4DA6E500282B36 /* CollectionViews */ = {
-			isa = PBXGroup;
-			children = (
-				CD7686FD1B5416A90011373C /* ReviewsTableViewController.swift */,
-				CD7686FF1B555D750011373C /* ReviewTableViewCell.swift */,
-				CD7687371B56ED580011373C /* ImageCollectionViewController.swift */,
-				CD7687391B585B420011373C /* ImageCollectionViewCell.swift */,
-			);
-			name = CollectionViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,19 +335,15 @@
 			files = (
 				CDD401AC1B4EBAF700282B36 /* SearchViewController.swift in Sources */,
 				CD8266E51B45DE530085302A /* AFHTTPRequestOperationManager.m in Sources */,
-				CDD4019D1B4D969B00282B36 /* VenueViewController.swift in Sources */,
 				CD8266E91B45DE530085302A /* AFURLConnectionOperation.m in Sources */,
 				CD8266CD1B45DE0A0085302A /* AFAmazonS3Manager.m in Sources */,
-				CD7687001B555D750011373C /* ReviewTableViewCell.swift in Sources */,
 				CD8266EA1B45DE530085302A /* AFURLRequestSerialization.m in Sources */,
-				CD7687381B56ED580011373C /* ImageCollectionViewController.swift in Sources */,
-				CD7686FE1B5416A90011373C /* ReviewsTableViewController.swift in Sources */,
 				CD8266E61B45DE530085302A /* AFHTTPSessionManager.m in Sources */,
 				CD8266E41B45DE530085302A /* AFHTTPRequestOperation.m in Sources */,
+				B98B3CC122C2643700EA8EF6 /* VenueViewController.swift in Sources */,
 				CD8266B71B45CACE0085302A /* ResultsViewController.swift in Sources */,
 				CD8266E81B45DE530085302A /* AFSecurityPolicy.m in Sources */,
 				CD8266CF1B45DE0A0085302A /* AFAmazonS3ResponseSerializer.m in Sources */,
-				CD76873A1B585B420011373C /* ImageCollectionViewCell.swift in Sources */,
 				CD8266E71B45DE530085302A /* AFNetworkReachabilityManager.m in Sources */,
 				CD8266EC1B45DE530085302A /* AFURLSessionManager.m in Sources */,
 				CD8266861B45B5080085302A /* AppDelegate.swift in Sources */,
@@ -517,6 +493,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = MZ98WPC7GY;
 				INFOPLIST_FILE = CoffeeFinder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.whitneylaurenios.coffea;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -533,6 +510,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = MZ98WPC7GY;
 				INFOPLIST_FILE = CoffeeFinder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.whitneylaurenios.coffea;
 				PRODUCT_NAME = "$(TARGET_NAME)";

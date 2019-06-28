@@ -25,12 +25,12 @@ class ResultsViewController: UIViewController, CLLocationManagerDelegate, MKMapV
 
     @IBOutlet weak var myMapView: MKMapView!
     
-
     let lManager = CLLocationManager()
     var allVenues: [[String:AnyObject]] = []
 
     
-    override func viewDidLoad() {
+    override func viewDidAppear(_ animated: Bool) {
+        
         lManager.requestWhenInUseAuthorization()
         lManager.delegate = self
         myMapView.showsUserLocation = true
@@ -40,11 +40,13 @@ class ResultsViewController: UIViewController, CLLocationManagerDelegate, MKMapV
 
     }
     
+    private func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print("In the location, seems we got some error \(error.description)")
+    }
     
-
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print("working")
-        if let location = locations.first as? CLLocation {
+        if let location = locations.first {
             
             print("latitude  \(location.coordinate.latitude) longitude \(location.coordinate.longitude)")
             
@@ -80,11 +82,9 @@ class ResultsViewController: UIViewController, CLLocationManagerDelegate, MKMapV
             
             
         }
-        
-        
     }
-    
-    
+
+
     func requestVenuesWithLocation(location: CLLocation, completion: @escaping (_ venues: [AnyObject]) -> ()) {
         print("Requesting Venues")
         
@@ -92,8 +92,7 @@ class ResultsViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         let foursquareId = "NEEAYQOQJE3WHXMGFYAPORCOB34JIWSIEVKBXIE3NUDDPBYU"
         let client_secret = "M2QIQDADDASWMBXX2GCR3WQZQA3IVBBNREEWEACRYKM3SJIP"
 
-        let endpoint = apiUrl + "search/recommendations?ll=\(location.coordinate.latitude),\(location.coordinate.longitude)&v=20160607&intent=coffee&limit=15&client_id=\(foursquareId)&client_secret=\(client_secret)"
-       // let endpoint = apiUrl + "venues/search?client_id=\(foursquareId)&client_secret=\(client_secret)&ll=\(location.coordinate.latitude),\(location.coordinate.longitude)&v=20150101&query=coffee"
+        let endpoint = apiUrl + "venues/search?client_id=\(foursquareId)&client_secret=\(client_secret)&ll=\(location.coordinate.latitude),\(location.coordinate.longitude)&v=20150101&query=coffee"
         
         if let url = NSURL(string: endpoint) {
             
@@ -134,7 +133,6 @@ class ResultsViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         
         let annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "annotation")
         
-        
         annotationView.canShowCallout = true
         annotationView.pinColor = MKPinAnnotationColor.green
         
@@ -144,14 +142,14 @@ class ResultsViewController: UIViewController, CLLocationManagerDelegate, MKMapV
         
         button.tag = (annotation as! MyAnnotation).venueIndex
         
-        button.addTarget(self, action: Selector(("showMoreInfo:")), for: UIControl.Event.touchUpInside)
-        
+        button.addTarget(self, action: #selector(showMoreInfo(sender:)), for: .touchUpInside)
+    
         return annotationView
     }
     
     
     
-    func showMoreInfo(sender: UIButton) {
+    @objc func showMoreInfo(sender: UIButton) {
         
         let venueVC = storyboard?.instantiateViewController(withIdentifier: "venueVC") as! VenueViewController
         

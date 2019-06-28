@@ -18,36 +18,12 @@ class VenueViewController: UIViewController, UIImagePickerControllerDelegate {
     var venueID: String?
     var locationAddress: String?
     
-    @IBAction func seePics(sender: UIButton) {
-        
-        let seeImagesVC = self.storyboard?.instantiateViewController(withIdentifier: "seeImagesVC")
-            as! ImageCollectionViewController
-        
-        seeImagesVC.venueID = self.venueID
-        
-        self.present(seeImagesVC, animated: false, completion: nil)
-    }
-    
-    
-    @IBAction func reviewButton(sender: UIButton) {
-        
-        let reviewsTVC = self.storyboard?.instantiateViewController(withIdentifier: "readreviewVC")
-            as! ReviewsTableViewController
-        
-        reviewsTVC.venueID = venueID
-        
-        self.present(reviewsTVC, animated: false, completion: nil)
-        
-    }
+
+
     
     @IBAction func resultsButton(sender: UIButton) {
         self.dismiss(animated: false, completion: nil)
-//
-//        let resultsVC = self.storyboard?.instantiateViewController(withIdentifier: "resultsVC")
-//            as! ResultsViewController
-//
-//        self.present(resultsVC, animated: false, completion: nil)
-//
+
         
     }
     
